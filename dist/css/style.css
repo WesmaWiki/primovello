@@ -1187,10 +1187,9 @@ h3 {
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent; }
+  transition: all 0.3s ease; }
   .footer__policy-link:hover {
-    border-color: #ffffff; }
+    color: #999999; }
 
 .payments-footer__sign {
   color: #444444;
