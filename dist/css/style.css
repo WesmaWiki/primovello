@@ -1184,7 +1184,13 @@ h3 {
 .footer__policy-link {
   font-size: 12px;
   line-height: 140%;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent; }
+  .footer__policy-link:hover {
+    border-color: #ffffff; }
 
 .payments-footer__sign {
   color: #444444;
@@ -1200,6 +1206,9 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.payments-footer__item img {
+  vertical-align: middle; }
 
 .menu-footer__name {
   margin-bottom: 30px;

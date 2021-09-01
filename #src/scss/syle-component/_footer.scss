@@ -79,6 +79,11 @@
 		font-size: 12px;
 		line-height: 140%;
 		color: #ffffff;
+		transition: all 0.3s ease;
+		border-bottom: 1px solid transparent;
+		&:hover {
+			border-color: #ffffff;
+		}
 	}
 }
 
@@ -95,6 +100,9 @@
 	}
 
 	&__item {
+		& img {
+			vertical-align: middle;
+		}
 	}
 }
 
