@@ -162,6 +162,8 @@ document.addEventListener(
 				});
 			}
 		}
+		animImageHover();
+
 		window.addEventListener("resize", animImageHover);
 
 		lightGallery(document.querySelector(".lightgallery"), {
