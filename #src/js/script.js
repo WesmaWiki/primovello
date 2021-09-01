@@ -78,8 +78,11 @@ document.addEventListener(
 			}
 		});
 
+		window.addEventListener("resize", () => (targetTopPage = target.getBoundingClientRect().top));
+
 		if (document.cookie == "REQ_COOKIE=Y") {
 			document.querySelector(".stocks").style.display = "none";
+			targetTopPage = target.getBoundingClientRect().top;
 		} else {
 			let stocks = document.querySelector(".stocks__close");
 
@@ -157,6 +160,8 @@ document.addEventListener(
 						});
 					}
 				});
+
+				window.addEventListener("resize", animImageHover);
 			}
 		}
 
