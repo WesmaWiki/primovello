@@ -160,10 +160,9 @@ document.addEventListener(
 						});
 					}
 				});
-
-				window.addEventListener("resize", animImageHover);
 			}
 		}
+		window.addEventListener("resize", animImageHover);
 
 		lightGallery(document.querySelector(".lightgallery"), {
 			plugins: [lgZoom, lgThumbnail],
