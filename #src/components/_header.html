@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="stocks">
+      <div class="stocks__close"></div>
+      <div class="stocks__text">Рапродажа 30% на дубленки осень - зима 2021</div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="container">
+
+        <div class="header__wrap">
+          <div class="header__row">
+            <div class="header__column">
+              <div class="header__logo logo">
+                <a href="#">
+                  <img src="./img/logo.svg" alt="">
+                </a>
+              </div>
+
+              @@include("_main-menu.html")
+            </div>
+
+            <div class="header__column">
+              <div class="header__lang lang-main">
+                <span class="lang-main__current">ru</span>
+
+                <ul class="lang-main__list">
+                  <li class="lang-main__item current"><a href="#">ru</a></li>
+                  <li class="lang-main__item"><a href="#">en</a></li>
+                </ul>
+              </div>
+
+              <div class="header__search search-main">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M10.3424 12.8625C13.2419 12.8625 15.5924 10.512 15.5924 7.6125C15.5924 4.71301 13.2419 2.3625 10.3424 2.3625C7.44291 2.3625 5.09241 4.71301 5.09241 7.6125C5.09241 10.512 7.44291 12.8625 10.3424 12.8625Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  <path d="M6.68246 11.3775L3.02246 15.0375" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="bevel" />
+                </svg>
+                <span class="search-main__sign">Поиск</span>
+              </div>
+
+              <div class="header__login login-main">
+                <a href="#" class="login-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 14.6667L2.52667 12.7467C4.26667 6.41333 11.7333 6.41333 13.4733 12.7467L14 14.6667"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M7.99996 7.98667C9.84091 7.98667 11.3333 6.49428 11.3333 4.65333C11.3333 2.81238 9.84091 1.32 7.99996 1.32C6.15901 1.32 4.66663 2.81238 4.66663 4.65333C4.66663 6.49428 6.15901 7.98667 7.99996 7.98667Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="header__fav fav-main">
+                <a href="#" class="fav-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="fav-main__value">5</span>
+                </a>
+              </div>
+
+              <div class="header__cart cart-main">
+                <a href="#" class="cart-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path
+                      d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="cart-main__value">2</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </header>
+
+    <!-- // HEADER -->

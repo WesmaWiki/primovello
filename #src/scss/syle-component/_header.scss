@@ -1,0 +1,196 @@
+.header {
+	background: #fff;
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 15;
+
+		& + .main {
+			margin-top: 80px;
+		}
+	}
+	&__wrap {
+		padding: 24px 0;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__column {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: 40px;
+	}
+
+	&__lang {
+		margin-right: 32px;
+	}
+
+	&__search {
+		margin-right: 30px;
+	}
+
+	&__login {
+		margin-right: 30px;
+	}
+
+	&__fav {
+		margin-right: 30px;
+	}
+
+	&__cart {
+		margin-right: 10px;
+	}
+}
+
+.logo {
+}
+
+.lang-main {
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 140%;
+	text-transform: uppercase;
+	color: #000000;
+	&__current {
+		position: relative;
+		padding-right: 17px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+			width: 10px;
+			height: 6px;
+			background: url("../img/icon-arrow-lang.svg") no-repeat;
+		}
+	}
+
+	&__list {
+		display: none;
+	}
+
+	&__item {
+		&.current {
+		}
+	}
+}
+
+.search-main {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	line-height: 140%;
+	text-transform: uppercase;
+	color: #000000;
+	&__sign {
+		margin-left: 10px;
+	}
+}
+
+.login-main {
+	& svg {
+		& path {
+			transition: all 0.3s ease;
+		}
+	}
+	&:hover {
+		& svg {
+			& path {
+				stroke: #c41616;
+			}
+		}
+	}
+	&__link {
+	}
+}
+
+.fav-main {
+	&__link {
+		position: relative;
+		display: block;
+	}
+
+	&__value {
+		position: absolute;
+		top: -11px;
+		right: -14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 16px;
+		min-height: 16px;
+		max-width: 16px;
+		max-height: 16px;
+		border-radius: 50%;
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: #000000;
+	}
+
+	& svg {
+		& path {
+			transition: stroke 0.3s ease;
+		}
+	}
+
+	&:hover {
+		& svg {
+			& path {
+				stroke: #c41616;
+			}
+		}
+	}
+}
+
+.cart-main {
+	&__link {
+		position: relative;
+		display: block;
+	}
+
+	&__value {
+		position: absolute;
+		top: -11px;
+		right: -11px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 16px;
+		min-height: 16px;
+		max-width: 16px;
+		max-height: 16px;
+		border-radius: 50%;
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: #c41616;
+	}
+
+	& svg {
+		& path {
+			transition: stroke 0.3s ease;
+		}
+	}
+
+	&:hover {
+		& svg {
+			& path {
+				stroke: #c41616;
+			}
+		}
+	}
+}
