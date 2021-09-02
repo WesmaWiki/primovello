@@ -29,16 +29,6 @@ document.addEventListener(
 						nextEl: element.querySelector(".tab-new-arrivals__next"),
 						prevEl: element.querySelector(".tab-new-arrivals__prev"),
 					},
-
-					on: {
-						afterInit: () => {
-							animImageHover();
-						},
-
-						observerUpdate: () => {
-							animImageHover();
-						},
-					},
 				});
 			});
 		}
@@ -136,35 +126,28 @@ document.addEventListener(
 
 		// Смена изображений при наведении
 
-		function animImageHover() {
-			let arrImagesHover = Array.prototype.slice.call(document.querySelectorAll(".js-hover-image"));
+		let arrImagesHover = Array.prototype.slice.call(document.querySelectorAll(".js-hover-image"));
 
-			if (arrImagesHover != null) {
-				arrImagesHover.forEach((element) => {
-					let firstImage = element.querySelector(".js-first-image");
-					let secondImage = element.querySelector(".js-second-image");
+		if (arrImagesHover != null) {
+			arrImagesHover.forEach((element) => {
+				let firstImage = element.querySelector(".js-first-image");
+				let secondImage = element.querySelector(".js-second-image");
 
-					if (firstImage != null && secondImage != null) {
+				if (firstImage != null && secondImage != null) {
+					firstImage.style.opacity = 1;
+
+					firstImage.style.transition = "opacity 0.3s ease";
+
+					element.addEventListener("mouseenter", function () {
+						firstImage.style.opacity = 0;
+					});
+
+					element.addEventListener("mouseleave", function () {
 						firstImage.style.opacity = 1;
-
-						firstImage.style.transition = "opacity 0.3s ease";
-
-						secondImage.style.transform = `translateX(-${firstImage ? firstImage.clientWidth : null}px)`;
-
-						element.addEventListener("mouseenter", function () {
-							firstImage.style.opacity = 0;
-						});
-
-						element.addEventListener("mouseleave", function () {
-							firstImage.style.opacity = 1;
-						});
-					}
-				});
-			}
+					});
+				}
+			});
 		}
-		animImageHover();
-
-		window.addEventListener("resize", animImageHover);
 
 		lightGallery(document.querySelector(".lightgallery"), {
 			plugins: [lgZoom, lgThumbnail],
