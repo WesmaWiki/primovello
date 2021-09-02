@@ -31,7 +31,7 @@ document.addEventListener(
 					},
 
 					on: {
-						beforeInit: () => {
+						afterInit: () => {
 							animImageHover();
 						},
 
