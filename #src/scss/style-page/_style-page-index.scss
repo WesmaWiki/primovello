@@ -3,23 +3,10 @@
 	&__wrap {
 	}
 
-	&__slider {
-	}
-}
-
-.slider-main-screen {
-	// height: 704px;
-	height: calc(100vh - 80px);
-	&__wrapper {
-	}
-
-	&__slide {
-	}
-
 	&__group {
 		position: relative;
 		display: flex;
-		height: 100%;
+		height: calc(100vh - 80px);
 	}
 
 	&__info {
@@ -33,11 +20,19 @@
 	&__bg {
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 100%;
+
+		width: 50%;
 		height: 100%;
 		object-fit: cover;
 		z-index: 0;
+
+		&.--left {
+			left: 0;
+		}
+
+		&.--right {
+			right: 0;
+		}
 	}
 
 	&__title {
@@ -66,9 +61,6 @@
 		}
 
 		&:hover {
-			// color: #fff;
-			// border-color: #ffffff;
-			// background: transparent;
 			opacity: 0.7;
 
 			&.--white {

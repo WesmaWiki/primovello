@@ -1,15 +1,6 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
-		let sliderMainScreen = new Swiper(".slider-main-screen", {
-			slidesPerView: 1,
-			watchOverflow: true,
-			loop: true,
-			autoplay: {
-				delay: 4000,
-			},
-		});
-
 		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
 		if (arrSlidersProducts != null) {

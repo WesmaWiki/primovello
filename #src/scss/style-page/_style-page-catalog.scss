@@ -39,6 +39,7 @@
 			line-height: 140%;
 			text-transform: uppercase;
 			color: #999999;
+			transition: all 0.3s ease;
 		}
 		&.active {
 			& a {
@@ -48,6 +49,17 @@
 		&.--red {
 			& a {
 				color: #c41616;
+			}
+		}
+
+		&:hover {
+			& a {
+				color: #000000;
+			}
+			&.--red {
+				& a {
+					color: #c41616;
+				}
 			}
 		}
 	}
