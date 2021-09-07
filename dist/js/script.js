@@ -10,13 +10,13 @@ document.addEventListener(
 			},
 		});
 
-		let arrSlidersNewArrivals = Array.prototype.slice.call(document.querySelectorAll(".tab-new-arrivals__content"));
+		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
-		if (arrSlidersNewArrivals != null) {
-			arrSlidersNewArrivals.forEach((element) => {
-				let sldier = element.querySelector(".tab-new-arrivals__sldier");
+		if (arrSlidersProducts != null) {
+			arrSlidersProducts.forEach((element) => {
+				let sldier = element.querySelector(".product-slider__container");
 				new Swiper(sldier, {
-					slidesPerView: 3,
+					slidesPerView: 4,
 					spaceBetween: 20,
 					watchOverflow: true,
 					observer: true,
@@ -26,8 +26,8 @@ document.addEventListener(
 					},
 
 					navigation: {
-						nextEl: element.querySelector(".tab-new-arrivals__next"),
-						prevEl: element.querySelector(".tab-new-arrivals__prev"),
+						nextEl: element.querySelector(".product-slider__next"),
+						prevEl: element.querySelector(".product-slider__prev"),
 					},
 				});
 			});
@@ -56,35 +56,39 @@ document.addEventListener(
 			spaceBetween: 20,
 		});
 
-		// Фиксирование шапки при прокрутке
-		let target = document.querySelector(".header");
-		let targetTopPage = target.getBoundingClientRect().top;
+		let stocks = document.querySelector(".stocks");
+		let headerTopindent = 0;
 
-		window.addEventListener("scroll", function (e) {
-			if (pageYOffset > targetTopPage) {
-				target.classList.add("fixed");
+		if (stocks != null) {
+			if (document.cookie == "REQ_COOKIE=Y") {
+				stocks.style.display = "none";
 			} else {
-				target.classList.remove("fixed");
-			}
-		});
-
-		window.addEventListener("resize", () => (targetTopPage = target.getBoundingClientRect().top));
-
-		if (document.cookie == "REQ_COOKIE=Y") {
-			document.querySelector(".stocks").style.display = "none";
-			targetTopPage = target.getBoundingClientRect().top;
-		} else {
-			let stocks = document.querySelector(".stocks__close");
-
-			if (stocks != null) {
-				stocks.addEventListener("click", (e) => {
+				document.querySelector(".stocks__close").addEventListener("click", (e) => {
 					e.preventDefault();
-					document.querySelector(".stocks").style.display = "none";
+					stocks.style.display = "none";
 					document.cookie = "REQ_COOKIE=Y; path=/; domain=" + location.hostname;
-					targetTopPage = target.getBoundingClientRect().top;
+
+					headerTopindent = 0;
+				});
+
+				headerTopindent = stocks.clientHeight;
+
+				window.addEventListener("resize", () => {
+					headerTopindent = stocks.clientHeight;
 				});
 			}
 		}
+
+		// Фиксирование шапки при прокрутке
+		let header = document.querySelector(".header");
+
+		window.addEventListener("scroll", function (e) {
+			if (pageYOffset > headerTopindent) {
+				header.classList.add("fixed");
+			} else {
+				header.classList.remove("fixed");
+			}
+		});
 
 		// Табы
 
@@ -172,6 +176,57 @@ document.addEventListener(
 				} else {
 					scroller.classList.remove("visabled");
 				}
+			});
+		}
+
+		let arrFilter = Array.prototype.slice.call(document.querySelectorAll(".js-filter"));
+
+		if (arrFilter != null) {
+			arrFilter.forEach((element, index, array) => {
+				let buttonFilter = element.querySelector(".js-filter-click");
+
+				buttonFilter.addEventListener("click", () => {
+					if (!element.classList.contains("active")) {
+						array.forEach((el) => el.classList.remove("active"));
+						element.classList.add("active");
+					} else {
+						element.classList.remove("active");
+					}
+				});
+			});
+		}
+
+		document.addEventListener("click", function (e) {
+			let filter = document.querySelector(".js-filter.active");
+			if (filter && e.target !== filter && !filter.contains(e.target)) {
+				filter.classList.remove("active");
+			}
+		});
+
+		let arrRangeSliders = Array.prototype.slice.call(document.querySelectorAll(".js-slider-range"));
+
+		if (arrRangeSliders != null) {
+			arrRangeSliders.forEach((element) => {
+				let rangeSlider = element.querySelector(".filter-range__slider");
+				let inputSliderOne = element.querySelector(".filter-range__input.--one");
+				let inputSliderTwo = element.querySelector(".filter-range__input.--two");
+				let inputsSlider = [inputSliderOne, inputSliderTwo];
+				let minValue = parseInt(inputSliderOne.dataset.minValue);
+				let maxValue = parseInt(inputSliderTwo.dataset.maxValue);
+
+				noUiSlider.create(rangeSlider, {
+					start: [minValue, maxValue],
+					connect: true,
+					step: 1,
+					range: {
+						min: minValue,
+						max: maxValue,
+					},
+				});
+
+				rangeSlider.noUiSlider.on("update", function (values, handle) {
+					inputsSlider[handle].value = Math.round(values[handle]);
+				});
 			});
 		}
 	},
