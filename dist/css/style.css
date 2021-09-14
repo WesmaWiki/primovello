@@ -624,6 +624,7 @@ h3 {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border-top: 1px solid #f0eff2;
   position: absolute;
   top: 100%;
   left: 0;
