@@ -49,6 +49,45 @@
 	&__cart {
 		margin-right: 10px;
 	}
+
+	&__burger {
+		cursor: pointer;
+		display: none;
+		margin-right: 13px;
+		position: relative;
+		width: 18px;
+		height: 14px;
+
+		& span {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 100%;
+			height: 2px;
+			border-radius: 1px;
+			background: #000000;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			border-radius: 1px;
+			background: #000000;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
 }
 
 .logo {
@@ -96,10 +135,14 @@
 	&__sign {
 		margin-left: 10px;
 	}
+	& svg {
+		vertical-align: top;
+	}
 }
 
 .login-main {
 	& svg {
+		vertical-align: top;
 		& path {
 			transition: all 0.3s ease;
 		}
@@ -142,6 +185,7 @@
 	}
 
 	& svg {
+		vertical-align: top;
 		& path {
 			transition: stroke 0.3s ease;
 		}
@@ -183,6 +227,7 @@
 	}
 
 	& svg {
+		vertical-align: top;
 		& path {
 			transition: stroke 0.3s ease;
 		}
@@ -193,6 +238,62 @@
 			& path {
 				stroke: #c41616;
 			}
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.header {
+		&__wrap {
+			padding: 15px 0;
+		}
+
+		&__logo {
+			margin-right: 10px;
+		}
+
+		&__burger {
+			display: block;
+		}
+
+		&.fixed {
+			& + .main {
+				margin-top: 62px;
+			}
+		}
+	}
+
+	.main-nav {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		&__lang {
+			display: none;
+		}
+
+		&__search {
+			margin-right: 12px;
+		}
+
+		&__login {
+			margin-right: 12px;
+		}
+
+		&__fav {
+			margin-right: 12px;
+		}
+
+		&__cart {
+			margin-right: 10px;
+		}
+	}
+
+	.search-main {
+		&__sign {
+			display: none;
 		}
 	}
 }

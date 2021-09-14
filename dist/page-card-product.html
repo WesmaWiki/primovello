@@ -30,6 +30,9 @@
         <div class="header__wrap">
           <div class="header__row">
             <div class="header__column">
+              <div class="header__burger">
+                <span></span>
+              </div>
               <div class="header__logo logo">
                 <a href="#">
                   <img src="./img/logo.svg" alt="">
@@ -108,13 +111,10 @@
               </div>
 
               <div class="header__search search-main">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path
-                    d="M10.3424 12.8625C13.2419 12.8625 15.5924 10.512 15.5924 7.6125C15.5924 4.71301 13.2419 2.3625 10.3424 2.3625C7.44291 2.3625 5.09241 4.71301 5.09241 7.6125C5.09241 10.512 7.44291 12.8625 10.3424 12.8625Z"
-                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                  <path d="M6.68246 11.3775L3.02246 15.0375" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="bevel" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
+                  <path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
+                  </svg>
                 <span class="search-main__sign">Поиск</span>
               </div>
 
@@ -1675,14 +1675,16 @@
 <!-- FOOTER -->
 
 <footer class="footer">
-  <div class="footer__top">
-    <div class="container">
+  <div class="container">
+    <div class="footer__wrap">
       <div class="footer__row">
         <div class="footer__column">
           <div class="footer__logo logo"><img src="./img/logo.svg" alt=""></div>
           <div class="footer__sign">Меховая фабрика по производству мужской и женской одежды</div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
+
           <div class="footer__payments payments-footer">
-            <div class="payments-footer__sign">Используем безопасные платежи:</div>
 
             <div class="payments-footer__list">
               <div class="payments-footer__item"><img src="./img/icon-mastercard.png" alt=""></div>
@@ -1696,34 +1698,37 @@
 
         <div class="footer__column">
           <div class="footer__menu-group">
-            <div class="footer__menu menu-footer">
-              <a href="#" class="menu-footer__name">Покупателям</a>
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">Покупателям</div>
 
               <ul class="menu-footer__list --two-column">
                 <li class="menu-footer__item"><a href="#">Обмен и возврат</a></li>
 
-                <li class="menu-footer__item"><a href="#">Руководство по уходу</a></li>
-
-                <li class="menu-footer__item"><a href="#">Доставка</a></li>
-
                 <li class="menu-footer__item"><a href="#">Гарантии</a></li>
 
-                <li class="menu-footer__item"><a href="#">Индивидуальный пошив</a></li>
+                <li class="menu-footer__item current"><a href="#">Доставка</a></li>
 
                 <li class="menu-footer__item"><a href="#">Кожа и обработка</a></li>
 
-                <li class="menu-footer__item"><a href="#">Оплата и рассрочка</a></li>
+                <li class="menu-footer__item"><a href="#">Индивидуальный пошив</a></li>
 
                 <li class="menu-footer__item"><a href="#">Экологичность</a></li>
 
-                <li class="menu-footer__item"><a href="#">Руководство по размерам</a></li>
+                <li class="menu-footer__item"><a href="#">Оплата и рассрочка</a></li>
 
                 <li class="menu-footer__item"><a href="#">Частые вопросы</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по размерам</a></li>
+
+                <li class="menu-footer__item"><a href="#">Оферта</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по уходу</a></li>
+
               </ul>
             </div>
 
-            <div class="footer__menu menu-footer">
-              <a href="#" class="menu-footer__name">о primo vello</a>
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">о primo vello</div>
 
               <ul class="menu-footer__list">
                 <li class="menu-footer__item"><a href="#">Магазин</a></li>
@@ -1736,11 +1741,11 @@
             </div>
 
             <div class="footer__menu menu-footer">
-              <a href="#" class="menu-footer__name">контакты</a>
-
+              <div class="menu-footer__name">контакты</div>
               <ul class="menu-footer__list">
                 <li class="menu-footer__item">Москва, Дмитровское шоссе, 79 с1</li>
                 <li class="menu-footer__item"><a href="tel:+74956457699">+7 (495) 645-76-99</a></li>
+                <li class="menu-footer__item"><a href="tel:+74956457693">+7 (495) 645-76-93</a></li>
                 <li class="menu-footer__item"><a href="mailto:info@pimovello.ru">info@pimovello.ru</a></li>
               </ul>
             </div>
@@ -1753,25 +1758,13 @@
             <a href="#" class="rating-footer__item"><img src="./img/icon-rating-google.png" alt=""></a>
             <a href="#" class="rating-footer__item"><img src="./img/icon-rating-yandex.png" alt=""></a>
           </div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="footer__bottom">
-    <div class="container">
-      <div class="footer__row">
-        <div class="footer__column">
-          <div class="footer__policy-text">© «Primo Vello», 2021. Все права защищены законом об авторском праве.</div>
-        </div>
-
-        <div class="footer__column">
-          <a href="#" class="footer__policy-link">Политика конфидециальности</a>
-          <a href="#" class="footer__policy-link">Политика использования Cookies</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </footer>
 
 <div class="scroller">

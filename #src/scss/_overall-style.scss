@@ -45,6 +45,29 @@ h3 {
 	color: #000000;
 }
 
+@media (max-width: 1430px) {
+	.title-h1,
+	h1 {
+		@include adaptiv-font(48, 36);
+	}
+
+	.title-h2,
+	h2 {
+		@include adaptiv-font(36, 24);
+	}
+}
+@media (max-width: 375px) {
+	.title-h1,
+	h1 {
+		font-size: 36px;
+	}
+
+	.title-h2,
+	h2 {
+		font-size: 24px;
+	}
+}
+
 .subtitle {
 	font-size: 12px;
 	line-height: 140%;
