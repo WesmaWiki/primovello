@@ -25,6 +25,7 @@
     <!-- HEADER -->
 
     <header class="header">
+
       <div class="container">
 
         <div class="header__wrap">
@@ -112,9 +113,12 @@
 
               <div class="header__search search-main">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
-                  <path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel"/>
-                  </svg>
+                  <path
+                    d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  <path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="bevel" />
+                </svg>
                 <span class="search-main__sign">Поиск</span>
               </div>
 
@@ -158,9 +162,42 @@
           </div>
         </div>
 
-
-
       </div>
+
+      <div class="header__search-panel search-panel">
+        <div class="container">
+          <form action="#" class="search-panel__form">
+            <div class="search-panel__wrap">
+              <button type="submit" class="search-panel__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M8.34241 11.8623C11.2419 11.8623 13.5924 9.5118 13.5924 6.6123C13.5924 3.71281 11.2419 1.3623 8.34241 1.3623C5.44291 1.3623 3.09241 3.71281 3.09241 6.6123C3.09241 9.5118 5.44291 11.8623 8.34241 11.8623Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  <path d="M4.68246 10.3774L1.02246 14.0374" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="bevel" />
+                </svg>
+              </button>
+              <input type="text" placeholder="поиск">
+            </div>
+          </form>
+
+          <div class="search-panel__result">
+            <div class="search-panel__result-list">
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная куртка с капюшоном</span>
+              </a>
+
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная дубленка с застежками</span>
+              </a>
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная юбка</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </header>
 
     <!-- // HEADER -->

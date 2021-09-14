@@ -1485,6 +1485,15 @@
 			max-width: 120px;
 		}
 	}
+
+	.social-subscribe {
+		margin-bottom: -10px;
+		flex-wrap: wrap;
+
+		&__item {
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .stocks {

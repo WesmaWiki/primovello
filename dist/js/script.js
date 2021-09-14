@@ -98,6 +98,17 @@ document.addEventListener(
 			}
 		}
 
+		// Пооиск
+		let searchButton = document.querySelector(".search-main");
+		let searchPanel = document.querySelector(".search-panel");
+
+		if (searchButton != null) {
+			searchButton.addEventListener("click", function () {
+				searchPanel.classList.toggle("active");
+				document.querySelector("body").classList.toggle("lock");
+			});
+		}
+
 		// Переключение главных изображений
 		let timerIamge;
 		let mainScreenIamge = document.querySelectorAll(".main-screen__bg");
