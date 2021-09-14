@@ -676,6 +676,36 @@ h3 {
               transform: translate(0, -50%);
       background: url("../img/icon-search-result.svg") no-repeat;
       opacity: 0.5; }
+  .search-panel__close {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 15px;
+    height: 15px; }
+    .search-panel__close::before, .search-panel__close::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100%;
+      height: 1px;
+      border-radius: 1px;
+      background: #000; }
+    .search-panel__close::before {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          -ms-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg); }
+    .search-panel__close::after {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          -ms-transform: translate(-50%, -50%) rotate(-45deg);
+              transform: translate(-50%, -50%) rotate(-45deg); }
   .search-panel.active {
     opacity: 1;
     visibility: visible;
@@ -689,7 +719,7 @@ h3 {
 
 @media (max-width: 768px) {
   .search-panel__wrap input {
-    padding: 15px 25px; }
+    padding: 15px 30px 15px 25px; }
   .search-panel__result-item {
     padding: 15px 25px; } }
 

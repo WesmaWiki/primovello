@@ -101,9 +101,17 @@ document.addEventListener(
 		// Пооиск
 		let searchButton = document.querySelector(".search-main");
 		let searchPanel = document.querySelector(".search-panel");
+		let searchClose = document.querySelector(".search-panel__close");
 
 		if (searchButton != null) {
 			searchButton.addEventListener("click", function () {
+				searchPanel.classList.toggle("active");
+				document.querySelector("body").classList.toggle("lock");
+			});
+		}
+
+		if (searchClose != null) {
+			searchClose.addEventListener("click", function () {
 				searchPanel.classList.toggle("active");
 				document.querySelector("body").classList.toggle("lock");
 			});
