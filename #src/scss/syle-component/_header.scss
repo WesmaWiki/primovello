@@ -9,12 +9,17 @@
 		z-index: 15;
 
 		& + .main {
-			margin-top: 80px;
+			margin-top: 62px;
+		}
+
+		& .header__wrap {
+			padding: 15px 0;
 		}
 	}
 	&__wrap {
 		position: relative;
 		padding: 24px 0;
+		transition: padding 0.15s ease;
 	}
 
 	&__row {

@@ -43,6 +43,8 @@ document.addEventListener(
 			},
 		});
 
+		let widthEl = document.querySelector(".card-catalog__image").clientWidth;
+
 		let sliderCatalog = new Swiper(".slider-catalog", {
 			slidesPerView: "auto",
 			freeMode: true,
@@ -56,7 +58,7 @@ document.addEventListener(
 
 			scrollbar: {
 				el: ".slider-catalog__scrollbar",
-				dragSize: 190,
+				dragSize: `450px`,
 			},
 
 			breakpoints: {
