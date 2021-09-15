@@ -58,7 +58,7 @@ document.addEventListener(
 
 			scrollbar: {
 				el: ".slider-catalog__scrollbar",
-				dragSize: `450px`,
+				dragSize: 185,
 			},
 
 			breakpoints: {
