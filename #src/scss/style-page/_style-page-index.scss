@@ -61,20 +61,20 @@
 			margin-bottom: 0;
 		}
 		&.--white {
-			color: #fff;
-			border-color: #ffffff;
-			background: transparent;
+			// color: #fff;
+			// border-color: #ffffff;
+			// background: transparent;
 		}
 
 		&:hover {
-			opacity: 0.7;
+			opacity: 0.9;
 
-			&.--white {
-				opacity: 1;
-				color: #000000;
-				background: #ffffff;
-				border-color: #ffffff;
-			}
+			// &.--white {
+			// 	opacity: 1;
+			// 	color: #000000;
+			// 	background: #ffffff;
+			// 	border-color: #ffffff;
+			// }
 		}
 	}
 }
