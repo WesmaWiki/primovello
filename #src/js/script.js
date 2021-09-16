@@ -43,8 +43,6 @@ document.addEventListener(
 			},
 		});
 
-		let widthEl = document.querySelector(".card-catalog__image").clientWidth;
-
 		let sliderCatalog = new Swiper(".slider-catalog", {
 			slidesPerView: "auto",
 			freeMode: true,
@@ -59,6 +57,7 @@ document.addEventListener(
 			scrollbar: {
 				el: ".slider-catalog__scrollbar",
 				dragSize: 185,
+				snapOnRelease: true,
 			},
 
 			breakpoints: {
@@ -99,6 +98,28 @@ document.addEventListener(
 				});
 			}
 		}
+
+		// Выбор языка
+		let elLang = document.querySelector(".lang-main");
+
+		if (elLang != null) {
+			let clickEl = elLang.querySelector(".lang-main__current");
+
+			clickEl.addEventListener("click", () => {
+				if (!elLang.classList.contains("active")) {
+					elLang.classList.add("active");
+				} else {
+					elLang.classList.remove("active");
+				}
+			});
+		}
+
+		document.addEventListener("click", function (e) {
+			let elLangActive = document.querySelector(".lang-main");
+			if (elLangActive && e.target !== elLangActive && !elLangActive.contains(e.target)) {
+				elLangActive.classList.remove("active");
+			}
+		});
 
 		// Пооиск
 		let searchButton = document.querySelector(".search-main");

@@ -7,7 +7,7 @@
 		position: relative;
 		display: flex;
 		// height: 700px;
-		padding: 16.5% 0;
+		padding: 20% 0 13% 0;
 	}
 
 	&__info {
@@ -81,7 +81,7 @@
 
 @media (max-width: 1170px) {
 	.main-screen {
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -89,6 +89,10 @@
 	.main-screen {
 		&__group {
 			min-height: 500px;
+		}
+
+		&__info {
+			justify-content: flex-end;
 		}
 
 		&__bg {
@@ -226,7 +230,7 @@
 @media (max-width: 1170px) {
 	.category {
 		&__wrap {
-			padding: 25px 0;
+			padding: 20px 0;
 		}
 	}
 }
@@ -546,6 +550,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	&__old {
+		font-weight: bold;
 		margin-right: 8px;
 		font-size: 12px;
 		line-height: 140%;
@@ -554,6 +559,7 @@
 	}
 
 	&__current {
+		font-weight: bold;
 		font-size: 12px;
 		line-height: 140%;
 		color: #000000;
@@ -619,7 +625,7 @@
 @media (max-width: 1170px) {
 	.new-arrivals {
 		&__wrap {
-			padding: 25px 0;
+			padding: 20px 0;
 		}
 	}
 
@@ -790,7 +796,7 @@
 @media (max-width: 1170px) {
 	.catalog {
 		&__wrap {
-			padding: 25px 0;
+			padding: 20px 0;
 		}
 	}
 }
@@ -814,7 +820,7 @@
 		}
 
 		&__scrollbar {
-			display: none;
+			// display: none;
 		}
 	}
 }
@@ -856,7 +862,7 @@
 
 	&__link {
 		position: relative;
-		height: 500px;
+		min-height: 500px;
 		width: 100%;
 		padding: 50px;
 		display: flex;
@@ -873,6 +879,8 @@
 
 	&__bg {
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -883,6 +891,11 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+	}
+
+	&__info {
+		text-align: center;
+		padding-top: 150px;
 	}
 
 	&__title {
@@ -908,14 +921,16 @@
 
 @media (max-width: 1170px) {
 	.category-screen {
-		margin: 0 0 25px 0;
+		margin: 0 0 20px 0;
 	}
 }
 
 @media (max-width: 768px) {
 	.category-screen {
 		&__link {
-			height: 400px;
+			min-height: 400px;
+			padding: 35px;
+			justify-content: flex-end;
 		}
 
 		&__title {
@@ -924,6 +939,10 @@
 
 		&__subtitle {
 			margin-bottom: 25px;
+		}
+
+		&__info {
+			padding-top: 0;
 		}
 	}
 }
@@ -975,7 +994,6 @@
 	&__icon {
 		margin-bottom: 20px;
 		& img {
-			opacity: 0.5;
 			transition: all 0.3s ease;
 		}
 	}
@@ -998,7 +1016,6 @@
 	&:hover {
 		& .card-factory__icon {
 			& img {
-				opacity: 1;
 			}
 		}
 	}
@@ -1026,6 +1043,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		padding: 1px;
 		// height: 240px;
 		// &::before {
 		// 	content: "";
@@ -1101,6 +1119,24 @@
 	}
 }
 
+@media (min-width: 1170px) {
+	.card-factory {
+		&__icon {
+			& img {
+				transition: all 0.5s ease;
+			}
+		}
+		&:hover {
+			& .card-factory__icon {
+				& img {
+					transform-origin: center;
+					transform: rotateY(180deg);
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 1430px) {
 	.banner-factory {
 		&__name {
@@ -1128,7 +1164,7 @@
 @media (max-width: 1170px) {
 	.factory {
 		&__wrap {
-			padding: 25px 0;
+			padding: 20px 0;
 		}
 
 		&__row {
@@ -1307,7 +1343,7 @@
 @media (max-width: 1170px) {
 	.brand {
 		&__wrap {
-			padding: 25px 0;
+			padding: 20px 0;
 		}
 
 		&__row {
@@ -1460,7 +1496,7 @@
 @media (max-width: 1170px) {
 	.subscribe {
 		&__wrap {
-			margin: 25px 0 0 0;
+			margin: 20px 0 0 0;
 		}
 
 		&__row {
