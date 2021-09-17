@@ -305,6 +305,16 @@
 	}
 }
 
+@media (min-width: 1170px) {
+	.header {
+		&__wrap {
+			position: relative;
+			background: #fff;
+			z-index: 15;
+		}
+	}
+}
+
 @media (max-width: 1170px) {
 	.header {
 		&__wrap {
@@ -496,7 +506,7 @@
 .menu-header {
 	opacity: 0;
 	visibility: hidden;
-	transform: translate(0, 100px);
+	transform: translate(0, -100%);
 	transition: all 0.3s ease;
 
 	position: absolute;
@@ -626,6 +636,10 @@
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: #000000;
+		transition: all 0.3s ease;
+		&:hover {
+			color: #444444;
+		}
 
 		&.--sale {
 			color: #c41616;
@@ -646,6 +660,10 @@
 			font-size: 13px;
 			line-height: 140%;
 			color: #444444;
+			transition: all 0.3s ease;
+			&:hover {
+				color: #000000;
+			}
 		}
 	}
 }
@@ -682,6 +700,10 @@
 		font-size: 12px;
 		line-height: 140%;
 		color: #666666;
+		transition: all 0.3s ease;
+		&:hover {
+			color: #000;
+		}
 	}
 }
 
@@ -704,6 +726,7 @@
 			width: 100%;
 			height: 100%;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+			transition: all 0.3s ease;
 		}
 	}
 
@@ -720,6 +743,16 @@
 		line-height: 140%;
 		text-transform: uppercase;
 		color: #ffffff;
+	}
+
+	&:hover {
+		.sub-nav-card-category {
+			&__image {
+				&::before {
+					opacity: 0.7;
+				}
+			}
+		}
 	}
 }
 
@@ -764,6 +797,10 @@
 			line-height: 140%;
 			text-transform: uppercase;
 			color: #000000;
+			transition: all 0.3s ease;
+			&:hover {
+				color: #444444;
+			}
 		}
 	}
 }

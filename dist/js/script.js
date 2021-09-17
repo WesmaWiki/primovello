@@ -3,7 +3,7 @@ document.addEventListener(
 	function () {
 		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
-		if (arrSlidersProducts != null) {
+		if (arrSlidersProducts.length > 0) {
 			arrSlidersProducts.forEach((element) => {
 				let sldier = element.querySelector(".product-slider__container");
 				new Swiper(sldier, {
@@ -156,7 +156,7 @@ document.addEventListener(
 			elBurger.addEventListener("click", openMobileMenu);
 		}
 
-		if (elCloseMobileMenu != null) {
+		if (elCloseMobileMenu.length > 0) {
 			elCloseMobileMenu.forEach((element) => {
 				element.addEventListener("click", closeMobileMenu);
 			});
@@ -164,13 +164,13 @@ document.addEventListener(
 
 		function activeMobileMenu() {
 			if (match[1].matches) {
-				if (arrElMenu != null) {
+				if (arrElMenu.length > 0) {
 					arrElMenu.forEach((element) => {
 						element.removeEventListener("mouseenter", showHoverMenu);
 					});
 				}
 
-				if (arrElMenu != null) {
+				if (arrElMenu.length > 0) {
 					arrElMenu.forEach((element) => {
 						element.addEventListener("click", showHoverMenu);
 					});
@@ -185,13 +185,13 @@ document.addEventListener(
 				arrElMenu[0].classList.add("active");
 				arrElSubMenu[0].classList.add("active");
 			} else {
-				if (arrElMenu != null) {
+				if (arrElMenu.length > 0) {
 					arrElMenu.forEach((element) => {
 						element.addEventListener("mouseenter", showHoverMenu);
 					});
 				}
 
-				if (arrElMenu != null) {
+				if (arrElMenu.length > 0) {
 					arrElMenu.forEach((element) => {
 						element.removeEventListener("click", showHoverMenu);
 					});
@@ -256,9 +256,9 @@ document.addEventListener(
 
 		// Переключение главных изображений
 		let timerIamge;
-		let mainScreenIamge = document.querySelectorAll(".main-screen__bg");
+		let mainScreenIamge = Array.prototype.slice.call(document.querySelectorAll(".main-screen__bg"));
 
-		if (mainScreenIamge != null) {
+		if (mainScreenIamge.length > 0) {
 			function mainScreenMoveImage() {
 				if (match[0].matches) {
 					mainScreenIamge[1].style.opacity = 1;
@@ -276,10 +276,10 @@ document.addEventListener(
 					});
 				}
 			}
-		}
 
-		mainScreenMoveImage();
-		match[0].addListener(mainScreenMoveImage);
+			mainScreenMoveImage();
+			match[0].addListener(mainScreenMoveImage);
+		}
 
 		// Фиксирование шапки при прокрутке
 		let header = document.querySelector(".header");
@@ -296,7 +296,7 @@ document.addEventListener(
 
 		let tabContainers = Array.prototype.slice.call(document.querySelectorAll(".js-tab-container"));
 
-		if (tabContainers != null) {
+		if (tabContainers.length > 0) {
 			tabContainers.forEach((element) => {
 				let tabItem = Array.prototype.slice.call(element.querySelectorAll(".js-tab-control"));
 				let tabContent = Array.prototype.slice.call(element.querySelectorAll(".js-tab-content"));
@@ -334,7 +334,7 @@ document.addEventListener(
 
 		let arrImagesHover = Array.prototype.slice.call(document.querySelectorAll(".js-hover-image"));
 
-		if (arrImagesHover != null) {
+		if (arrImagesHover.length > 0) {
 			arrImagesHover.forEach((element) => {
 				let firstImage = element.querySelector(".js-first-image");
 				let secondImage = element.querySelector(".js-second-image");
@@ -383,7 +383,7 @@ document.addEventListener(
 
 		let arrFilter = Array.prototype.slice.call(document.querySelectorAll(".js-filter"));
 
-		if (arrFilter != null) {
+		if (arrFilter.length > 0) {
 			arrFilter.forEach((element, index, array) => {
 				let buttonFilter = element.querySelector(".js-filter-click");
 
@@ -407,7 +407,7 @@ document.addEventListener(
 
 		let arrRangeSliders = Array.prototype.slice.call(document.querySelectorAll(".js-slider-range"));
 
-		if (arrRangeSliders != null) {
+		if (arrRangeSliders.length > 0) {
 			arrRangeSliders.forEach((element) => {
 				let rangeSlider = element.querySelector(".filter-range__slider");
 				let inputSliderOne = element.querySelector(".filter-range__input.--one");
@@ -449,7 +449,7 @@ document.addEventListener(
 		let buttonViewAllRev = document.querySelector(".product-reviews__button-all");
 		let arrReviewsItem = Array.prototype.slice.call(document.querySelectorAll(".product-reviews__item"));
 
-		if (arrReviewsItem != null && arrReviewsItem.length > 0) {
+		if (arrReviewsItem.length > 0 && arrReviewsItem.length > 0) {
 			if (arrReviewsItem.length < 6) {
 				buttonViewAllRev.classList.add("button-hidden");
 			} else {

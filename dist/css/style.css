@@ -281,7 +281,7 @@ h3 {
     visibility: visible; }
 
 .breadcrumbs {
-  padding: 0px 0 30px 0; }
+  padding: 0px 0 25px 0; }
   .breadcrumbs__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -654,6 +654,12 @@ h3 {
 .cart-main:hover svg path {
   stroke: #c41616; }
 
+@media (min-width: 1170px) {
+  .header__wrap {
+    position: relative;
+    background: #fff;
+    z-index: 15; } }
+
 @media (max-width: 1170px) {
   .header__wrap {
     padding: 15px 0; }
@@ -790,9 +796,9 @@ h3 {
 .menu-header {
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translate(0, 100px);
-      -ms-transform: translate(0, 100px);
-          transform: translate(0, 100px);
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -876,7 +882,12 @@ h3 {
   line-height: 140%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #000000; }
+  color: #000000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .menu-sub-nav__title:hover {
+    color: #444444; }
   .menu-sub-nav__title.--sale {
     color: #c41616; }
 
@@ -889,7 +900,12 @@ h3 {
 .menu-sub-nav__item a {
   font-size: 13px;
   line-height: 140%;
-  color: #444444; }
+  color: #444444;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .menu-sub-nav__item a:hover {
+    color: #000000; }
 
 .card-sub-nav__image {
   width: 100%;
@@ -918,7 +934,12 @@ h3 {
 .card-sub-nav__link {
   font-size: 12px;
   line-height: 140%;
-  color: #666666; }
+  color: #666666;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .card-sub-nav__link:hover {
+    color: #000; }
 
 .sub-nav-card-category {
   position: relative; }
@@ -940,7 +961,10 @@ h3 {
       height: 100%;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.35)));
       background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%); }
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
   .sub-nav-card-category__name {
     position: absolute;
     display: -webkit-box;
@@ -961,6 +985,8 @@ h3 {
     line-height: 140%;
     text-transform: uppercase;
     color: #ffffff; }
+  .sub-nav-card-category:hover .sub-nav-card-category__image::before {
+    opacity: 0.7; }
 
 .sub-menu-popular {
   position: relative;
@@ -1001,7 +1027,12 @@ h3 {
     font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
-    color: #000000; }
+    color: #000000;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .sub-menu-popular__item a:hover {
+      color: #444444; }
 
 @media (max-width: 1170px) {
   .menu-header {
@@ -1139,7 +1170,9 @@ h3 {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
     .main-nav__item.active::before {
-      opacity: 1; } }
+      opacity: 1; }
+  .header.fixed .main-nav__item::before {
+    bottom: -21px; } }
 
 @media (max-width: 1170px) {
   .menu-header .main-nav {
@@ -2337,11 +2370,11 @@ h3 {
   padding-bottom: 30px; }
 
 .page-catalog__title {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   text-align: center; }
 
 .page-catalog__breadcrumbs {
-  padding-top: 40px; }
+  padding-top: 30px; }
   .page-catalog__breadcrumbs .breadcrumbs__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2359,7 +2392,7 @@ h3 {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -20px 20px -20px; }
+    margin: 0 -20px 5px -20px; }
   .category-catalog__item {
     margin: 0 20px 20px 20px; }
     .category-catalog__item a {

@@ -54,6 +54,18 @@
 			}
 		}
 	}
+
+	.header {
+		&.fixed {
+			& .main-nav {
+				&__item {
+					&::before {
+						bottom: -21px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1170px) {
