@@ -770,7 +770,7 @@
 
 @media (max-width: 1170px) {
 	.menu-header {
-		padding: 30px 25px 30px 0;
+		padding: 30px 0 30px 0;
 		opacity: 0;
 		visibility: hidden;
 		left: -100%;
@@ -780,7 +780,6 @@
 		top: 0;
 		max-width: 400px;
 		height: 100vh;
-		overflow: auto;
 
 		&.show {
 			left: 0;
@@ -796,6 +795,9 @@
 	}
 
 	.sub-nav {
+		height: calc(100vh - 100px);
+		overflow: auto;
+		padding-right: 25px;
 		&__row {
 			padding: 0;
 		}
@@ -877,6 +879,7 @@
 		margin-top: 30px;
 		flex-direction: column;
 		align-items: flex-start;
+		padding: 0;
 		&__list {
 			flex-direction: column;
 			align-items: flex-start;
@@ -884,14 +887,18 @@
 
 		&__name {
 			margin-right: 0;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 
 		&__item {
 			&:not(:last-child) {
 				margin-right: 0px;
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 			}
+		}
+
+		&::before {
+			content: none;
 		}
 	}
 }
