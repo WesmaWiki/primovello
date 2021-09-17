@@ -1027,10 +1027,10 @@ h3 {
     .menu-header__close {
       display: block; }
   .sub-nav {
-    height: calc(100vh);
+    height: calc(100vh - 50px);
     overflow: auto;
     padding-right: 25px;
-    padding-bottom: 80px; }
+    padding-bottom: 50px; }
     .sub-nav__row {
       padding: 0; }
     .sub-nav__item.--her .sub-nav__row, .sub-nav__item.--him .sub-nav__row {

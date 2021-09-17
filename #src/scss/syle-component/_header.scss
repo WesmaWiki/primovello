@@ -795,10 +795,10 @@
 	}
 
 	.sub-nav {
-		height: calc(100vh);
+		height: calc(100vh - 50px);
 		overflow: auto;
 		padding-right: 25px;
-		padding-bottom: 80px;
+		padding-bottom: 50px;
 		&__row {
 			padding: 0;
 		}
