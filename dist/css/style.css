@@ -2869,7 +2869,7 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%; }
+    min-height: 100%; }
     .moblie-panel-modal .filter-form__form {
       display: -webkit-box;
       display: -ms-flexbox;
