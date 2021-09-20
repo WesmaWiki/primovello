@@ -108,6 +108,12 @@ h3 {
 		border-color: rgba(0, 0, 0, 0.1);
 		background: #fff;
 	}
+
+	&.--transparent {
+		color: #666666;
+		background: transparent;
+		text-transform: lowercase;
+	}
 }
 
 .slider-button-prev,
@@ -245,6 +251,12 @@ h3 {
 	}
 }
 
+@media (max-width: 1170px) {
+	.breadcrumbs {
+		padding: 0px 0 10px 0;
+	}
+}
+
 .pagination {
 	padding: 20px 0;
 	display: flex;
@@ -332,6 +344,30 @@ h3 {
 					border-color: #ecedef;
 					background: #ecedef;
 					color: #000;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.pagination {
+		&__item {
+			&.--next {
+				& a {
+					font-size: 0;
+					& svg {
+						margin-left: 0;
+					}
+				}
+			}
+
+			&.--prev {
+				& a {
+					font-size: 0;
+					& svg {
+						margin-right: 0;
+					}
 				}
 			}
 		}
