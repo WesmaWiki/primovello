@@ -590,32 +590,32 @@ document.addEventListener(
 
 		if (listCategory != null) {
 			categoryMobilePanel.querySelector(".moblie-panel-modal__wrap").append(listCategory.cloneNode(true));
-		}
 
-		function catalogMobilePanel() {
-			if (match[0].matches) {
-				if (listCategory.querySelectorAll(".category-catalog__item").length > 5) {
-					listCategory.querySelectorAll(".category-catalog__item").forEach((element, index, array) => {
-						if (index > 4) {
-							element.classList.add("--hidden");
-						}
-					});
+			function catalogMobilePanel() {
+				if (match[0].matches) {
+					if (listCategory.querySelectorAll(".category-catalog__item").length > 5) {
+						listCategory.querySelectorAll(".category-catalog__item").forEach((element, index, array) => {
+							if (index > 4) {
+								element.classList.add("--hidden");
+							}
+						});
 
-					listCategory.querySelector(".category-catalog__item-all").classList.add("show");
-				}
-			} else {
-				if (listCategory.querySelectorAll(".category-catalog__item").length > 5) {
-					listCategory.querySelectorAll(".category-catalog__item").forEach((element, index, array) => {
-						element.classList.remove("--hidden");
-					});
+						listCategory.querySelector(".category-catalog__item-all").classList.add("show");
+					}
+				} else {
+					if (listCategory.querySelectorAll(".category-catalog__item").length > 5) {
+						listCategory.querySelectorAll(".category-catalog__item").forEach((element, index, array) => {
+							element.classList.remove("--hidden");
+						});
 
-					listCategory.querySelector(".category-catalog__item-all").classList.remove("show");
+						listCategory.querySelector(".category-catalog__item-all").classList.remove("show");
+					}
 				}
 			}
-		}
 
-		catalogMobilePanel();
-		match[0].addListener(catalogMobilePanel);
+			catalogMobilePanel();
+			match[0].addListener(catalogMobilePanel);
+		}
 
 		let arrMobilePanel = Array.prototype.slice.call(document.querySelectorAll(".moblie-panel-modal"));
 		let arrButtonOpenPanel = Array.prototype.slice.call(document.querySelectorAll(".js-open-mobile-panel"));
