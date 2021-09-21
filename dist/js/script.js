@@ -48,16 +48,12 @@ document.addEventListener(
 			freeMode: true,
 			watchOverflow: true,
 			spaceBetween: 10,
+			observer: true,
+			observeParents: true,
 
 			navigation: {
 				nextEl: ".catalog__next",
 				prevEl: ".catalog__prev",
-			},
-
-			scrollbar: {
-				el: ".slider-catalog__scrollbar",
-				dragSize: 185,
-				snapOnRelease: true,
 			},
 
 			breakpoints: {
@@ -66,7 +62,35 @@ document.addEventListener(
 					spaceBetween: 20,
 				},
 			},
+
+			scrollbar: {
+				el: ".slider-catalog__scrollbar",
+				dragSize: 185,
+				snapOnRelease: true,
+			},
+
+			// on: {
+			// 	afterInit: function (swiper) {
+			// 		console.log(swiper);
+			// 		swiper.scrollbar.dragSize = swiper.slides[0].clientWidth;
+			// 		swiper.scrollbar.updateSize();
+			// 		// swiper.destroy(true, true);
+			// 	},
+			// },
 		});
+
+		// sliderCatalog.on("resize", function () {
+		// 	this.scrollbar.dragSize = this.slides[0].clientWidth;
+		// 	this.scrollbar.setTranslate();
+		// });
+
+		// sliderCatalog.on("setTranslate", function () {
+		// 	this.scrollbar.dragSize = this.slides[0].clientWidth;
+		// 	this.scrollbar.setTranslate();
+		// });
+		// setTimeout(() => {
+		// 	sliderCatalog.translateTo(1, 300, false, false);
+		// }, 0);
 
 		let sliderBrand = new Swiper(".slider-brand", {
 			slidesPerView: 1,

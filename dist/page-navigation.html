@@ -40,7 +40,35 @@
                 </a>
               </div>
 
-              @@include("_main-menu.html")
+              <nav class="main-nav">
+    <ul class="main-nav__list">
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="her">
+            <a href="#" class="main-nav__link">Для нее</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="him">
+            <a href="#" class="main-nav__link">Для него</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="sale">
+            <a href="#" class="main-nav__link current --sale">Sale</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="factory">
+            <a href="#" class="main-nav__link">Фабрика</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="buyers">
+            <a href="#" class="main-nav__link">Покупателям</a>
+        </li>
+
+        <li class="main-nav__item --lk">
+            <a href="#" class="main-nav__link">Личный кабинет</a>
+        </li>
+
+    </ul>
+</nav>
             </div>
 
             <div class="header__column">
@@ -430,3 +458,169 @@
     </header>
 
     <!-- // HEADER -->
+
+<main class="main">
+    <section class="page-navigation">
+        <div class="container">
+            <div class="page-navigation__row">
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2"><span>Страницы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="./index.html" class="page-navigation__item">Главная</a>
+                        <a href="./page-catalog.html" class="page-navigation__item">Каталог</a>
+                        <a href="./page-card-product.html" class="page-navigation__item">Кроточка</a>
+                        <a href="./page-card-product-add-more.html" class="page-navigation__item">Кроточка добавить
+                            еще</a>
+                    </div>
+                </div>
+
+                <div class="page-navigation__column"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .page-navigation {
+        padding: 100px 0
+    }
+
+    .page-navigation__title {
+        margin-bottom: 40px;
+    }
+
+    .page-navigation__list {
+        display: grid;
+        gap: 40px;
+    }
+
+    .page-navigation__item {
+        font-size: 36px;
+        line-height: 180%;
+        color: #AA1D26;
+    }
+</style>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrap">
+      <div class="footer__row">
+        <div class="footer__column">
+          <div class="footer__logo logo"><img src="./img/logo.svg" alt=""></div>
+          <div class="footer__sign">Меховая фабрика по производству мужской и женской одежды</div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
+
+          <div class="footer__payments payments-footer">
+
+            <div class="payments-footer__list">
+              <div class="payments-footer__item"><img src="./img/icon-mastercard.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-visa.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-mir.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-app-pay.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-google-pay.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__menu-group">
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">Покупателям</div>
+
+              <ul class="menu-footer__list --two-column">
+                <li class="menu-footer__item"><a href="#">Обмен и возврат</a></li>
+
+                <li class="menu-footer__item"><a href="#">Гарантии</a></li>
+
+                <li class="menu-footer__item current"><a href="#">Доставка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Кожа и обработка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Индивидуальный пошив</a></li>
+
+                <li class="menu-footer__item"><a href="#">Экологичность</a></li>
+
+                <li class="menu-footer__item"><a href="#">Оплата и рассрочка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Частые вопросы</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по размерам</a></li>
+
+                <li class="menu-footer__item"><a href="#">Оферта</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по уходу</a></li>
+
+              </ul>
+            </div>
+
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">о primo vello</div>
+
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item"><a href="#">Магазин</a></li>
+                <li class="menu-footer__item"><a href="#">Контакты</a></li>
+                <li class="menu-footer__item"><a href="#">О фабрике</a></li>
+                <li class="menu-footer__item"><a href="#">Оптовикам</a></li>
+                <li class="menu-footer__item"><a href="#">История</a></li>
+                <li class="menu-footer__item"><a href="#">Вакансии</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__menu menu-footer">
+              <div class="menu-footer__name">контакты</div>
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item">Москва, Дмитровское шоссе, 79 с1</li>
+                <li class="menu-footer__item"><a href="tel:+74956457699">+7 (495) 645-76-99</a></li>
+                <li class="menu-footer__item"><a href="tel:+74956457693">+7 (495) 645-76-93</a></li>
+                <li class="menu-footer__item"><a href="mailto:info@pimovello.ru">info@pimovello.ru</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__rating rating-footer">
+            <a href="#" class="rating-footer__item"><img src="./img/icon-rating-google.png" alt=""></a>
+            <a href="#" class="rating-footer__item"><img src="./img/icon-rating-yandex.png" alt=""></a>
+          </div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<div class="scroller">
+  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M4.69064 0.784457C4.77269 0.70241 4.88397 0.656316 5 0.656316C5.11603 0.656316 5.22731 0.70241 5.30936 0.784457L9.02167 4.49677C9.10372 4.57881 9.14981 4.69009 9.14981 4.80613C9.14981 4.92216 9.10372 5.03344 9.02167 5.11549C8.93962 5.19753 8.82834 5.24363 8.71231 5.24363C8.59628 5.24363 8.485 5.19753 8.40295 5.11549L5.43743 2.14997L5.43805 14.7056C5.43805 14.8218 5.3919 14.9332 5.30975 15.0154C5.2276 15.0975 5.11618 15.1437 5 15.1437C4.88382 15.1437 4.7724 15.0975 4.69025 15.0154C4.6081 14.9332 4.56195 14.8218 4.56195 14.7056L4.56257 2.14997L1.59705 5.11549C1.515 5.19753 1.40372 5.24363 1.28769 5.24363C1.17166 5.24363 1.06038 5.19753 0.97833 5.11549C0.896283 5.03344 0.850189 4.92216 0.850189 4.80613C0.85019 4.6901 0.896283 4.57882 0.97833 4.49677L4.69064 0.784457Z"
+      fill="black" />
+  </svg>
+</div>
+
+<div class="overlay-menu close-mobile-menu"></div>
+
+<!-- // FOOTER -->
+
+</div>
+
+<script src="https://yastatic.net/share2/share.js"></script>
+<script src="./js/jquey.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/lightgallery.min.js"></script>
+<script src="./js/lg-zoom.min.js"></script>
+<script src="./js/lg-thumbnail.min.js"></script>
+<script src="./js/nouislider.js"></script>
+<script src="./js/sticksy.min.js"></script>
+<script src="./js/dynamicAdapt.js"></script>
+<script src="./js/script.js"></script>
+</body>
+
+</html>

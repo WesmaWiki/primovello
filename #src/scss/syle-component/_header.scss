@@ -62,8 +62,8 @@
 		display: none;
 		margin-right: 13px;
 		position: relative;
-		width: 18px;
-		height: 14px;
+		width: 21px;
+		height: 15px;
 
 		& span {
 			position: absolute;
@@ -329,10 +329,35 @@
 			display: block;
 		}
 
+		&__login {
+			display: none;
+		}
+
 		&.fixed {
 			& + .main {
 				margin-top: 62px;
 			}
+		}
+	}
+
+	.search-main {
+		& svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	.fav-main {
+		& svg {
+			width: 21px;
+			height: 21px;
+		}
+	}
+
+	.cart-main {
+		& svg {
+			width: 21px;
+			height: 21px;
 		}
 	}
 
@@ -348,15 +373,11 @@
 		}
 
 		&__search {
-			margin-right: 13px;
-		}
-
-		&__login {
-			margin-right: 13px;
+			margin-right: 19px;
 		}
 
 		&__fav {
-			margin-right: 17px;
+			margin-right: 21px;
 		}
 
 		&__cart {
@@ -522,11 +543,23 @@
 	&__sub {
 	}
 
+	&__group {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	&__name {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 120%;
+		color: #000000;
+	}
+
 	&__close {
 		display: none;
-		position: absolute;
-		top: 10px;
-		right: 15px;
+		position: relative;
 		width: 15px;
 		height: 15px;
 		&::before,
@@ -807,7 +840,7 @@
 
 @media (max-width: 1170px) {
 	.menu-header {
-		padding: 30px 0 30px 0;
+		padding: 17px 0 30px 0;
 		opacity: 0;
 		visibility: hidden;
 		left: -100%;
@@ -826,13 +859,17 @@
 			display: flex;
 		}
 
+		&__group {
+			display: flex;
+		}
+
 		&__close {
 			display: block;
 		}
 	}
 
 	.sub-nav {
-		height: calc(100vh - 50px);
+		height: calc(100vh - 100px);
 		overflow: auto;
 		padding-right: 25px;
 		padding-bottom: 50px;

@@ -10,6 +10,16 @@
 		&:last-child {
 			margin-right: 0;
 		}
+
+		&.--lk {
+			display: none;
+			& .main-nav__link {
+				font-size: 12px;
+				line-height: 140%;
+				color: #999999;
+				text-transform: initial;
+			}
+		}
 	}
 
 	&__link {
@@ -92,6 +102,11 @@
 						color: #c41616;
 					}
 				}
+			}
+
+			&.--lk {
+				margin-top: 10px;
+				display: block;
 			}
 		}
 
