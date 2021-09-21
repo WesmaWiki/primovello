@@ -176,8 +176,12 @@
                                 <div class="size-product__lsit">
                                     <div class="size-product__item"><span class="size-product__value">41</span></div>
 
-                                    <div class="size-product__item">
+                                    <div class="size-product__item --out-of-stock">
                                         <span class="size-product__value">42</span>
+                                        <div class="size-product__hint">
+                                            Нет в наличии.
+                                            Выберите размер, и мы сообщим вам, когда он появится в наличии.
+                                        </div>
                                     </div>
 
                                     <div class="size-product__item current"><span class="size-product__value">43</span>
@@ -188,6 +192,14 @@
                                     <div class="size-product__item"><span class="size-product__value">47</span></div>
                                     <div class="size-product__item"><span class="size-product__value">48</span></div>
                                     <div class="size-product__item"><span class="size-product__value">48</span></div>
+
+                                    <div class="size-product__item --out-of-stock">
+                                        <span class="size-product__value">42</span>
+                                        <div class="size-product__hint">
+                                            Нет в наличии.
+                                            Выберите размер, и мы сообщим вам, когда он появится в наличии.
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <a href="#" class="size-product__table-size">
@@ -211,10 +223,22 @@
                             </div>
 
                             <div class="product__group-buy buy-product">
-                                <div class="buy-product__wrap-button">
-                                    <a href="#" class="buy-product__button btn-var-two">добавить еще</a>
-                                    <a href="#" class="buy-product__button btn-var-two --white">купить в 1 клик</a>
-                                </div>
+
+                                <form action="#" class="buy-product__form">
+                                    <div class="buy-product__form-group">
+                                        <div class="buy-product__wrap-input wrap-input">
+                                            <input type="text" placeholder="Введите ваш Email">
+                                        </div>
+
+                                        <button class="buy-product__message btn-var-two">Уведомите меня</button>
+                                    </div>
+
+                                    <div class="buy-product__form-subtext">Пожалуйста, введите свой e-mail, чтобы
+                                        получить уведомление,
+                                        когда товар появится в наличии.
+                                    </div>
+
+                                </form>
 
                                 <div class="buy-product__info">
                                     <div class="buy-product__info-item">

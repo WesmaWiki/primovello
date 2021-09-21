@@ -509,16 +509,14 @@ document.addEventListener(
 			});
 		}
 
-		let stickyElCardInfo;
-		if (document.querySelector(".product__group-sticy") != null) {
-			stickyElCardInfo = new Sticksy(".product__group-sticy", { topSpacing: 90, listen: true }, true);
-		}
+		let Sticky = new hcSticky(".product__group-sticy", {
+			top: 90,
+			followScroll: false,
+		});
 
-		// Position sticky на js
-		let stickyEl;
-		if (document.querySelector(".product-reviews__group-all-rev") != null) {
-			stickyEl = new Sticksy(".product-reviews__group-all-rev", { topSpacing: 140, listen: true }, true);
-		}
+		let Sticky2 = new hcSticky(".product-reviews__group-all-rev", {
+			top: 90,
+		});
 
 		// Раскрытие отзывов
 
@@ -538,7 +536,6 @@ document.addEventListener(
 					el.style.height = "0px";
 					el.classList.add("--hidden");
 				}
-				stickyEl.hardRefresh();
 			});
 		}
 
@@ -566,9 +563,7 @@ document.addEventListener(
 					buttonViewAllRev.textContent = "Скрыть";
 				}
 
-				setTimeout(() => {
-					stickyEl.hardRefresh();
-				}, 300);
+				setTimeout(() => {}, 300);
 			});
 		}
 
@@ -664,8 +659,41 @@ document.addEventListener(
 			});
 		}
 
+		// Отслеживание видео в карточке
+		let productVideo = document.querySelector(".gallery-product__video");
+		let containerVideo = document.querySelector(".gallery-product__item.--video");
+
+		if (productVideo != null) {
+			let intersectionObserver = new IntersectionObserver(function (entries) {
+				if (entries[0].intersectionRatio <= 0) {
+					productVideo.pause();
+					containerVideo ? containerVideo.classList.remove("show") : null;
+				} else {
+					productVideo.play();
+					containerVideo ? containerVideo.classList.add("show") : null;
+				}
+			});
+
+			intersectionObserver.observe(productVideo);
+		}
+
 		const da = new DynamicAdapt("max");
 		da.init();
+
+		// Позиция хинтов нет в наличии при ресайзе
+		let arrElSize = Array.prototype.slice.call(document.querySelectorAll(".size-product__item.--out-of-stock"));
+
+		if (arrElSize.length > 0) {
+			arrElSize.forEach((element, index) => {
+				window.addEventListener("resize", function () {
+					if (element.getBoundingClientRect().right - element.closest(".container").getBoundingClientRect().right > -150) {
+						element.classList.add("--right");
+					} else {
+						element.classList.remove("--right");
+					}
+				});
+			});
+		}
 	},
 	false
 );
