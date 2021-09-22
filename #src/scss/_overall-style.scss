@@ -89,6 +89,10 @@ h3 {
 	background: #ffffff;
 	border: 1px solid transparent;
 	transition: all 0.3s ease;
+	&.errors {
+		background: #ecedef;
+		color: #999999;
+	}
 }
 
 .btn-var-two {
@@ -108,7 +112,7 @@ h3 {
 		border-color: rgba(0, 0, 0, 0.1);
 		background: #fff;
 
-		&:hover {
+		&:not(.errors):hover {
 			color: #ffffff;
 			background: #000000;
 		}
@@ -119,10 +123,15 @@ h3 {
 		background: transparent;
 		text-transform: lowercase;
 	}
-	&:not(.--white):not(.--transparent):hover {
+	&:not(.--white):not(.--transparent):not(.errors):hover {
 		color: #000;
 		border-color: rgba(0, 0, 0, 0.1);
 		background: transparent;
+	}
+
+	&.errors {
+		background: #ecedef;
+		color: #999999;
 	}
 }
 
@@ -182,6 +191,12 @@ h3 {
 		}
 		&:focus,
 		&:active {
+		}
+	}
+
+	&.errors {
+		& input {
+			border-color: #c41616;
 		}
 	}
 }
@@ -401,4 +416,21 @@ h3 {
 		opacity: 1;
 		visibility: visible;
 	}
+}
+
+.form-errors {
+	display: block;
+	margin: 15px 0;
+	font-size: 12px;
+	line-height: 140%;
+	color: #c41616;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }

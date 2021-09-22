@@ -167,13 +167,16 @@ document.addEventListener(
 		function openMobileMenu() {
 			elMenuHeader.classList.toggle("show");
 			elOverlayMenu.classList.toggle("active");
-			document.querySelector("body").classList.toggle("lock");
+			document.querySelector("body").classList.add("lock");
 		}
 
 		function closeMobileMenu() {
 			elMenuHeader.classList.remove("show");
 			elOverlayMenu.classList.remove("active");
-			document.querySelector("body").classList.remove("lock");
+
+			if (!document.querySelector(".search-panel").classList.contains("active")) {
+				document.querySelector("body").classList.remove("lock");
+			}
 		}
 
 		if (elBurger != null) {
@@ -267,14 +270,14 @@ document.addEventListener(
 		if (searchButton != null) {
 			searchButton.addEventListener("click", function () {
 				searchPanel.classList.toggle("active");
-				document.querySelector("body").classList.toggle("lock");
+				document.querySelector("body").classList.add("lock");
 			});
 		}
 
 		if (searchClose != null) {
 			searchClose.addEventListener("click", function () {
 				searchPanel.classList.toggle("active");
-				document.querySelector("body").classList.toggle("lock");
+				document.querySelector("body").classList.remove("lock");
 			});
 		}
 
