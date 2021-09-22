@@ -599,7 +599,7 @@ ul.dots-text {
 @media (max-width: 1170px) {
 	.product {
 		&__wrap {
-			padding: 20px 0;
+			padding: 0px 0;
 		}
 
 		&__row {
@@ -637,6 +637,15 @@ ul.dots-text {
 			&::before {
 				content: none;
 			}
+		}
+
+		&__group-sticy {
+			position: static !important;
+			width: 100% !important;
+		}
+
+		& .sticky-spacer {
+			display: none !important;
 		}
 	}
 
@@ -991,6 +1000,12 @@ ul.dots-text {
 		}
 
 		&__group-all-rev {
+			position: static !important;
+			width: 100% !important;
+		}
+
+		& .sticky-spacer {
+			display: none !important;
 		}
 
 		&__not-rev {
@@ -1046,6 +1061,23 @@ ul.dots-text {
 	.product-reviews {
 		&__button-all {
 			max-width: initial;
+		}
+	}
+}
+
+@media (max-width: 370px) {
+	.product-reviews {
+		&__group-all-rev {
+			padding: 25px;
+		}
+		&__rating {
+			& .rating__reviews {
+				margin-right: 10px;
+			}
+
+			& .rating__text {
+				margin-right: 10px;
+			}
 		}
 	}
 }

@@ -98,7 +98,7 @@ document.addEventListener(
 			spaceBetween: 20,
 		});
 
-		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)")];
+		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)"), window.matchMedia("(max-width: 900px)")];
 
 		let stocks = document.querySelector(".stocks");
 		let headerTopindent = 0;
