@@ -1,0 +1,168 @@
+.basket-product {
+	&__wrap {
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 25px;
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__title {
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 100px;
+	}
+
+	&__column {
+	}
+
+	&__form {
+	}
+}
+
+.form-basket {
+	&__group-button {
+		display: flex;
+		align-items: center;
+	}
+
+	&__check {
+	}
+
+	&__delete {
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #c41616;
+		opacity: 0.5;
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__card {
+	}
+}
+.check-from {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	& input {
+		display: none;
+		&:checked + .check-from__checkmark {
+			background: #000;
+			&::before {
+				opacity: 1;
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+	}
+
+	&__chekmarck {
+		position: relative;
+		margin-right: 10px;
+		width: 15px;
+		height: 15px;
+		background: #ecedef;
+		transition: all 0.3s ease;
+		&::before {
+			opacity: 0;
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			width: 11px;
+			height: 11px;
+			background: url("../img/icon-check.svg") no-repeat;
+			transition: all 0.3s ease 0.1s;
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #666666;
+	}
+}
+
+.card-basket-item {
+	&__image {
+	}
+
+	&__group {
+	}
+
+	&__controls {
+	}
+
+	&__fav {
+	}
+
+	&__delete {
+	}
+
+	&__group-name {
+	}
+
+	&__name {
+	}
+
+	&__article {
+	}
+
+	&__price {
+	}
+
+	&__price-old {
+	}
+
+	&__price-current {
+	}
+
+	&__group-option {
+	}
+
+	&__list-option {
+	}
+
+	&__option {
+	}
+
+	&__option-color {
+	}
+
+	&__option-value {
+	}
+
+	&__change-size {
+	}
+
+	&__quantity {
+	}
+}
+
+.quantity {
+	&__sub {
+	}
+
+	&__input {
+	}
+
+	&__add {
+	}
+}

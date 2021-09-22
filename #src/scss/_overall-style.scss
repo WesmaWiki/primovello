@@ -107,12 +107,22 @@ h3 {
 		color: #000;
 		border-color: rgba(0, 0, 0, 0.1);
 		background: #fff;
+
+		&:hover {
+			color: #ffffff;
+			background: #000000;
+		}
 	}
 
 	&.--transparent {
 		color: #666666;
 		background: transparent;
 		text-transform: lowercase;
+	}
+	&:not(.--white):not(.--transparent):hover {
+		color: #000;
+		border-color: rgba(0, 0, 0, 0.1);
+		background: transparent;
 	}
 }
 

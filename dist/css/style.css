@@ -196,10 +196,17 @@ h3 {
     color: #000;
     border-color: rgba(0, 0, 0, 0.1);
     background: #fff; }
+    .btn-var-two.--white:hover {
+      color: #ffffff;
+      background: #000000; }
   .btn-var-two.--transparent {
     color: #666666;
     background: transparent;
     text-transform: lowercase; }
+  .btn-var-two:not(.--white):not(.--transparent):hover {
+    color: #000;
+    border-color: rgba(0, 0, 0, 0.1);
+    background: transparent; }
 
 .slider-button-prev,
 .slider-button-next {
@@ -3875,6 +3882,89 @@ ul.dots-text {
     margin-right: 10px; }
   .product-reviews__rating .rating__text {
     margin-right: 10px; } }
+
+.basket-product__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px; }
+
+.basket-product__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px; }
+
+.form-basket__group-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.form-basket__delete {
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #c41616;
+  opacity: 0.5; }
+
+.check-from {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .check-from input {
+    display: none; }
+    .check-from input:checked + .check-from__checkmark {
+      background: #000; }
+      .check-from input:checked + .check-from__checkmark::before {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+            -ms-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1); }
+  .check-from__chekmarck {
+    position: relative;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #ecedef;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .check-from__chekmarck::before {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) scale(0);
+          -ms-transform: translate(-50%, -50%) scale(0);
+              transform: translate(-50%, -50%) scale(0);
+      width: 11px;
+      height: 11px;
+      background: url("../img/icon-check.svg") no-repeat;
+      -webkit-transition: all 0.3s ease 0.1s;
+      -o-transition: all 0.3s ease 0.1s;
+      transition: all 0.3s ease 0.1s; }
+  .check-from__text {
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #666666; }
 
 .footer__wrap {
   padding: 40px 0; }
