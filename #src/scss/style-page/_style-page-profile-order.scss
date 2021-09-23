@@ -48,8 +48,9 @@
 		color: #666666;
 		& span {
 			position: absolute;
-			top: 50%;
-			transform: translate(0, -50%);
+			top: 2px;
+			// top: 50%;
+			// transform: translate(0, -50%);
 			left: 0;
 			width: 10px;
 			height: 10px;

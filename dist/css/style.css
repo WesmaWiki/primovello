@@ -5146,10 +5146,7 @@ ul.dots-text {
     color: #666666; }
     .card-order-profile__status span {
       position: absolute;
-      top: 50%;
-      -webkit-transform: translate(0, -50%);
-          -ms-transform: translate(0, -50%);
-              transform: translate(0, -50%);
+      top: 2px;
       left: 0;
       width: 10px;
       height: 10px;
