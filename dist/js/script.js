@@ -565,8 +565,6 @@ document.addEventListener(
 				} else {
 					buttonViewAllRev.textContent = "Скрыть";
 				}
-
-				setTimeout(() => {}, 300);
 			});
 		}
 
@@ -695,6 +693,105 @@ document.addEventListener(
 						element.classList.remove("--right");
 					}
 				});
+			});
+		}
+
+		// Раскрытие товаров в оформлении заказов
+
+		let buttonViewAllOrderProduct = document.querySelector(".list-product-order__all");
+		let arrOrderProductItem = Array.prototype.slice.call(document.querySelectorAll(".list-product-order__item"));
+		let elShowOrderProduct = document.querySelector(".list-product-order__show");
+		let elWrapOrderProduct = document.querySelector(".list-product-order__wrap");
+
+		function hidenElOrderProduc(length, i) {
+			if (arrOrderProductItem.length > 0 && arrOrderProductItem.length > 0) {
+				arrOrderProductItem.forEach((el, index) => {
+					el.style.height = "initial";
+					el.classList.remove("--hidden");
+					buttonViewAllOrderProduct.classList.remove("view-all");
+					buttonViewAllOrderProduct.textContent = "Показать все";
+				});
+
+				if (arrOrderProductItem.length <= length) {
+					buttonViewAllOrderProduct.classList.add("button-hidden");
+				} else {
+					buttonViewAllOrderProduct.classList.add("view-all");
+				}
+
+				arrOrderProductItem.forEach((el, index) => {
+					if (index > i) {
+						el.style.height = "0px";
+						el.classList.add("--hidden");
+					}
+				});
+			}
+		}
+
+		let countIndexSize = 7;
+
+		function hidenElOrderProductResize() {
+			if (match[0].matches) {
+				countIndexSize = 3;
+				hidenElOrderProduc(4, countIndexSize);
+			} else {
+				countIndexSize = 7;
+				hidenElOrderProduc(8, countIndexSize);
+			}
+		}
+
+		hidenElOrderProductResize();
+		match[0].addListener(hidenElOrderProductResize);
+
+		if (buttonViewAllOrderProduct != null) {
+			buttonViewAllOrderProduct.addEventListener("click", (e) => {
+				e.preventDefault();
+
+				arrOrderProductItem.forEach((el, index) => {
+					if (index > countIndexSize) {
+						if (el.style.height == "0px") {
+							el.classList.remove("--hidden");
+							el.style.height = el.scrollHeight + "px";
+							buttonViewAllOrderProduct.classList.remove("view-all");
+						} else {
+							el.classList.add("--hidden");
+							el.style.height = "0px";
+							buttonViewAllOrderProduct.classList.add("view-all");
+						}
+					}
+				});
+
+				if (buttonViewAllOrderProduct.classList.contains("view-all")) {
+					buttonViewAllOrderProduct.textContent = "Показать все";
+				} else {
+					buttonViewAllOrderProduct.textContent = "Скрыть";
+				}
+			});
+		}
+
+		if (elShowOrderProduct != null) {
+			let timerHeight;
+
+			elShowOrderProduct.addEventListener("click", function () {
+				clearTimeout(timerHeight);
+				this.classList.toggle("active");
+
+				elWrapOrderProduct.style.height = elWrapOrderProduct.scrollHeight + "px";
+
+				setTimeout(() => {
+					if (!elWrapOrderProduct.classList.contains("active")) {
+						elWrapOrderProduct.style.height = elWrapOrderProduct.scrollHeight + "px";
+
+						elWrapOrderProduct.classList.add("active");
+
+						timerHeight = setTimeout(() => {
+							elWrapOrderProduct.style.height = "initial";
+						}, 350);
+					} else {
+						elWrapOrderProduct.style.height = "0";
+
+						elWrapOrderProduct.classList.remove("active");
+					}
+				}, 0);
 			});
 		}
 	},
