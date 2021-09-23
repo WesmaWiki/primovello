@@ -746,11 +746,11 @@ document.addEventListener(
 			buttonViewAllOrderProduct.addEventListener("click", (e) => {
 				e.preventDefault();
 
-				arrOrderProductItem.forEach((el, index) => {
+				arrOrderProductItem.forEach((el, index, array) => {
 					if (index > countIndexSize) {
 						if (el.style.height == "0px") {
 							el.classList.remove("--hidden");
-							el.style.height = el.scrollHeight + "px";
+							el.style.height = array[0].scrollHeight + "px";
 							buttonViewAllOrderProduct.classList.remove("view-all");
 						} else {
 							el.classList.add("--hidden");
