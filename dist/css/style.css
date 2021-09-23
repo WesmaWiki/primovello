@@ -4186,7 +4186,6 @@ ul.dots-text {
     line-height: 140%;
     -webkit-text-decoration-line: line-through;
             text-decoration-line: line-through;
-    text-transform: uppercase;
     color: #999999; }
   .card-basket-item__price-current {
     font-size: 18px;
