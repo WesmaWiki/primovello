@@ -167,6 +167,7 @@ h3 {
 }
 
 .wrap-input {
+	position: relative;
 	width: 100%;
 	&__name {
 		margin-bottom: 15px;
@@ -200,6 +201,17 @@ h3 {
 		}
 		&:focus,
 		&:active {
+		}
+	}
+
+	&__icon-pass {
+		cursor: pointer;
+		position: absolute;
+		right: 22px;
+		bottom: 15px;
+		opacity: 0.5;
+		&.show {
+			opacity: 1;
 		}
 	}
 

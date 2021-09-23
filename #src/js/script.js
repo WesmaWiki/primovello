@@ -794,6 +794,24 @@ document.addEventListener(
 				}, 0);
 			});
 		}
+
+		// Показать скрыть пароль
+		let elViewPass = document.querySelectorAll(".js-show-pass");
+
+		if (elViewPass != null) {
+			elViewPass.forEach((element) => {
+				element.addEventListener("click", (e) => {
+					element.classList.toggle("show");
+					let inputPassword = e.target.parentNode.querySelector("input");
+
+					if (inputPassword.getAttribute("type") == "text") {
+						inputPassword.setAttribute("type", "password");
+					} else {
+						inputPassword.setAttribute("type", "text");
+					}
+				});
+			});
+		}
 	},
 	false
 );
