@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="./css/lg-thumbnail.css">
+  <link rel="stylesheet" href="./css/lg-zoom.css">
+  <link rel="stylesheet" href="./css/nouislider.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="stocks">
+      <div class="stocks__close"></div>
+      <div class="stocks__text">Рапродажа 30% на дубленки осень - зима 2021</div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <div class="container">
+
+        <div class="header__wrap">
+          <div class="header__row">
+            <div class="header__column">
+              <div class="header__burger">
+                <span></span>
+              </div>
+              <div class="header__logo logo">
+                <a href="#">
+                  <img src="./img/logo.svg" alt="">
+                </a>
+              </div>
+
+              <nav class="main-nav">
+    <ul class="main-nav__list">
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="her">
+            <a href="#" class="main-nav__link">Для нее</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="him">
+            <a href="#" class="main-nav__link">Для него</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="sale">
+            <a href="#" class="main-nav__link current --sale">Sale</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="factory">
+            <a href="#" class="main-nav__link">Фабрика</a>
+        </li>
+
+        <li class="main-nav__item hover-item" data-id-sub-menu="buyers">
+            <a href="#" class="main-nav__link">Покупателям</a>
+        </li>
+
+        <li class="main-nav__item --lk">
+            <a href="#" class="main-nav__link">Личный кабинет</a>
+        </li>
+
+    </ul>
+</nav>
+            </div>
+
+            <div class="header__column">
+              <div class="header__lang lang-main">
+                <span class="lang-main__current">ru</span>
+
+                <ul class="lang-main__list">
+                  <li class="lang-main__item current"><a href="#">RU</a></li>
+                  <li class="lang-main__item"><a href="#">ENG</a></li>
+                </ul>
+              </div>
+
+              <div class="header__search search-main">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  <path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="bevel" />
+                </svg>
+                <span class="search-main__sign">Поиск</span>
+              </div>
+
+              <div class="header__login login-main">
+                <a href="#" class="login-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 14.6667L2.52667 12.7467C4.26667 6.41333 11.7333 6.41333 13.4733 12.7467L14 14.6667"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M7.99996 7.98667C9.84091 7.98667 11.3333 6.49428 11.3333 4.65333C11.3333 2.81238 9.84091 1.32 7.99996 1.32C6.15901 1.32 4.66663 2.81238 4.66663 4.65333C4.66663 6.49428 6.15901 7.98667 7.99996 7.98667Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="header__fav fav-main">
+                <a href="#" class="fav-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="fav-main__value">5</span>
+                </a>
+              </div>
+
+              <div class="header__cart cart-main">
+                <a href="#" class="cart-main__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path
+                      d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="cart-main__value">2</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="header__search-panel search-panel">
+        <div class="container">
+          <form action="#" class="search-panel__form">
+            <div class="search-panel__wrap">
+              <button type="submit" class="search-panel__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M8.34241 11.8623C11.2419 11.8623 13.5924 9.5118 13.5924 6.6123C13.5924 3.71281 11.2419 1.3623 8.34241 1.3623C5.44291 1.3623 3.09241 3.71281 3.09241 6.6123C3.09241 9.5118 5.44291 11.8623 8.34241 11.8623Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                  <path d="M4.68246 10.3774L1.02246 14.0374" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="bevel" />
+                </svg>
+              </button>
+              <input type="text" placeholder="Поиск">
+              <div class="search-panel__close"></div>
+            </div>
+          </form>
+
+          <div class="search-panel__result">
+            <div class="search-panel__result-list">
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная куртка с капюшоном</span>
+              </a>
+
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная дубленка с застежками</span>
+              </a>
+              <a href="#" class="search-panel__result-item">
+                <span>Кожаная юбка</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__menu menu-header">
+        <div class="container">
+
+          <div class="menu-header__group">
+            <div class="menu-header__name">Меню</div>
+
+            <div class="menu-header__close close-mobile-menu"></div>
+          </div>
+
+          <div class="menu-header__wrap">
+
+            <nav class="menu-header__sub sub-nav">
+
+              <div class="sub-nav__item --her sub-menu" id="her">
+                <div class="sub-nav__row">
+                  <div class="sub-nav__column">
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">верхняя одежда</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
+                      </ul>
+                    </div>
+
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">Аксессуары</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">одежда</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
+                      </ul>
+                    </div>
+
+
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">Коллекции</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
+                      </ul>
+
+                      <a href="#" class="menu-sub-nav__title">Новинки</a>
+
+                      <a href="#" class="menu-sub-nav__title --sale">Sale</a>
+                    </div>
+
+                  </div>
+
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__card card-sub-nav">
+                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt=""></div>
+                      <div class="card-sub-nav__name">Кожаные пиджаки</div>
+                      <div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков,
+                        для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
+                      <a href="#" class="card-sub-nav__link">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sub-menu__popular sub-menu-popular">
+                  <div class="sub-menu-popular__name">Популярное:</div>
+
+                  <ul class="sub-menu-popular__list">
+                    <li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">топы</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">косухи</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">шубы</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-nav__item --him sub-menu" id="him">
+                <div class="sub-nav__row">
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">верхняя одежда</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">одежда</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">Аксессуары</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <a href="#" class="menu-sub-nav__title">Коллекции</a>
+
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
+                      </ul>
+
+                      <a href="#" class="menu-sub-nav__title">Новинки</a>
+
+                      <a href="#" class="menu-sub-nav__title --sale">Sale</a>
+                    </div>
+
+                  </div>
+
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__card card-sub-nav">
+                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt=""></div>
+                      <div class="card-sub-nav__name">Кожаные пиджаки</div>
+                      <div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков,
+                        для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
+                      <a href="#" class="card-sub-nav__link">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sub-menu__popular sub-menu-popular">
+                  <div class="sub-menu-popular__name">Популярное:</div>
+
+                  <ul class="sub-menu-popular__list">
+                    <li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">топы</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">косухи</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">шубы</a></li>
+                    <li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-nav__item --sale sub-menu" id="sale">
+                <div class="sub-nav__row">
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__card card-sub-nav">
+                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-1.png" alt=""></div>
+                      <div class="card-sub-nav__name">Для женщин</div>
+                      <div class="card-sub-nav__text">Новые коллекции кожаных тренчей со скидкой до 30%</div>
+                      <a href="#" class="card-sub-nav__link">Перейти</a>
+                    </div>
+                  </div>
+
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__card card-sub-nav">
+                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-2.png" alt=""></div>
+                      <div class="card-sub-nav__name">Для мужчин</div>
+                      <div class="card-sub-nav__text">Распродажа кожаных пиджаков, для любой погоды</div>
+                      <a href="#" class="card-sub-nav__link">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub-nav__item --factory sub-menu" id="factory">
+                <div class="sub-nav__row">
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Оптовикам</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Вакансии</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="sub-nav__column">
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-4.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">Магазин</div>
+                    </a>
+
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-5.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">О фабрике</div>
+                    </a>
+
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-6.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">Наша история</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub-nav__item --buyers sub-menu" id="buyers">
+                <div class="sub-nav__row">
+                  <div class="sub-nav__column">
+                    <div class="sub-nav__menu menu-sub-nav">
+                      <ul class="menu-sub-nav__list">
+                        <li class="menu-sub-nav__item"><a href="#">Доставка</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Оплата и рассрочка</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Обмен и возврат</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Гарантии</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Кожа и обработка</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Руководство по уходу</a></li>
+                        <li class="menu-sub-nav__item"><a href="#">Частые вопросы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="sub-nav__column">
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-1.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">Индивидуальный пошив</div>
+                    </a>
+
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-2.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">руководство по размерам</div>
+                    </a>
+
+                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
+                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-3.png"
+                          alt="">
+                      </div>
+                      <div class="sub-nav-card-category__name">Экологичность</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <!-- // HEADER -->
+
+<main class="main">
+    <section class="profile">
+        <div class="container">
+            <div class="profile__wrap">
+                <div class="profile__group row-top">
+                    <div class="row-top__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+                            <li class="breadcrumbs__item"><a href="#">Личный кабинет</a></li>
+                            <li class="breadcrumbs__item"><span>Профиль</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="row-top__title title-h2">Мой профиль</div>
+                </div>
+
+
+                <div class="profile__row">
+                    <div class="profile__column">
+                        <div class="profile__menu menu-profile">
+                            <div class="menu-profile__list">
+                                <a href="#" class="menu-profile__item active">
+                                    <span class="menu-profile__name">Мой профиль</span>
+                                </a>
+
+                                <a href="#" class="menu-profile__item">
+                                    <span class="menu-profile__name">Мои заказы</span>
+                                </a>
+
+                                <a href="#" class="menu-profile__item">
+                                    <span class="menu-profile__name">Программа лояльности</span>
+                                </a>
+
+                                <a href="#" class="menu-profile__item ">
+                                    <span class="menu-profile__name">Избранное</span>
+                                </a>
+
+                                <a href="#" class="menu-profile__item --exit">
+                                    <span class="menu-profile__name">Выйти</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__column">
+                        <div class="profile__personal-data profile-personal-data">
+                            <form action="#" class="profile-personal-data__form">
+                                <div class="profile-personal-data__list">
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Ваше ФИО *</div>
+                                        <input type="text" placeholder="Виктория Иванова">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Дата рождения</div>
+                                        <input type="text" placeholder="11.11.1980">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Телефон*</div>
+                                        <input type="text" placeholder="+7 (000) 000-00-00">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Ваш Email *</div>
+                                        <input type="text" placeholder="info@primovello.ru">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Город*</div>
+                                        <input type="text" placeholder="Москва">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input">
+                                        <div class="wrap-input__name">Улица, дом, квартира*</div>
+                                        <input type="text" placeholder="ул. Яна Райниса д.45">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="profile-personal-data__button btn-var-two">сохранить
+                                    изменения</button>
+
+                            </form>
+
+                            <form action="#" class="profile-personal-data__form">
+                                <div class="profile-personal-data__title title-h4">Изменить пароль</div>
+
+                                <div class="profile-personal-data__list">
+                                    <div class="profile-personal-data__wrap-input wrap-input">
+                                        <div class="wrap-input__name">Новый пароль</div>
+                                        <input type="password" placeholder="14782A">
+                                        <img class="wrap-input__icon-pass js-show-pass" src="./img/icon-show-pass.png"
+                                            alt="">
+                                    </div>
+
+                                    <div class="profile-personal-data__wrap-input wrap-input ">
+                                        <div class="wrap-input__name">Повторите новый пароль</div>
+                                        <input type="password" placeholder="14782A">
+                                        <img class="wrap-input__icon-pass js-show-pass" src="./img/icon-show-pass.png"
+                                            alt="">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="profile-personal-data__button btn-var-two">сохранить
+                                    изменения</button>
+
+
+                                <div class="profile-personal-data__group">
+                                    <div class="profile-personal-data__text">*При обновлении своих данных заполнять
+                                        пароль
+                                        не обязательно. Только если необходимо изменить свой пароль.<br>
+
+                                        Пароль должен быть не менее 10 символов длиной, содержать латинские символы
+                                        верхнего
+                                        регистра (A-Z),<br>
+
+                                        содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9),
+                                        содержать
+                                        знаки пунктуации<br> (,.<>/?;:'"[]{}\|`~!@#$%^&*()-_+=)
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="subscribe__wrap">
+                <div class="subscribe__row">
+                    <div class="subscribe__column">
+                        <div class="subscribe__text">EMAIL-РАССЫЛКА</div>
+                        <form action="#" class="subscribe__form form-subscribe">
+                            <div class="form-subscribe__group">
+                                <div class="form-subscribe__wrap-input wrap-input">
+                                    <input type="text" placeholder="Введите ваш Email">
+                                </div>
+
+                                <button type="submit" class="form-subscribe__button main-btn">подписаться</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="subscribe__column">
+                        <div class="subscribe__text">Мы в соцсетях</div>
+
+                        <ul class="subscribe__list-social social-subscribe">
+                            <li class="social-subscribe__item">
+                                <a href="#" class="social-subscribe__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16"
+                                        fill="#none">
+                                        <path
+                                            d="M12.9156 2.82338L1.83437 7.0965C1.07812 7.40025 1.0825 7.82213 1.69562 8.01025L4.54062 8.89775L11.1231 4.74463C11.4344 4.55525 11.7187 4.65713 11.485 4.86463L6.15187 9.67775H6.15062L6.15187 9.67838L5.95562 12.6109C6.24312 12.6109 6.37 12.479 6.53125 12.3234L7.91312 10.9796L10.7875 13.1028C11.3175 13.3946 11.6981 13.2446 11.83 12.6121L13.7169 3.71963C13.91 2.94525 13.4212 2.59463 12.9156 2.82338Z"
+                                            fill="#64a9dc" />
+                                    </svg>
+                                    <span class="social-subscribe__sign">Telegram</span>
+                                </a>
+                            </li>
+
+                            <li class="social-subscribe__item">
+                                <a href="#" class="social-subscribe__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.8022 4.22477C13.1785 3.59694 12.4364 3.09911 11.6189 2.76013C10.8014 2.42116 9.92475 2.24777 9.03975 2.25002C5.32875 2.25002 2.30775 5.27027 2.30625 8.98277C2.30625 10.1693 2.616 11.3273 3.20475 12.3488L2.25 15.837L5.81925 14.9003C6.80655 15.4377 7.91265 15.7195 9.03675 15.72H9.03975C12.75 15.72 15.771 12.6998 15.7725 8.98727C15.775 8.10263 15.6022 7.22627 15.2641 6.40882C14.9259 5.59137 14.429 4.84905 13.8022 4.22477ZM9.03975 14.5838H9.0375C8.03514 14.5839 7.05122 14.3142 6.189 13.803L5.985 13.6815L3.867 14.2373L4.43175 12.1725L4.299 11.961C3.73859 11.0688 3.44192 10.0364 3.44325 8.98277C3.44475 5.89727 5.955 3.38702 9.042 3.38702C9.77719 3.38539 10.5054 3.52958 11.1845 3.81126C11.8636 4.09294 12.4801 4.5065 12.9982 5.02802C13.5192 5.54705 13.9321 6.16419 14.2132 6.84377C14.4942 7.52335 14.6377 8.25188 14.6355 8.98727C14.634 12.0728 12.1238 14.5838 9.03975 14.5838ZM12.1095 10.392C11.9408 10.3073 11.1143 9.90077 10.9598 9.84452C10.806 9.78827 10.6943 9.76052 10.5817 9.92852C10.4692 10.0965 10.1467 10.4753 10.0485 10.5878C9.95025 10.7003 9.852 10.7138 9.684 10.6298C9.516 10.5458 8.97375 10.368 8.331 9.79502C7.83075 9.34877 7.49325 8.79827 7.395 8.62952C7.29675 8.46077 7.3845 8.37002 7.46925 8.28602C7.545 8.21102 7.63725 8.08952 7.72125 7.99127C7.80525 7.89302 7.833 7.82327 7.88925 7.71077C7.9455 7.59827 7.91775 7.50002 7.875 7.41602C7.833 7.33127 7.49625 6.50327 7.356 6.16652C7.22025 5.84027 7.0815 5.88377 6.978 5.87927C6.87081 5.87489 6.76353 5.87289 6.65625 5.87327C6.57094 5.87545 6.487 5.89522 6.4097 5.93136C6.33239 5.96749 6.26338 6.01921 6.207 6.08327C6.0525 6.25202 5.61825 6.65852 5.61825 7.48652C5.61825 8.31452 6.22125 9.11477 6.30525 9.22727C6.38925 9.33977 7.49175 11.0385 9.17925 11.7675C9.58125 11.9408 9.89475 12.0443 10.1385 12.1223C10.5412 12.2505 10.908 12.2318 11.1982 12.189C11.5215 12.141 12.1935 11.7825 12.3337 11.3895C12.474 10.9965 12.474 10.6598 12.432 10.5893C12.39 10.5188 12.2767 10.476 12.1095 10.392Z"
+                                            fill="#65bc54" />
+                                    </svg>
+                                    <span class="social-subscribe__sign">Whatsapp</span>
+                                </a>
+                            </li>
+
+                            <li class="social-subscribe__item">
+                                <a href="#" class="social-subscribe__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.66563 1.16625C5.39875 1.1325 5.6325 1.125 7.5 1.125C9.3675 1.125 9.60125 1.13312 10.3337 1.16625C11.0662 1.19937 11.5662 1.31625 12.0037 1.48563C12.4619 1.65875 12.8775 1.92937 13.2212 2.27937C13.5712 2.6225 13.8413 3.0375 14.0138 3.49625C14.1838 3.93375 14.3 4.43375 14.3337 5.165C14.3675 5.89937 14.375 6.13312 14.375 8C14.375 9.8675 14.3669 10.1012 14.3337 10.8344C14.3006 11.5656 14.1838 12.0656 14.0138 12.5031C13.8412 12.9619 13.5708 13.3776 13.2212 13.7212C12.8775 14.0712 12.4619 14.3413 12.0037 14.5138C11.5662 14.6838 11.0662 14.8 10.335 14.8337C9.60125 14.8675 9.3675 14.875 7.5 14.875C5.6325 14.875 5.39875 14.8669 4.66563 14.8337C3.93438 14.8006 3.43438 14.6838 2.99688 14.5138C2.53808 14.3412 2.12239 14.0708 1.77875 13.7212C1.42899 13.3779 1.15832 12.9624 0.985625 12.5037C0.81625 12.0662 0.7 11.5662 0.66625 10.835C0.6325 10.1006 0.625 9.86687 0.625 8C0.625 6.1325 0.633125 5.89875 0.66625 5.16625C0.699375 4.43375 0.81625 3.93375 0.985625 3.49625C1.15858 3.03755 1.42945 2.62207 1.77937 2.27875C2.12253 1.92906 2.5378 1.6584 2.99625 1.48563C3.43375 1.31625 3.93375 1.2 4.665 1.16625H4.66563ZM10.2781 2.40375C9.55312 2.37063 9.33562 2.36375 7.5 2.36375C5.66437 2.36375 5.44688 2.37063 4.72187 2.40375C4.05125 2.43438 3.6875 2.54625 3.445 2.64062C3.12438 2.76562 2.895 2.91375 2.65438 3.15438C2.42628 3.37628 2.25074 3.64643 2.14062 3.945C2.04625 4.1875 1.93438 4.55125 1.90375 5.22187C1.87063 5.94688 1.86375 6.16437 1.86375 8C1.86375 9.83562 1.87063 10.0531 1.90375 10.7781C1.93438 11.4487 2.04625 11.8125 2.14062 12.055C2.25063 12.3531 2.42625 12.6237 2.65438 12.8456C2.87625 13.0738 3.14688 13.2494 3.445 13.3594C3.6875 13.4538 4.05125 13.5656 4.72187 13.5963C5.44688 13.6294 5.66375 13.6362 7.5 13.6362C9.33625 13.6362 9.55312 13.6294 10.2781 13.5963C10.9487 13.5656 11.3125 13.4538 11.555 13.3594C11.8756 13.2344 12.105 13.0863 12.3456 12.8456C12.5738 12.6237 12.7494 12.3531 12.8594 12.055C12.9538 11.8125 13.0656 11.4487 13.0963 10.7781C13.1294 10.0531 13.1362 9.83562 13.1362 8C13.1362 6.16437 13.1294 5.94688 13.0963 5.22187C13.0656 4.55125 12.9538 4.1875 12.8594 3.945C12.7344 3.62438 12.5863 3.395 12.3456 3.15438C12.1237 2.92629 11.8536 2.75076 11.555 2.64062C11.3125 2.54625 10.9487 2.43438 10.2781 2.40375ZM6.62188 10.1194C7.11229 10.3235 7.65836 10.3511 8.16683 10.1973C8.6753 10.0436 9.11462 9.71807 9.40976 9.2764C9.70489 8.83473 9.83753 8.30429 9.78503 7.77569C9.73252 7.24709 9.49813 6.75311 9.12187 6.37812C8.88202 6.13842 8.59201 5.95488 8.27271 5.84072C7.95341 5.72655 7.61277 5.6846 7.27531 5.71789C6.93785 5.75117 6.61197 5.85886 6.32113 6.03321C6.03028 6.20755 5.78171 6.44422 5.59331 6.72616C5.40491 7.0081 5.28137 7.32831 5.23157 7.66373C5.18178 7.99915 5.20697 8.34143 5.30534 8.66595C5.40371 8.99046 5.5728 9.28913 5.80045 9.54045C6.0281 9.79177 6.30864 9.98949 6.62188 10.1194ZM5.00125 5.50125C5.32939 5.17311 5.71895 4.91281 6.14769 4.73523C6.57642 4.55764 7.03594 4.46623 7.5 4.46623C7.96406 4.46623 8.42358 4.55764 8.85231 4.73523C9.28105 4.91281 9.67061 5.17311 9.99875 5.50125C10.3269 5.82939 10.5872 6.21895 10.7648 6.64769C10.9424 7.07642 11.0338 7.53594 11.0338 8C11.0338 8.46406 10.9424 8.92358 10.7648 9.35231C10.5872 9.78105 10.3269 10.1706 9.99875 10.4987C9.33604 11.1615 8.43721 11.5338 7.5 11.5338C6.56279 11.5338 5.66396 11.1615 5.00125 10.4987C4.33854 9.83604 3.96623 8.93721 3.96623 8C3.96623 7.06279 4.33854 6.16396 5.00125 5.50125ZM11.8175 4.9925C11.8988 4.91579 11.9639 4.82355 12.0089 4.72123C12.054 4.61892 12.078 4.50861 12.0796 4.39683C12.0813 4.28506 12.0605 4.17409 12.0184 4.07051C11.9764 3.96692 11.914 3.87282 11.835 3.79377C11.7559 3.71473 11.6618 3.65235 11.5582 3.61032C11.4547 3.5683 11.3437 3.54748 11.2319 3.54911C11.1201 3.55074 11.0098 3.57478 10.9075 3.61981C10.8052 3.66484 10.713 3.72993 10.6362 3.81125C10.4871 3.96939 10.4054 4.17945 10.4086 4.39683C10.4117 4.61421 10.4995 4.8218 10.6532 4.97553C10.807 5.12925 11.0145 5.21702 11.2319 5.22019C11.4493 5.22336 11.6594 5.14168 11.8175 4.9925Z"
+                                            fill="#f56040" />
+                                    </svg>
+                                    <span class="social-subscribe__sign">Instagram</span>
+                                </a>
+                            </li>
+
+                            <li class="social-subscribe__item">
+                                <a href="#" class="social-subscribe__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <path
+                                            d="M10.0478 15.7479V9.60088H12.1215L12.4298 7.19413H10.0478V5.66113C10.0478 4.96663 10.2413 4.49113 11.238 4.49113H12.501V2.34538C11.8865 2.27952 11.2688 2.24772 10.6508 2.25013C8.81777 2.25013 7.55927 3.36913 7.55927 5.42338V7.18963H5.49902V9.59638H7.56377V15.7479H10.0478Z"
+                                            fill="#3b5998" />
+                                    </svg>
+                                    <span class="social-subscribe__sign">Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrap">
+      <div class="footer__row">
+        <div class="footer__column">
+          <div class="footer__logo logo"><img src="./img/logo.svg" alt=""></div>
+          <div class="footer__sign">Меховая фабрика по производству мужской и женской одежды</div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
+
+          <div class="footer__payments payments-footer">
+
+            <div class="payments-footer__list">
+              <div class="payments-footer__item"><img src="./img/icon-mastercard.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-visa.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-mir.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-app-pay.png" alt=""></div>
+              <div class="payments-footer__item"><img src="./img/icon-google-pay.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__menu-group">
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">Покупателям</div>
+
+              <ul class="menu-footer__list --two-column">
+                <li class="menu-footer__item"><a href="#">Обмен и возврат</a></li>
+
+                <li class="menu-footer__item"><a href="#">Гарантии</a></li>
+
+                <li class="menu-footer__item current"><a href="#">Доставка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Кожа и обработка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Индивидуальный пошив</a></li>
+
+                <li class="menu-footer__item"><a href="#">Экологичность</a></li>
+
+                <li class="menu-footer__item"><a href="#">Оплата и рассрочка</a></li>
+
+                <li class="menu-footer__item"><a href="#">Частые вопросы</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по размерам</a></li>
+
+                <li class="menu-footer__item"><a href="#">Оферта</a></li>
+
+                <li class="menu-footer__item"><a href="#">Руководство по уходу</a></li>
+
+              </ul>
+            </div>
+
+            <div class="footer__menu menu-footer toggle-menu">
+              <div class="menu-footer__name">о primo vello</div>
+
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item"><a href="#">Магазин</a></li>
+                <li class="menu-footer__item"><a href="#">Контакты</a></li>
+                <li class="menu-footer__item"><a href="#">О фабрике</a></li>
+                <li class="menu-footer__item"><a href="#">Оптовикам</a></li>
+                <li class="menu-footer__item"><a href="#">История</a></li>
+                <li class="menu-footer__item"><a href="#">Вакансии</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__menu menu-footer">
+              <div class="menu-footer__name">контакты</div>
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item">Москва, Дмитровское шоссе, 79 с1</li>
+                <li class="menu-footer__item"><a href="tel:+74956457699">+7 (495) 645-76-99</a></li>
+                <li class="menu-footer__item"><a href="tel:+74956457693">+7 (495) 645-76-93</a></li>
+                <li class="menu-footer__item"><a href="mailto:info@pimovello.ru">info@pimovello.ru</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="footer__rating rating-footer">
+            <a href="#" class="rating-footer__item"><img src="./img/icon-rating-google.png" alt=""></a>
+            <a href="#" class="rating-footer__item"><img src="./img/icon-rating-yandex.png" alt=""></a>
+          </div>
+
+          <div class="footer__policy-text">© «Primo Vello», 2021.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<div class="scroller">
+  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M4.69064 0.784457C4.77269 0.70241 4.88397 0.656316 5 0.656316C5.11603 0.656316 5.22731 0.70241 5.30936 0.784457L9.02167 4.49677C9.10372 4.57881 9.14981 4.69009 9.14981 4.80613C9.14981 4.92216 9.10372 5.03344 9.02167 5.11549C8.93962 5.19753 8.82834 5.24363 8.71231 5.24363C8.59628 5.24363 8.485 5.19753 8.40295 5.11549L5.43743 2.14997L5.43805 14.7056C5.43805 14.8218 5.3919 14.9332 5.30975 15.0154C5.2276 15.0975 5.11618 15.1437 5 15.1437C4.88382 15.1437 4.7724 15.0975 4.69025 15.0154C4.6081 14.9332 4.56195 14.8218 4.56195 14.7056L4.56257 2.14997L1.59705 5.11549C1.515 5.19753 1.40372 5.24363 1.28769 5.24363C1.17166 5.24363 1.06038 5.19753 0.97833 5.11549C0.896283 5.03344 0.850189 4.92216 0.850189 4.80613C0.85019 4.6901 0.896283 4.57882 0.97833 4.49677L4.69064 0.784457Z"
+      fill="black" />
+  </svg>
+</div>
+
+<div class="overlay-menu close-mobile-menu"></div>
+
+<!-- // FOOTER -->
+
+</div>
+
+<script src="https://yastatic.net/share2/share.js"></script>
+<script src="./js/jquey.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/lightgallery.min.js"></script>
+<script src="./js/lg-zoom.min.js"></script>
+<script src="./js/lg-thumbnail.min.js"></script>
+<script src="./js/nouislider.js"></script>
+<script src="./js/dynamicAdapt.js"></script>
+<script src="./js/hc-sticky.js"></script>
+<script src="./js/script.js"></script>
+</body>
+
+</html>

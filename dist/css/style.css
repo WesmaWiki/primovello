@@ -4487,6 +4487,11 @@ ul.dots-text {
     font-size: 10px; }
   .card-basket-item__price-current {
     font-size: 14px; }
+  .card-basket-item__price-discount {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 140%;
+    color: #c41616; }
   .card-basket-item__fav {
     margin-right: 10px; }
     .card-basket-item__fav svg {
@@ -5123,7 +5128,7 @@ ul.dots-text {
             align-items: center; }
   .card-order-profile__number {
     margin-right: 67px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 140%;
     text-transform: uppercase;
     color: #000000;
@@ -5333,6 +5338,22 @@ ul.dots-text {
     margin-right: 0; }
   .card-order-profile__info {
     gap: 10px; } }
+
+.order-profile-current__item .card-basket-item__image {
+  max-width: 100px;
+  margin-right: 20px; }
+
+.order-profile-current__item .card-basket-item__option:not(:last-child) {
+  margin-bottom: 10px; }
+
+.order-profile-current__item .card-basket-item__group-top {
+  margin-bottom: 20px; }
+
+.order-profile-current__item .card-basket-item__group-bottom {
+  margin-top: 0;
+  margin-bottom: 0; }
+  .order-profile-current__item .card-basket-item__group-bottom .card-basket-item__price {
+    margin-bottom: 0; }
 
 .footer__wrap {
   padding: 40px 0; }

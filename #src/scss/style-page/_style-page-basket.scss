@@ -674,6 +674,13 @@
 			font-size: 14px;
 		}
 
+		&__price-discount {
+			margin-top: 5px;
+			font-size: 12px;
+			line-height: 140%;
+			color: #c41616;
+		}
+
 		&__fav {
 			margin-right: 10px;
 			& svg {
