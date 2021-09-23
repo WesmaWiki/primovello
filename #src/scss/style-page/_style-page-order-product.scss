@@ -118,6 +118,7 @@
 }
 
 .from-radio {
+	cursor: pointer;
 	&__checkmark {
 		position: relative;
 		display: inline-block;
@@ -154,6 +155,7 @@
 
 .order-delivery-choose {
 	&__name {
+		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 10px;

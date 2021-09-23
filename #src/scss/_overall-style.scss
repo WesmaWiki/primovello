@@ -109,7 +109,7 @@ h3 {
 	transition: all 0.3s ease;
 	&.--white {
 		color: #000;
-		border-color: rgba(0, 0, 0, 0.1);
+		border-color: #999999;
 		background: #fff;
 
 		&:not(.errors):hover {
@@ -125,7 +125,7 @@ h3 {
 	}
 	&:not(.--white):not(.--transparent):not(.errors):hover {
 		color: #000;
-		border-color: rgba(0, 0, 0, 0.1);
+		border-color: #999999;
 		background: transparent;
 	}
 
@@ -184,19 +184,19 @@ h3 {
 		line-height: 140%;
 		color: #000000;
 		border-bottom: 1px solid #000;
-		background: #dee0e3;
+		background: #ecedef;
 
 		&::-webkit-input-placeholder {
-			opacity: 0.35;
+			color: #999999;
 		}
 		&::-moz-placeholder {
-			opacity: 0.35;
+			color: #999999;
 		}
 		&:-moz-placeholder {
-			opacity: 0.35;
+			color: #999999;
 		}
 		&:-ms-input-placeholder {
-			opacity: 0.35;
+			color: #999999;
 		}
 		&:focus,
 		&:active {
