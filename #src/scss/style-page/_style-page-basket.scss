@@ -20,7 +20,7 @@
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 		display: grid;
 		grid-template-columns: 1fr 0.561fr;
-		gap: 150px;
+		gap: 50px;
 	}
 
 	&__column {
@@ -63,7 +63,7 @@
 	}
 
 	&__check {
-		margin-right: 30px;
+		margin-right: 10px;
 	}
 
 	&__delete {
@@ -319,22 +319,6 @@
 	}
 
 	&__quantity {
-	}
-}
-
-@media (min-width: 1170px) {
-	.card-basket-item {
-		&__controls {
-			opacity: 0;
-			visibility: hidden;
-			transition: all 0.3s ease;
-		}
-		&:hover {
-			& .card-basket-item__controls {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
 	}
 }
 
@@ -606,10 +590,6 @@
 		&__group-button {
 			justify-content: space-between;
 			margin-bottom: 20px;
-		}
-
-		&__check {
-			margin-right: 15px;
 		}
 
 		&__delete {

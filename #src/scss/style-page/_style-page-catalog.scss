@@ -47,7 +47,7 @@
 			font-size: 12px;
 			line-height: 140%;
 			text-transform: uppercase;
-			color: #999999;
+			color: #000000;
 			transition: all 0.3s ease;
 		}
 
@@ -68,7 +68,7 @@
 
 		&:hover {
 			& a {
-				color: #000000;
+				color: #999;
 			}
 			&.--red {
 				& a {

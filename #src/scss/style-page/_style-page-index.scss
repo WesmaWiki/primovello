@@ -365,22 +365,18 @@
 	&__control {
 		cursor: pointer;
 		white-space: nowrap;
-		// margin-right: 35px;
 		font-size: 12px;
 		line-height: 140%;
 		text-transform: uppercase;
-		color: #999999;
+		color: #000000;
 		transition: all 0.3s ease;
-		// &:last-child {
-		// 	margin-right: 0;
-		// }
 
 		&:hover {
-			color: #000000;
+			color: #c41616;
 		}
 
 		&.active {
-			color: #000000;
+			color: #c41616;
 		}
 	}
 
@@ -1453,7 +1449,7 @@
 	&__wrap-input {
 		margin-right: 10px;
 		& input {
-			background: #DEE0E3;
+			background: #dee0e3;
 		}
 	}
 

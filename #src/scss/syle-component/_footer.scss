@@ -118,15 +118,15 @@
 		font-size: 13px;
 		line-height: 140%;
 		& a {
-			color: #444444;
+			color: #000000;
 			transition: all 0.3s ease;
 			&:hover {
-				color: #000;
+				color: #c41616;
 			}
 		}
 		&.current {
 			& a {
-				color: #000;
+				color: #c41616;
 			}
 		}
 	}

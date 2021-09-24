@@ -28,6 +28,7 @@
 	}
 
 	&__number {
+		font-weight: bold;
 		margin-right: 67px;
 		font-size: 14px;
 		line-height: 140%;
@@ -35,7 +36,7 @@
 		color: #000000;
 		transition: all 0.3s ease;
 		&:hover {
-			color: #666666;
+			color: #444444;
 		}
 	}
 
