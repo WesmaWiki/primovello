@@ -55,6 +55,13 @@ h3 {
 	h2 {
 		@include adaptiv-font(36, 24);
 	}
+
+	.row-top {
+		& .title-h2,
+		h2 {
+			@include adaptiv-font(36, 20);
+		}
+	}
 }
 @media (max-width: 375px) {
 	.title-h1,
@@ -65,6 +72,13 @@ h3 {
 	.title-h2,
 	h2 {
 		font-size: 24px;
+	}
+
+	.row-top {
+		& .title-h2,
+		h2 {
+			font-size: 20px;
+		}
 	}
 }
 

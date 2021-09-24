@@ -206,6 +206,13 @@
 		}
 	}
 
+	&__price-discount {
+		margin-top: 5px;
+		font-size: 12px;
+		line-height: 140%;
+		color: #c41616;
+	}
+
 	&__controls {
 		display: flex;
 		align-items: center;
@@ -675,10 +682,7 @@
 		}
 
 		&__price-discount {
-			margin-top: 5px;
-			font-size: 12px;
-			line-height: 140%;
-			color: #c41616;
+			font-size: 10px;
 		}
 
 		&__fav {

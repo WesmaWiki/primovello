@@ -1452,6 +1452,9 @@
 
 	&__wrap-input {
 		margin-right: 10px;
+		& input {
+			background: #DEE0E3;
+		}
 	}
 
 	&__button {
