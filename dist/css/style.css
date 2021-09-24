@@ -4106,7 +4106,7 @@ ul.dots-text {
     font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
-    color: #666666;
+    color: #444444;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
@@ -4251,13 +4251,13 @@ ul.dots-text {
     font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
-    color: #666666; }
+    color: #444444; }
   .card-basket-item__change-size {
     display: block;
     margin-top: 15px;
     font-size: 12px;
     line-height: 140%;
-    color: #666666; }
+    color: #444444; }
 
 .quantity {
   display: -webkit-box;
@@ -4395,7 +4395,7 @@ ul.dots-text {
   margin-top: 15px;
   font-size: 12px;
   line-height: 140%;
-  color: #666666; }
+  color: #444444; }
 
 .from-basket-result__code-wrap {
   margin: 15px 0;
@@ -5444,7 +5444,7 @@ ul.dots-text {
     padding-left: 15px;
     font-size: 12px;
     line-height: 140%;
-    color: #666666; }
+    color: #444444; }
     .back-profile__button::before {
       content: "";
       position: absolute;
@@ -5506,7 +5506,7 @@ ul.dots-text {
   display: block;
   font-size: 12px;
   line-height: 140%;
-  color: #666666 !important; }
+  color: #444444 !important; }
 
 @media (max-width: 1170px) {
   .order-profile-current__row {
