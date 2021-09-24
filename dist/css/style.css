@@ -5589,6 +5589,10 @@ ul.dots-text {
   .cancel-profile-order__text {
     margin-bottom: 10px; } }
 
+@media (max-width: 500px) {
+  .cancel-profile-order__button {
+    max-width: initial; } }
+
 .footer__wrap {
   padding: 40px 0; }
 
