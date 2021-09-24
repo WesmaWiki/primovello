@@ -4789,6 +4789,19 @@ ul.dots-text {
   line-height: 120%;
   color: #000000; }
 
+.order-result__wrap.--erros {
+  max-width: 420px; }
+  .order-result__wrap.--erros .wrap-input {
+    margin-bottom: 20px; }
+  .order-result__wrap.--erros .order-result__group-button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .order-result__wrap.--erros .order-result__button:first-child {
+    margin-right: 0;
+    margin-bottom: 15px; }
+
 .order-result__group-button {
   display: -webkit-box;
   display: -ms-flexbox;

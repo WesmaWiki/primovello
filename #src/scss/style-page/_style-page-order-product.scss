@@ -323,6 +323,24 @@
 		color: #000000;
 	}
 
+	&__wrap {
+		&.--erros {
+			max-width: 420px;
+			& .wrap-input {
+				margin-bottom: 20px;
+			}
+
+			& .order-result__group-button {
+				flex-direction: column;
+			}
+
+			& .order-result__button:first-child {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
 	&__group-button {
 		display: flex;
 		margin-bottom: 10px;
