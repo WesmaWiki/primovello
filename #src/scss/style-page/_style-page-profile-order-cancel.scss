@@ -1,0 +1,54 @@
+.profile {
+	&__cancel-order {
+	}
+}
+
+.cancel-profile-order {
+	&__group-back {
+		margin-bottom: 35px;
+	}
+
+	&__form {
+	}
+
+	&__name {
+		margin-bottom: 35px;
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #c41616;
+	}
+
+	&__text {
+		margin-bottom: 15px;
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #000000;
+	}
+
+	&__wrap-input {
+	}
+
+	&__button {
+		display: block;
+		margin-top: 25px;
+		max-width: 280px;
+	}
+}
+
+@media (max-width: 768px) {
+	.cancel-profile-order {
+		&__group-back {
+			margin-bottom: 25px;
+		}
+
+		&__name {
+			margin-bottom: 25px;
+		}
+
+		&__text {
+			margin-bottom: 10px;
+		}
+	}
+}

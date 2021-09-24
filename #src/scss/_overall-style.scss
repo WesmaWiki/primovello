@@ -192,7 +192,8 @@ h3 {
 		color: #000000;
 	}
 
-	& input {
+	& input,
+	& textarea {
 		width: 100%;
 		padding: 11px 15px 12px 15px;
 		font-size: 12px;
@@ -216,6 +217,11 @@ h3 {
 		&:focus,
 		&:active {
 		}
+	}
+
+	& textarea {
+		min-height: 120px;
+		resize: none;
 	}
 
 	&__icon-pass {
