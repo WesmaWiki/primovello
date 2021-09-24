@@ -5482,7 +5482,7 @@ ul.dots-text {
   display: block;
   font-size: 12px;
   line-height: 140%;
-  color: #666666; }
+  color: #666666 !important; }
 
 @media (max-width: 1170px) {
   .order-profile-current__row {
