@@ -5498,6 +5498,9 @@ ul.dots-text {
     margin-bottom: 20px; }
   .order-profile-current__result {
     margin-bottom: 0px; }
+  .order-profile-current__item .card-basket-item__image {
+    margin-right: 15px;
+    max-width: 90px; }
   .order-curent-result__group {
     padding: 25px 0; }
   .order-curent-result__item.--price .order-curent-result__value {

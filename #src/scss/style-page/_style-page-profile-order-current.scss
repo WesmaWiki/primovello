@@ -206,6 +206,13 @@
 		&__result {
 			margin-bottom: 0px;
 		}
+
+		&__item {
+			& .card-basket-item__image {
+				margin-right: 15px;
+				max-width: 90px;
+			}
+		}
 	}
 
 	.order-curent-result {
