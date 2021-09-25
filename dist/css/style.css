@@ -3197,8 +3197,8 @@ input::-webkit-inner-spin-button {
 
 .product__row {
   display: grid;
-  gap: 100px;
-  grid-template-columns: 1fr 1fr; }
+  gap: 70px;
+  grid-template-columns: 1fr 0.75fr; }
 
 .product__gallery {
   position: relative; }
