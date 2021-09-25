@@ -839,7 +839,7 @@ document.addEventListener(
 
 			modal.classList.add("active");
 
-			body.classList.add("lock-modal");
+			body.classList.add("lock");
 
 			popupOverlay.classList.add("active");
 
@@ -868,7 +868,7 @@ document.addEventListener(
 					modal.style.opacity = "0";
 					popupOverlay.style.opacity = "0";
 
-					body.classList.remove("lock-modal");
+					body.classList.remove("lock");
 				}
 			});
 		}
