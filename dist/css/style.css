@@ -5860,7 +5860,7 @@ ul.dots-text {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  padding: 15px;
+  padding: 30px 15px;
   z-index: 1000;
   max-width: 525px;
   overflow: auto;
