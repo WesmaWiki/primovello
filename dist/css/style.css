@@ -6174,18 +6174,16 @@ ul.dots-text {
     height: 100%; }
     .popup-general__body {
       height: 100%;
-      padding: 15px; }
+      padding: 0; }
     .popup-general__group-title {
+      padding: 15px 15px 0 15px;
       position: relative; }
     .popup-general__title {
       padding-right: 25px;
       font-size: 18px; }
     .popup-general__close {
-      right: 0;
-      top: 50%;
-      -webkit-transform: translate(0, -50%);
-          -ms-transform: translate(0, -50%);
-              transform: translate(0, -50%);
+      right: 15px;
+      top: 20px;
       width: 13px;
       height: 13px; }
       .popup-general__close::before {
@@ -6194,10 +6192,8 @@ ul.dots-text {
       .popup-general__close::after {
         width: 13px;
         top: 6px; }
-      .popup-general__close:hover {
-        -webkit-transform: translate(0, -50%) rotate(90deg);
-            -ms-transform: translate(0, -50%) rotate(90deg);
-                transform: translate(0, -50%) rotate(90deg); }
+    .popup-general__wrap {
+      padding: 0 15px 15px 15px; }
     .popup-general__add-basket-product {
       margin-bottom: 20px; }
     .popup-general__add-basket-buttons {
