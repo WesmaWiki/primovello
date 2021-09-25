@@ -912,6 +912,10 @@ ul.dots-text {
 			}
 		}
 	}
+
+	.product.--two-photo .buy-product__button:not(:last-child) {
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 370px) {

@@ -3823,7 +3823,9 @@ ul.dots-text {
             flex-direction: column; }
   .buy-product__button:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .product.--two-photo .buy-product__button:not(:last-child) {
+    margin-right: 0; } }
 
 @media (max-width: 370px) {
   .product__tab-control {
