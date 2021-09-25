@@ -503,7 +503,28 @@
                     </div>
                 </div>
 
-                <div class="page-navigation__column"></div>
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2"><span>Попапы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="#popup-entry" class="page-navigation__item js-modal-show"
+                            data-popup="popup-entry">Войти</a>
+                        <a href="#popup-password-rec" class="page-navigation__item js-modal-show"
+                            data-popup="popup-password-rec">Восстановление
+                            пароля</a>
+                        <a href="#popup-regist" class="page-navigation__item js-modal-show"
+                            data-popup="popup-regist">Зарегистрироваться</a>
+                        <a href="#popup-add-basket" class="page-navigation__item js-modal-show"
+                            data-popup="popup-add-basket">Товар добавлен в
+                            корзину</a>
+                        <a href="#popup-one-click" class="page-navigation__item js-modal-show"
+                            data-popup="popup-one-click">Купить в 1 клик</a>
+                        <a href="#popup-review" class="page-navigation__item js-modal-show"
+                            data-popup="popup-review">Оставить отзыв</a>
+                        <a href="#popup-result" class="page-navigation__item js-modal-show"
+                            data-popup="popup-result">Спасибо</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -514,19 +535,31 @@
         padding: 100px 0
     }
 
+    .page-navigation__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
     .page-navigation__title {
         margin-bottom: 40px;
     }
 
     .page-navigation__list {
         display: grid;
-        gap: 40px;
+        gap: 20px;
     }
 
     .page-navigation__item {
-        font-size: 36px;
+        font-size: 24px;
         line-height: 180%;
         color: #AA1D26;
+    }
+
+    @media (max-width: 768px) {
+        .page-navigation__item {
+            font-size: 18px;
+        }
     }
 </style>
 
@@ -1048,26 +1081,27 @@
           </div>
         </div>
 
-        <form action="#" class="popup-general__add-basket-form popup-form-one-click">
-          <div class="popup-form-one-click__group-input">
-            <div class="popup-form-one-click__wrap-input wrap-input">
+        <form action="#" class="popup-general__form form-popup-general">
+          <div class="form-popup-general__lsit">
+            <div class="form-popup-general__wrap-input wrap-input">
               <input type="text" placeholder="Ваше имя">
             </div>
 
-            <div class="popup-form-one-click__wrap-input wrap-input">
+            <div class="form-popup-general__wrap-input wrap-input">
               <input type="text" placeholder="Ваш номер телефона *">
             </div>
           </div>
 
-          <div class="popup-form-one-click__group-button">
-            <div class="popup-form-one-click__policy">
+          <div class="form-popup-general__wrap-button">
+            <div class="form-popup-general__policy">
               Нажимая кнопку подтверждения заказа я даю своё согласие на обработку моих персональных данных на условиях
               <a href="#">Соглашения об обработке персональных данных</a>
             </div>
-
-            <button type="submit" class="popup-form-one-click__button btn-var-two">оформить заказ</button>
+            <button type="submit" class="form-popup-general__button btn-var-two">оформить заказ</button>
           </div>
         </form>
+
+
 
       </div>
     </div>

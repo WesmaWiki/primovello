@@ -127,6 +127,12 @@
 		display: none;
 	}
 
+	&.active {
+		&.modal {
+			display: block;
+		}
+	}
+
 	&.--entry {
 		& .form-popup-general__group {
 			justify-content: space-between;
@@ -148,6 +154,30 @@
 
 	&.--one-click {
 		max-width: 875px;
+
+		& .form-popup-general__lsit {
+			display: flex;
+		}
+
+		& .form-popup-general__wrap-input {
+			margin-top: 0;
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+
+		& .form-popup-general__wrap-button {
+			display: flex;
+			align-items: center;
+		}
+
+		& .form-popup-general__policy {
+			margin-right: 20px;
+		}
+
+		& .form-popup-general__button {
+			max-width: 220px;
+		}
 	}
 
 	&.--review {
@@ -223,6 +253,14 @@
 			}
 		}
 	}
+	&__policy {
+		font-size: 12px;
+		line-height: 140%;
+		color: #b9b9b9;
+		& a {
+			color: #666666;
+		}
+	}
 }
 
 .popup-roduct {
@@ -255,6 +293,7 @@
 			flex-grow: 1;
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -330,40 +369,9 @@
 	}
 }
 
-.popup-form-one-click {
-	&__group-input {
-		display: flex;
-		margin-bottom: 25px;
-	}
-
-	&__wrap-input {
-		&:first-child {
-			margin-right: 20px;
-		}
-	}
-
-	&__group-button {
-		display: flex;
-		align-items: flex-start;
-	}
-
-	&__policy {
-		margin-right: 20px;
-		font-size: 12px;
-		line-height: 140%;
-		color: #b9b9b9;
-		& a {
-			color: #666666;
-		}
-	}
-
-	&__button {
-		max-width: 220px;
-	}
-}
-
 .popup-overlay {
-	display: none;
+	opacity: 0;
+	visibility: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -373,4 +381,198 @@
 	backdrop-filter: blur(5px);
 	z-index: 99;
 	transition: all 0.3s ease;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media (max-width: 900px) {
+	.popup-general {
+		&__add-basket-slider {
+			& .product-slider__container {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.popup-general {
+		padding: 0;
+		max-width: 100%;
+		height: 100%;
+		&__body {
+			height: 100%;
+			padding: 15px;
+		}
+
+		&__group-title {
+			position: relative;
+		}
+
+		&__title {
+			padding-right: 25px;
+			font-size: 18px;
+		}
+
+		&__close {
+			right: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 13px;
+			height: 13px;
+			&::before {
+				width: 13px;
+				top: 6px;
+			}
+			&::after {
+				width: 13px;
+				top: 6px;
+			}
+			&:hover {
+				transform: translate(0, -50%) rotate(90deg);
+			}
+		}
+
+		&__add-basket-product {
+			margin-bottom: 20px;
+		}
+
+		&__add-basket-buttons {
+			flex-direction: column;
+		}
+
+		&__add-basket-button {
+			&:first-child {
+				margin-bottom: 15px;
+				margin-right: 0;
+			}
+			max-width: 100%;
+		}
+
+		&__result-name {
+			margin-bottom: 20px;
+		}
+
+		&__result-button {
+			max-width: 100%;
+		}
+
+		&.--review {
+			& .form-popup-general__lsit {
+				& .form-popup-general__wrap-input {
+					&:first-child {
+						padding-bottom: 20px;
+					}
+				}
+			}
+
+			& .form-popup-general__submit {
+				max-width: 100%;
+			}
+		}
+
+		&.--one-click {
+			& .form-popup-general__lsit {
+				flex-direction: column;
+			}
+
+			& .form-popup-general__wrap-input {
+				&:first-child {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+
+			& .form-popup-general__wrap-button {
+				flex-direction: column;
+			}
+
+			& .form-popup-general__policy {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+
+			& .form-popup-general__button {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.form-popup-general {
+		&__wrap-input {
+			&:not(:first-child) {
+				margin-top: 25px;
+			}
+		}
+
+		&__group {
+			margin-top: 25px;
+		}
+	}
+
+	.popup-roduct {
+		padding-bottom: 20px;
+		&__row {
+			flex-direction: column;
+		}
+
+		&__column {
+			&:first-child {
+				margin-right: 0;
+				margin-bottom: 25px;
+			}
+
+			&:last-child {
+			}
+		}
+
+		&__image {
+			margin-right: 15px;
+			max-width: 120px;
+		}
+
+		&__name {
+			margin-bottom: 5px;
+			font-size: 10px;
+		}
+
+		&__article {
+			font-size: 10px;
+		}
+
+		&__group-name {
+			margin-bottom: 20px;
+		}
+
+		&__option-name {
+			font-size: 10px;
+		}
+
+		&__option-value {
+			font-size: 10px;
+		}
+
+		&__quantity {
+			margin-top: 15px;
+			margin-right: 20px;
+		}
+
+		&__price {
+			margin-top: 15px;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			flex-grow: initial;
+		}
+
+		&__price-old {
+			font-size: 10px;
+		}
+
+		&__price-current {
+			margin-bottom: 0;
+			font-size: 14px;
+		}
+	}
 }

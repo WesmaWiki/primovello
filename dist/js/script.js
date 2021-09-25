@@ -815,7 +815,6 @@ document.addEventListener(
 
 		// Рейтинг
 		let arrRatingEl = Array.prototype.slice.call(document.querySelectorAll(".wrap-input__rating .rating__item"));
-		console.log(arrRatingEl);
 		if (arrRatingEl.length > null) {
 			arrRatingEl.forEach((el, index, array) => {
 				el.addEventListener("click", () => {
@@ -824,6 +823,77 @@ document.addEventListener(
 						array[i].classList.add("added");
 					}
 				});
+			});
+		}
+
+		// Открытие попапов МОЖНО УДАЛЯТЬ
+		let popupAllElem = Array.prototype.slice.call(document.querySelectorAll(".modal"));
+		let openButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-show"));
+		let closeButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-close"));
+		let popupOverlay = document.querySelector(".popup-overlay");
+		let body = document.querySelector("body");
+
+		function openPopup(e) {
+			e.preventDefault();
+			let modal = document.querySelector(`#${e.target.dataset.popup}`);
+
+			modal.classList.add("active");
+
+			body.classList.add("lock-modal");
+
+			popupOverlay.classList.add("active");
+
+			setTimeout(() => {
+				modal.style.opacity = "1";
+				popupOverlay.style.opacity = "1";
+			}, 100);
+
+			if (e.target.dataset.popup == "domain") {
+				let domainList = modal.querySelector(".popup-domain__list");
+				let domainWrap = modal.querySelector(".popup-domain__wrap");
+				domainList.style.height = `${window.innerHeight - domainWrap.offsetHeight - 40}px`;
+			}
+		}
+
+		function closePopup() {
+			popupAllElem.forEach((element) => {
+				if (element.classList.contains("active")) {
+					let modal = element;
+
+					popupOverlay.classList.remove("active");
+					setTimeout(() => {
+						modal.classList.remove("active");
+					}, 300);
+
+					modal.style.opacity = "0";
+					popupOverlay.style.opacity = "0";
+
+					body.classList.remove("lock-modal");
+				}
+			});
+		}
+
+		if (openButton != null) {
+			openButton.forEach((element) => {
+				element.addEventListener("click", (e) => {
+					closePopup(e);
+
+					openPopup(e);
+				});
+			});
+		}
+
+		if (closeButton != null) {
+			closeButton.forEach((element) => {
+				element.addEventListener("click", (e) => {
+					closePopup();
+				});
+			});
+		}
+
+		if (popupOverlay != null) {
+			popupOverlay.addEventListener("click", () => {
+				closePopup();
 			});
 		}
 	},
