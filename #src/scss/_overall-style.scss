@@ -236,8 +236,42 @@ h3 {
 	}
 
 	&.errors {
-		& input {
+		& input,
+		& textarea {
 			border-color: #c41616;
+		}
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		& .rating__wrap {
+			flex-direction: row-reverse;
+		}
+
+		& .rating__item {
+			display: block;
+			position: relative;
+			padding-right: 7px;
+			&:last-child {
+				padding-right: 7px;
+			}
+			& svg {
+				cursor: pointer;
+				width: 27px;
+				height: 27px;
+			}
+			& input {
+				display: none;
+			}
+		}
+
+		& .rating__wrap > .rating__item:hover,
+		& .rating__wrap > .rating__item:hover ~ .rating__item {
+			& svg {
+				fill: #c41616;
+			}
 		}
 	}
 }

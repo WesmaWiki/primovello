@@ -646,7 +646,7 @@
     </div>
 
     <div class="popup-general__wrap">
-      <from action="#" class="popup-general__form form-popup-general">
+      <form action="#" class="popup-general__form form-popup-general">
         <div class="form-popup-general__lsit">
           <div class="form-popup-general__wrap-input wrap-input errors">
             <div class="wrap-input__name">E-Mail*</div>
@@ -672,7 +672,7 @@
           <a href="#" class="form-popup-general__button">Зарегистрироваться</a>
         </div>
 
-      </from>
+      </form>
     </div>
 
   </div>
@@ -688,7 +688,7 @@
 
     <div class="popup-general__wrap">
 
-      <from action="#" class="popup-general__form form-popup-general">
+      <form action="#" class="popup-general__form form-popup-general">
 
         <div class="form-popup-general__text">
           Пожалуйста укажите адрес электронной почты, который вы использовали для создания вашей учетной записи, и мы
@@ -709,7 +709,7 @@
           <button type="submit" class="form-popup-general__submit btn-var-two">Восстановить пароль</button>
         </div>
 
-      </from>
+      </form>
     </div>
 
   </div>
@@ -725,7 +725,7 @@
 
     <div class="popup-general__wrap">
 
-      <from action="#" class="popup-general__form form-popup-general">
+      <form action="#" class="popup-general__form form-popup-general">
 
         <div class="form-popup-general__lsit">
           <div class="form-popup-general__wrap-input wrap-input">
@@ -759,7 +759,7 @@
           <a href="#" class="form-popup-general__button">Войти</a>
         </div>
 
-      </from>
+      </form>
     </div>
 
   </div>
@@ -810,6 +810,8 @@
         </div>
 
         <div class="popup-general__add-basket-slider-wrap">
+
+          <div class="popup-general__add-baske-slider-name">Вас может заинтересовать</div>
 
           <div class="popup-general__add-basket-slider product-slider">
 
@@ -983,9 +985,194 @@
 
           </div>
 
+          <div class="popup-general__add-basket-buttons">
+            <a href="#" class="popup-general__add-basket-button btn-var-two --white">продолжить покупки</a>
+            <a href="#" class="popup-general__add-basket-button btn-var-two">Перейти в корзину</a>
+          </div>
+
         </div>
 
       </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="popup-general modal --one-click" id="popup-one-click">
+  <div class="popup-general__body">
+
+    <div class="popup-general__group-title">
+      <div class="popup-general__title">Купить в 1 клик</div>
+      <div class="popup-general__close js-modal-close"></div>
+    </div>
+
+    <div class="popup-general__wrap">
+      <div class="popup-general__add-basket">
+        <div class="popup-general__add-basket-product popup-roduct">
+          <div class="popup-roduct__image"><img src="./img/image-popup-product-1.png" alt=""></div>
+
+          <div class="popup-roduct__row">
+            <div class="popup-roduct__column">
+              <div class="popup-roduct__group-name">
+                <div class="popup-roduct__name">дубленка с мехом</div>
+
+                <div class="popup-roduct__article">Артикул: SS213260P/PNFL-42
+                </div>
+              </div>
+
+              <div class="popup-roduct__list-option">
+                <div class="popup-roduct__option">
+                  <span class="popup-roduct__option-name">Цвет:</span>
+                  <span class="popup-roduct__option-value">Бежевый</span>
+                </div>
+
+                <div class="popup-roduct__option">
+                  <span class="popup-roduct__option-name">размер:</span>
+                  <span class="popup-roduct__option-value">44</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-roduct__column">
+              <div class="popup-roduct__quantity quantity">
+                <div class="quantity__sub"></div>
+                <input class="quantity__input" type="number" value="1">
+                <div class="quantity__add"></div>
+              </div>
+
+              <div class="popup-roduct__price">
+                <span class="popup-roduct__price-current">450 000 руб.</span>
+                <span class="popup-roduct__price-old">600 000 руб.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="#" class="popup-general__add-basket-form popup-form-one-click">
+          <div class="popup-form-one-click__group-input">
+            <div class="popup-form-one-click__wrap-input wrap-input">
+              <input type="text" placeholder="Ваше имя">
+            </div>
+
+            <div class="popup-form-one-click__wrap-input wrap-input">
+              <input type="text" placeholder="Ваш номер телефона *">
+            </div>
+          </div>
+
+          <div class="popup-form-one-click__group-button">
+            <div class="popup-form-one-click__policy">
+              Нажимая кнопку подтверждения заказа я даю своё согласие на обработку моих персональных данных на условиях
+              <a href="#">Соглашения об обработке персональных данных</a>
+            </div>
+
+            <button type="submit" class="popup-form-one-click__button btn-var-two">оформить заказ</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="popup-general modal --review" id="popup-review">
+  <div class="popup-general__body">
+
+    <div class="popup-general__group-title">
+      <div class="popup-general__title">Оставить отзыв</div>
+      <div class="popup-general__close js-modal-close"></div>
+    </div>
+
+    <div class="popup-general__wrap">
+
+      <form action="#" class="popup-general__form form-popup-general">
+
+        <div class="form-popup-general__lsit">
+          <div class="form-popup-general__wrap-input wrap-input">
+            <div class="wrap-input__name">Оцените товар</div>
+
+            <div class="wrap-input__rating rating">
+              <div class="rating__wrap">
+                <label class="rating__item added">
+                  <input type="radio" name="rating" checked>
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.50046 9.40904L2.86499 11.1929L3.5593 7.41462L0.618146 4.73883L4.68272 4.18759L6.50046 0.75L8.31819 4.18759L12.3828 4.73883L9.44161 7.41462L10.1359 11.1929L6.50046 9.40904Z"
+                      stroke="#c41616" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </label>
+                <label class="rating__item added">
+                  <input type="radio" name="rating">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.50046 9.40904L2.86499 11.1929L3.5593 7.41462L0.618146 4.73883L4.68272 4.18759L6.50046 0.75L8.31819 4.18759L12.3828 4.73883L9.44161 7.41462L10.1359 11.1929L6.50046 9.40904Z"
+                      stroke="#c41616" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </label>
+                <label class="rating__item added">
+                  <input type="radio" name="rating">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.50046 9.40904L2.86499 11.1929L3.5593 7.41462L0.618146 4.73883L4.68272 4.18759L6.50046 0.75L8.31819 4.18759L12.3828 4.73883L9.44161 7.41462L10.1359 11.1929L6.50046 9.40904Z"
+                      stroke="#c41616" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </label>
+                <label class="rating__item added">
+                  <input type="radio" name="rating">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.50046 9.40904L2.86499 11.1929L3.5593 7.41462L0.618146 4.73883L4.68272 4.18759L6.50046 0.75L8.31819 4.18759L12.3828 4.73883L9.44161 7.41462L10.1359 11.1929L6.50046 9.40904Z"
+                      stroke="#c41616" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </label>
+                <label class="rating__item added">
+                  <input type="radio" name="rating">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.50046 9.40904L2.86499 11.1929L3.5593 7.41462L0.618146 4.73883L4.68272 4.18759L6.50046 0.75L8.31819 4.18759L12.3828 4.73883L9.44161 7.41462L10.1359 11.1929L6.50046 9.40904Z"
+                      stroke="#c41616" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-popup-general__wrap-input wrap-input errors">
+            <div class="wrap-input__name">оставьте свой комментарий</div>
+            <textarea placeholder="Напишите свой отзыв о товаре *"></textarea>
+          </div>
+
+          <span class="form-errors">Пожалуйста, добавьте отзыв</span>
+
+          <div class="form-popup-general__wrap-input wrap-input">
+            <div class="wrap-input__name">Представьтесь, пожалуйста</div>
+            <input type="text" placeholder="Напишите свой отзыв о товаре *">
+          </div>
+        </div>
+
+        <div class="form-popup-general__wrap-button">
+          <button type="submit" class="form-popup-general__submit btn-var-two">оставить отзыв</button>
+        </div>
+      </form>
+
+
+    </div>
+
+  </div>
+</div>
+
+<div class="popup-general modal --result" id="popup-result">
+  <div class="popup-general__body">
+
+    <div class="popup-general__group-title">
+      <div class="popup-general__title">Спасибо</div>
+      <div class="popup-general__close js-modal-close"></div>
+    </div>
+
+    <div class="popup-general__wrap">
+      <div class="popup-general__result-name">Отзыв успешно добавлен</div>
+      <div class="popup-general__result-text">Мы опубликуем ваш отзыв в ближайшее время</div>
+      <a href="#" class="popup-general__result-button btn-var-two">продолжить покупки</a>
     </div>
 
   </div>
