@@ -5985,7 +5985,7 @@ ul.dots-text {
               align-items: center; }
     .popup-general.--one-click .form-popup-general__policy {
       margin-right: 20px; }
-    .popup-general.--one-click .form-popup-general__button {
+    .popup-general.--one-click .form-popup-general__submit {
       max-width: 220px; }
   .popup-general.--review {
     max-width: 730px; }
@@ -6234,7 +6234,7 @@ ul.dots-text {
     .popup-general.--one-click .form-popup-general__policy {
       margin-right: 0;
       margin-bottom: 20px; }
-    .popup-general.--one-click .form-popup-general__button {
+    .popup-general.--one-click .form-popup-general__submit {
       max-width: 100%; }
   .form-popup-general__wrap-input:not(:first-child) {
     margin-top: 25px; }
