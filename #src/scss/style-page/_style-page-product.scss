@@ -5,13 +5,12 @@
 
 	&__row {
 		display: grid;
-		// gap: 60px;
+		gap: 200px;
 		grid-template-columns: 1fr 0.48fr;
 	}
 
 	&__column {
 		&.--one {
-			padding: 0 120px;
 		}
 	}
 
@@ -650,12 +649,12 @@ ul.dots-text {
 
 		&__row {
 			grid-template-columns: 1fr 0.7fr;
-			// gap: 30px;
+			gap: 140px;
 		}
 
 		&__column {
 			&.--one {
-				padding: 0 70px;
+				// padding: 0 70px;
 			}
 		}
 	}
@@ -670,7 +669,6 @@ ul.dots-text {
 
 		&__column {
 			&.--one {
-				padding: 0px;
 			}
 		}
 

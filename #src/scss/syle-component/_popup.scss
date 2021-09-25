@@ -92,7 +92,15 @@
 	}
 
 	&__add-basket-slider {
+		overflow: hidden;
 		margin-bottom: 30px;
+		& .product-slider__prev {
+			left: 5px;
+		}
+
+		& .product-slider__next {
+			right: 5px;
+		}
 	}
 
 	&__result-name {
