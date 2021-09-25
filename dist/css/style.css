@@ -3193,7 +3193,7 @@ input::-webkit-inner-spin-button {
   grid-column: initial; }
 
 .product__wrap {
-  padding: 40px 0 50px 0; }
+  padding: 10px 0 50px 0; }
 
 .product__row {
   display: grid;
@@ -3723,7 +3723,7 @@ ul.dots-text {
 
 @media (max-width: 1170px) {
   .product__wrap {
-    padding: 0px 0; }
+    padding: 10px 0; }
   .product__row {
     gap: 50px; }
   .product__tab-control::before {
