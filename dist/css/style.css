@@ -3313,11 +3313,12 @@ input::-webkit-inner-spin-button {
 
 .product__text p {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   color: #444444; }
 
 .product__text ul {
+  font-size: 16px;
   margin-bottom: 25px; }
 
 .gallery-product__banner {
@@ -3764,7 +3765,7 @@ ul.dots-text {
   .product__tab-controls {
     margin-bottom: 20px; }
   .product__tab-control {
-    font-size: 10px; }
+    font-size: 11px; }
   .buy-product__form {
     margin-bottom: 15px; }
   .buy-product__message {
@@ -5528,13 +5529,13 @@ ul.dots-text {
 .order-current-item__name {
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   color: #000000; }
 
 .order-current-item__text {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   color: #444444 !important; }
 
@@ -5566,16 +5567,16 @@ ul.dots-text {
   .order-profile-current__details-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
     row-gap: 20px; }
   .order-profile-current__details-item:not(:last-child) {
     margin-bottom: 0; }
   .order-current-item__name {
-    font-size: 12px; }
+    font-size: 14px; }
   .order-current-item__text {
-    font-size: 12px; }
+    font-size: 14px; }
   .back-profile {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }

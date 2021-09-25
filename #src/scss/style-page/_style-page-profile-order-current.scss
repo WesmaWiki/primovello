@@ -170,14 +170,14 @@
 	&__name {
 		display: block;
 		margin-bottom: 5px;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 140%;
 		color: #000000;
 	}
 
 	&__text {
 		display: block;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 140%;
 		color: #444444 !important;
 	}
@@ -239,7 +239,7 @@
 		&__details-list {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			column-gap: 50px;
+			column-gap: 25px;
 			row-gap: 20px;
 		}
 
@@ -252,11 +252,11 @@
 
 	.order-current-item {
 		&__name {
-			font-size: 12px;
+			font-size: 14px;
 		}
 
 		&__text {
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 
