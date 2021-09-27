@@ -387,7 +387,7 @@ document.addEventListener(
 			addClass: "lightGallery-white-theme",
 			exThumbImage: "data-external-thumb-image",
 			speed: 500,
-			plugins: [lgZoom, lgFullscreen, lgThumbnail],
+			plugins: [lgFullscreen, lgThumbnail],
 			mobileSettings: {
 				controls: true,
 			},
