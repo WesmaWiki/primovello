@@ -385,8 +385,12 @@ document.addEventListener(
 		lightGallery(document.querySelector(".lightgallery"), {
 			selector: "a",
 			addClass: "lightGallery-white-theme",
+			exThumbImage: "data-external-thumb-image",
 			speed: 500,
-			plugins: [lgZoom, lgFullscreen, lgRotate, lgThumbnail],
+			plugins: [lgZoom, lgFullscreen, lgThumbnail],
+			mobileSettings: {
+				controls: true,
+			},
 		});
 
 		let scroller = document.querySelector(".scroller");
