@@ -383,10 +383,10 @@ document.addEventListener(
 		}
 
 		lightGallery(document.querySelector(".lightgallery"), {
-			plugins: [lgZoom, lgThumbnail],
 			selector: "a",
+			addClass: "lightGallery-white-theme",
 			speed: 500,
-			exThumbImage: "data-external-thumb-image",
+			plugins: [lgZoom, lgFullscreen, lgRotate, lgThumbnail],
 		});
 
 		let scroller = document.querySelector(".scroller");
