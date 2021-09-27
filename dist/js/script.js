@@ -826,6 +826,34 @@ document.addEventListener(
 			});
 		}
 
+		// Открытие корзины
+		let elCart = document.querySelector(".cart-main");
+		let elCartClick = elCart.querySelector(".js-show-cart");
+		let elCartBasket = elCart.querySelector(".js-show-cart-basket");
+		let elCloseCartBasket = elCart.querySelector(".js-close-cart-basket");
+
+		if (elCartClick != null) {
+			elCartClick.addEventListener("click", function () {
+				elCartBasket.classList.toggle("active");
+			});
+		}
+
+		if (elCloseCartBasket != null) {
+			elCloseCartBasket.addEventListener("click", function () {
+				if (elCartBasket.classList.contains("active")) {
+					elCartBasket.classList.remove("active");
+				}
+			});
+		}
+
+		document.addEventListener("click", function (e) {
+			if (elCartBasket.classList.contains("active")) {
+				if (elCart && e.target !== elCart && !elCart.contains(e.target)) {
+					elCartBasket.classList.remove("active");
+				}
+			}
+		});
+
 		// Открытие попапов МОЖНО УДАЛЯТЬ
 		let popupAllElem = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 		let openButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-show"));
@@ -847,12 +875,6 @@ document.addEventListener(
 				modal.style.opacity = "1";
 				popupOverlay.style.opacity = "1";
 			}, 100);
-
-			if (e.target.dataset.popup == "domain") {
-				let domainList = modal.querySelector(".popup-domain__list");
-				let domainWrap = modal.querySelector(".popup-domain__wrap");
-				domainList.style.height = `${window.innerHeight - domainWrap.offsetHeight - 40}px`;
-			}
 		}
 
 		function closePopup() {

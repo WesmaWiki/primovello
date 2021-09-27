@@ -264,9 +264,17 @@
 }
 
 .cart-main {
+	position: relative;
 	&__link {
 		position: relative;
 		display: block;
+
+		& svg {
+			vertical-align: top;
+			& path {
+				transition: stroke 0.3s ease;
+			}
+		}
 	}
 
 	&__value {
@@ -289,17 +297,12 @@
 		background: #c41616;
 	}
 
-	& svg {
-		vertical-align: top;
-		& path {
-			transition: stroke 0.3s ease;
-		}
-	}
-
 	&:hover {
-		& svg {
-			& path {
-				stroke: #c41616;
+		& .cart-main__link {
+			& svg {
+				& path {
+					stroke: #c41616;
+				}
 			}
 		}
 	}
@@ -974,6 +977,243 @@
 
 		&::before {
 			content: none;
+		}
+	}
+}
+
+.popup-cart-main {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	position: absolute;
+	right: -20px;
+	top: calc(100% + 20px);
+	width: 100%;
+	max-width: 460px;
+	min-width: 460px;
+	background: #fff;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+
+	z-index: 20;
+
+	&__body {
+		padding: 20px 0 20px 30px;
+	}
+
+	&__group-top {
+		padding-right: 30px;
+	}
+
+	&__group-middle {
+		padding-bottom: 20px;
+	}
+
+	&__group-bottom {
+		padding-right: 30px;
+	}
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		width: 13px;
+		height: 13px;
+		top: 15px;
+		right: 20px;
+		transition: all 0.3s ease;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 13px;
+			height: 1px;
+			top: 6px;
+			background-color: #000;
+			transform: rotate(45deg);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 13px;
+			height: 1px;
+			top: 6px;
+			background-color: #000;
+			transform: rotate(-45deg);
+		}
+		&:hover {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+		line-height: 120%;
+		color: #000000;
+		& span {
+			color: #b9b9b9;
+		}
+	}
+
+	&__list {
+		padding-right: 30px;
+
+		max-height: 460px;
+		overflow: auto;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__result {
+		padding-top: 25px;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 25px;
+	}
+
+	&__name {
+		margin-right: 15px;
+		font-size: 12px;
+		line-height: 140%;
+		text-transform: uppercase;
+	}
+
+	&__value {
+		font-size: 18px;
+		line-height: 120%;
+		color: #000000;
+	}
+
+	&__button {
+	}
+
+	& .card-basket-item__image {
+		margin-right: 20px;
+		max-width: 110px;
+	}
+
+	& .card-basket-item__name {
+		margin-bottom: 0px;
+	}
+
+	& .card-basket-item__group-top {
+		margin-bottom: 20px;
+	}
+
+	& .card-basket-item__price {
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		justify-content: flex-end;
+		margin-bottom: 10px;
+	}
+
+	& .card-basket-item__price-current {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	& .card-basket-item__option:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 900px) {
+	.popup-cart-main {
+		&__list {
+			max-height: 350px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.popup-cart-main {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-width: initial;
+		min-width: initial;
+
+		&__body {
+			padding: 15px 0 15px 15px;
+		}
+
+		&__close {
+			top: 50%;
+			transform: translate(0, -50%);
+			right: 15px;
+		}
+
+		&__group-top {
+			position: relative;
+			padding-right: 15px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__list {
+			max-height: 250px;
+			padding-right: 15px;
+		}
+
+		&__group-bottom {
+			padding-right: 15px;
+		}
+
+		& .card-basket-item__image {
+			margin-right: 10px;
+			max-width: 90px;
+		}
+
+		& .card-basket-item__group-top {
+			margin-bottom: 10px;
+		}
+
+		& .card-basket-item__option:not(:last-child) {
+			margin-bottom: 5px;
+		}
+
+		& .popup-cart-main__item:not(:last-child) {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+		}
+
+		&__result {
+			padding-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+	.popup-cart-main {
+		&__list {
+			max-height: 120px;
+		}
+	}
+}
+
+@media only handheld and (orientation: landscape) and (min-width: 768px) {
+	.popup-cart-main {
+		max-height: 250px;
+		overflow: auto;
+		&__list {
+			max-height: 120px;
 		}
 	}
 }
