@@ -1003,7 +1003,11 @@
 	z-index: 20;
 
 	&__body {
+		position: relative;
 		padding: 20px 0 20px 30px;
+
+		max-height: calc(100vh - 110px);
+		overflow: auto;
 	}
 
 	&__group-top {
@@ -1202,16 +1206,6 @@
 
 @media (max-width: 768px) and (orientation: landscape) {
 	.popup-cart-main {
-		&__list {
-			max-height: 120px;
-		}
-	}
-}
-
-@media only handheld and (orientation: landscape) and (min-width: 768px) {
-	.popup-cart-main {
-		max-height: 250px;
-		overflow: auto;
 		&__list {
 			max-height: 120px;
 		}
