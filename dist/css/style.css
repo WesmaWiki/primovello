@@ -4993,6 +4993,7 @@ ul.dots-text {
   text-transform: uppercase;
   color: #000000; }
   .order-delivery-choose__name span:first-child {
+    font-weight: bold;
     margin-right: 20px; }
   .order-delivery-choose__name span:last-child {
     -ms-flex-preferred-size: 100px;
