@@ -112,7 +112,19 @@ body.lock {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .container {
   max-width: 1430px;
@@ -140,6 +152,24 @@ h3 {
   line-height: 120%;
   color: #000000; }
 
+.title-h4,
+h4 {
+  font-size: 24px;
+  line-height: 120%;
+  color: #000000; }
+
+.title-h5,
+h5 {
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000; }
+
+.title-h6,
+h6 {
+  font-size: 18px;
+  line-height: 120%;
+  color: #000000; }
+
 @media (max-width: 1430px) {
   .title-h1,
   h1 {
@@ -147,6 +177,18 @@ h3 {
   .title-h2,
   h2 {
     font-size: calc(24px + 12 * ((100vw - 375px) / 1055)); }
+  .title-h3,
+  h3 {
+    font-size: calc(20px + 10 * ((100vw - 375px) / 1055)); }
+  .title-h4,
+  h4 {
+    font-size: calc(18px + 6 * ((100vw - 375px) / 1055)); }
+  .title-h5,
+  h5 {
+    font-size: calc(16px + 4 * ((100vw - 375px) / 1055)); }
+  .title-h6,
+  h6 {
+    font-size: calc(14px + 4 * ((100vw - 375px) / 1055)); }
   .row-top .title-h2,
   .row-top h2 {
     font-size: calc(20px + 16 * ((100vw - 375px) / 1055)); } }
@@ -3236,7 +3278,8 @@ input::-webkit-inner-spin-button {
   padding: 50px 0; }
 
 .block-text h1 {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  color: #000; }
 
 .block-text h2 {
   margin-bottom: 35px; }
@@ -3257,6 +3300,29 @@ input::-webkit-inner-spin-button {
   margin-bottom: 20px; }
   .block-text p:last-child {
     margin-bottom: 0; }
+
+.block-text ul {
+  margin-bottom: 20px; }
+  .block-text ul li {
+    position: relative;
+    padding-left: 15px; }
+    .block-text ul li:not(:last-child) {
+      margin-bottom: 15px; }
+    .block-text ul li::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #666; }
+
+.block-text ol {
+  list-style-position: inside;
+  margin-bottom: 20px; }
+  .block-text ol li:not(:last-child) {
+    margin-bottom: 15px; }
 
 @media (max-width: 1170px) {
   .block-text__wrap {

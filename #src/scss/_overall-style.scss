@@ -13,6 +13,13 @@ body.lock {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
 }
 
 .container {
@@ -45,6 +52,27 @@ h3 {
 	color: #000000;
 }
 
+.title-h4,
+h4 {
+	font-size: 24px;
+	line-height: 120%;
+	color: #000000;
+}
+
+.title-h5,
+h5 {
+	font-size: 20px;
+	line-height: 120%;
+	color: #000000;
+}
+
+.title-h6,
+h6 {
+	font-size: 18px;
+	line-height: 120%;
+	color: #000000;
+}
+
 @media (max-width: 1430px) {
 	.title-h1,
 	h1 {
@@ -56,6 +84,26 @@ h3 {
 		@include adaptiv-font(36, 24);
 	}
 
+	.title-h3,
+	h3 {
+		@include adaptiv-font(30, 20);
+	}
+
+	.title-h4,
+	h4 {
+		@include adaptiv-font(24, 18);
+	}
+
+	.title-h5,
+	h5 {
+		@include adaptiv-font(20, 16);
+	}
+
+	.title-h6,
+	h6 {
+		@include adaptiv-font(18, 14);
+	}
+
 	.row-top {
 		& .title-h2,
 		h2 {
@@ -63,6 +111,7 @@ h3 {
 		}
 	}
 }
+
 @media (max-width: 375px) {
 	.title-h1,
 	h1 {
