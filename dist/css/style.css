@@ -3540,7 +3540,7 @@ input::-webkit-inner-spin-button {
     content: "";
     position: absolute;
     top: 50%;
-    right: -1.7vw;
+    right: -1.5vw;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
