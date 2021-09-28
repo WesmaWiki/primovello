@@ -120,10 +120,12 @@
 
 		&.active {
 			color: #000000;
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 
 		&:hover {
 			color: #000000;
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 		&::before {
 			content: "";

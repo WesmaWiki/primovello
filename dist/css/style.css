@@ -3528,9 +3528,11 @@ input::-webkit-inner-spin-button {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .product__tab-control.active {
-    color: #000000; }
+    color: #000000;
+    text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
   .product__tab-control:hover {
-    color: #000000; }
+    color: #000000;
+    text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
   .product__tab-control::before {
     content: "";
     position: absolute;
