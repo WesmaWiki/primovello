@@ -189,6 +189,20 @@
 		& .product-slider__next {
 			top: 24%;
 		}
+
+		&.--var-two {
+			& .product-card__image {
+				padding-top: 133%;
+			}
+
+			& .product-slider__prev {
+				top: 34%;
+			}
+
+			& .product-slider__next {
+				top: 34%;
+			}
+		}
 	}
 
 	&.--one-click {

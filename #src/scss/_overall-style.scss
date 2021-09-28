@@ -182,7 +182,7 @@ h6 {
 	}
 
 	&.--transparent {
-		color: #666666;
+		color: #444444;
 		background: transparent;
 		text-transform: lowercase;
 	}
@@ -206,7 +206,7 @@ h6 {
 	left: initial;
 	margin: 0;
 	background: #ffffff;
-	box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15);
+	box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.4);
 	border-radius: 50%;
 	&::after {
 		content: none;
