@@ -895,6 +895,38 @@
 	}
 }
 
+@media (max-width: 1470px) {
+	.table-size {
+		&__list {
+			max-height: 150px;
+		}
+	}
+
+	.popup-table-size {
+		&__info-image {
+			& img {
+				max-width: 160px;
+				max-height: 160px;
+				margin-bottom: 15px;
+			}
+		}
+
+		&__info-title {
+			margin-bottom: 15px;
+		}
+
+		&__info-name {
+			margin-bottom: 10px;
+		}
+
+		&__info-wrap {
+			& li:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
 @media (max-width: 900px) {
 	.popup-table-size {
 		&__info-row {
