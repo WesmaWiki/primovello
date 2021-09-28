@@ -5033,6 +5033,15 @@ ul.dots-text {
 
 .order-pay__radio {
   cursor: pointer; }
+  .order-pay__radio:hover .order-pay__item {
+    background: #000; }
+  .order-pay__radio:hover .order-pay__icon img {
+    -webkit-filter: invert(1);
+            filter: invert(1); }
+  .order-pay__radio:hover .order-pay__name {
+    color: #fff; }
+  .order-pay__radio:hover .order-pay__text {
+    color: #fff; }
 
 .order-pay input {
   display: none; }

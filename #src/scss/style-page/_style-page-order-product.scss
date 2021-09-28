@@ -210,6 +210,24 @@
 
 	&__radio {
 		cursor: pointer;
+
+		&:hover {
+			& .order-pay__item {
+				background: #000;
+			}
+
+			& .order-pay__icon img {
+				filter: invert(1);
+			}
+
+			& .order-pay__name {
+				color: #fff;
+			}
+
+			& .order-pay__text {
+				color: #fff;
+			}
+		}
 	}
 
 	& input {
