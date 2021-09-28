@@ -5556,7 +5556,8 @@ ul.dots-text {
     font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
-    color: #000000; }
+    color: #000000;
+    font-weight: bold; }
   .card-order-profile__info {
     display: grid;
     grid-template-columns: 270px 0.8fr 1fr 0.9fr 1fr;
@@ -5703,7 +5704,8 @@ ul.dots-text {
       font-size: 14px;
       line-height: 140%;
       text-transform: uppercase;
-      color: #000000; } }
+      color: #000000;
+      font-weight: bold; } }
 
 @media (max-width: 768px) {
   .order-profile__item {
