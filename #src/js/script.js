@@ -68,29 +68,7 @@ document.addEventListener(
 				dragSize: 185,
 				snapOnRelease: true,
 			},
-
-			// on: {
-			// 	afterInit: function (swiper) {
-			// 		console.log(swiper);
-			// 		swiper.scrollbar.dragSize = swiper.slides[0].clientWidth;
-			// 		swiper.scrollbar.updateSize();
-			// 		// swiper.destroy(true, true);
-			// 	},
-			// },
 		});
-
-		// sliderCatalog.on("resize", function () {
-		// 	this.scrollbar.dragSize = this.slides[0].clientWidth;
-		// 	this.scrollbar.setTranslate();
-		// });
-
-		// sliderCatalog.on("setTranslate", function () {
-		// 	this.scrollbar.dragSize = this.slides[0].clientWidth;
-		// 	this.scrollbar.setTranslate();
-		// });
-		// setTimeout(() => {
-		// 	sliderCatalog.translateTo(1, 300, false, false);
-		// }, 0);
 
 		let sliderBrand = new Swiper(".slider-brand", {
 			slidesPerView: 1,
@@ -926,8 +904,12 @@ document.addEventListener(
 		}
 
 		if (popupOverlay != null) {
-			popupOverlay.addEventListener("click", () => {
-				closePopup();
+			popupAllElem.forEach((element) => {
+				element.addEventListener("click", (e) => {
+					if (e.target.classList.contains("modal")) {
+						closePopup();
+					}
+				});
 			});
 		}
 	},

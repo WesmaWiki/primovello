@@ -1,15 +1,26 @@
 .popup-general {
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	// top: 50%;
+	// left: 50%;
+	// transform: translate(-50%, -50%);
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	width: 100%;
-	padding: 30px 15px;
-	z-index: 1000;
-	max-width: 525px;
+	height: 100%;
 
-	overflow: auto;
-	max-height: 100vh;
+	z-index: 1000;
+
+	&__popup-wrap {
+		width: 100%;
+		padding: 30px 15px;
+		max-width: 525px;
+		overflow: auto;
+		max-height: 100vh;
+	}
 
 	&__body {
 		position: relative;
@@ -20,7 +31,7 @@
 	}
 
 	&__group-title {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	&__title {
@@ -70,11 +81,12 @@
 	}
 
 	&__add-basket-product {
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 
 	&__add-baske-slider-name {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
+		font-weight: bold;
 		font-size: 14px;
 		line-height: 140%;
 		color: #000000;
@@ -94,7 +106,7 @@
 
 	&__add-basket-slider {
 		overflow: hidden;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 		& .product-slider__prev {
 			left: 5px;
 		}
@@ -130,7 +142,7 @@
 
 	&.active {
 		&.modal {
-			display: block;
+			display: flex;
 		}
 	}
 
@@ -150,11 +162,39 @@
 	}
 
 	&.--add-basket {
-		max-width: 970px;
+		& .popup-general__popup-wrap {
+			max-width: 970px;
+		}
+
+		& .popup-general__body {
+			padding: 20px 40px;
+		}
+
+		& .product-card__group {
+			margin-bottom: 10px;
+		}
+
+		& .product-card__price {
+			margin-bottom: 10px;
+		}
+
+		& .product-card__image {
+			padding-top: 90%;
+		}
+
+		& .product-slider__prev {
+			top: 24%;
+		}
+
+		& .product-slider__next {
+			top: 24%;
+		}
 	}
 
 	&.--one-click {
-		max-width: 875px;
+		& .popup-general__popup-wrap {
+			max-width: 875px;
+		}
 
 		& .form-popup-general__lsit {
 			display: flex;
@@ -182,7 +222,10 @@
 	}
 
 	&.--review {
-		max-width: 730px;
+		& .popup-general__popup-wrap {
+			max-width: 730px;
+		}
+
 		& .form-popup-general__submit {
 			max-width: 220px;
 		}
@@ -198,11 +241,16 @@
 	}
 
 	&.--result {
-		max-width: 460px;
+		& .popup-general__popup-wrap {
+			max-width: 460px;
+		}
 	}
 
 	&.--number-card {
-		max-width: 410px;
+		& .popup-general__popup-wrap {
+			max-width: 410px;
+		}
+
 		& .popup-general__group {
 			text-align: center;
 		}
@@ -215,7 +263,10 @@
 	}
 
 	&.--change-product {
-		max-width: 860px;
+		& .popup-general__popup-wrap {
+			display: flex;
+			max-width: 860px;
+		}
 
 		& .popup-general__image {
 			flex-basis: 380px;
@@ -254,7 +305,9 @@
 	}
 
 	&.--table-size {
-		max-width: 990px;
+		& .popup-general__popup-wrap {
+			max-width: 990px;
+		}
 	}
 }
 
@@ -264,7 +317,7 @@
 
 	&__wrap-input {
 		&:not(:first-child) {
-			margin-top: 30px;
+			margin-top: 15px;
 		}
 	}
 
@@ -276,29 +329,29 @@
 	}
 
 	&__wrap-button {
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 
 	&__submit {
 	}
 
 	&__group {
-		margin-top: 30px;
+		margin-top: 15px;
 		display: flex;
 	}
 
 	&__button {
 		font-size: 12px;
 		line-height: 140%;
-		color: #666666;
+		color: #000;
 		transition: all 0.3s ease;
 		&:hover {
-			color: #000;
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 	}
 
 	&__subtext {
-		margin-top: 30px;
+		margin-top: 15px;
 		font-size: 12px;
 		line-height: 140%;
 		color: #b9b9b9;
@@ -318,17 +371,21 @@
 			color: #666666;
 		}
 	}
+
+	& .wrap-input textarea {
+		min-height: 90px;
+	}
 }
 
 .popup-roduct {
 	display: flex;
 	width: 100%;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 	&__image {
-		margin-right: 30px;
-		max-width: 150px;
+		margin-right: 15px;
+		max-width: 110px;
 		& img {
 			width: 100%;
 			height: 100%;
@@ -484,7 +541,7 @@
 		font-size: 14px;
 		line-height: 140%;
 		text-decoration-line: line-through;
-		color: #444444;
+		color: #999999;
 	}
 }
 
@@ -500,12 +557,15 @@
 
 @media (max-width: 768px) {
 	.popup-general {
-		padding: 0;
-		max-width: 100% !important;
-		height: 100%;
+		&__popup-wrap {
+			padding: 0;
+			max-width: 100% !important;
+			height: 100%;
 
-		overflow: initial;
-		max-height: initial;
+			overflow: initial;
+			max-height: initial;
+		}
+
 		&__body {
 			height: 100%;
 			padding: 0;
@@ -570,6 +630,12 @@
 
 		&__result-button {
 			max-width: 100%;
+		}
+
+		&.--add-basket {
+			& .popup-general__body {
+				padding: 0;
+			}
 		}
 
 		&.--review {
@@ -639,18 +705,6 @@
 			&__price-old {
 				font-size: 14px;
 			}
-		}
-	}
-
-	.form-popup-general {
-		&__wrap-input {
-			&:not(:first-child) {
-				margin-top: 25px;
-			}
-		}
-
-		&__group {
-			margin-top: 25px;
 		}
 	}
 

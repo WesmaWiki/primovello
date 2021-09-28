@@ -1061,7 +1061,7 @@
 
 	&__title {
 		margin-bottom: 20px;
-		font-size: 24px;
+		font-size: 18px;
 		line-height: 120%;
 		color: #000000;
 		& span {
@@ -1072,7 +1072,7 @@
 	&__list {
 		padding-right: 30px;
 
-		max-height: 460px;
+		max-height: 420px;
 		overflow: auto;
 	}
 
@@ -1098,6 +1098,7 @@
 		font-size: 12px;
 		line-height: 140%;
 		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	&__value {
@@ -1139,10 +1140,10 @@
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1470px) {
 	.popup-cart-main {
 		&__list {
-			max-height: 350px;
+			max-height: 250px;
 		}
 	}
 }
