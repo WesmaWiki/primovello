@@ -3305,9 +3305,10 @@ input::-webkit-inner-spin-button {
   margin-bottom: 20px; }
   .block-text ul li {
     position: relative;
-    padding-left: 15px; }
+    padding-left: 15px;
+    margin-left: 15px; }
     .block-text ul li:not(:last-child) {
-      margin-bottom: 15px; }
+      margin-bottom: 10px; }
     .block-text ul li::before {
       content: "";
       position: absolute;
@@ -3316,13 +3317,15 @@ input::-webkit-inner-spin-button {
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background: #666; }
+      background: #000; }
 
 .block-text ol {
   list-style-position: inside;
   margin-bottom: 20px; }
-  .block-text ol li:not(:last-child) {
-    margin-bottom: 15px; }
+  .block-text ol li {
+    margin-left: 15px; }
+    .block-text ol li:not(:last-child) {
+      margin-bottom: 10px; }
 
 @media (max-width: 1170px) {
   .block-text__wrap {
@@ -3565,7 +3568,7 @@ input::-webkit-inner-spin-button {
 
 .product__text ul {
   font-size: 14px;
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
 
 .gallery-product__banner {
   top: 15px;
@@ -3907,10 +3910,11 @@ input::-webkit-inner-spin-button {
 
 ul.dots-text {
   display: grid;
-  grid-gap: 15px; }
+  grid-gap: 10px; }
   ul.dots-text li {
     position: relative;
-    padding-left: 10px;
+    padding-left: 13px;
+    margin-left: 15px;
     color: #444444; }
     ul.dots-text li::before {
       content: "";
@@ -5556,8 +5560,7 @@ ul.dots-text {
     font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
-    color: #000000;
-    font-weight: bold; }
+    color: #000000; }
   .card-order-profile__info {
     display: grid;
     grid-template-columns: 270px 0.8fr 1fr 0.9fr 1fr;
@@ -5704,8 +5707,7 @@ ul.dots-text {
       font-size: 14px;
       line-height: 140%;
       text-transform: uppercase;
-      color: #000000;
-      font-weight: bold; } }
+      color: #000000; } }
 
 @media (max-width: 768px) {
   .order-profile__item {

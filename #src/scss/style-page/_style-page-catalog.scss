@@ -683,8 +683,9 @@
 		& li {
 			position: relative;
 			padding-left: 15px;
+			margin-left: 15px;
 			&:not(:last-child) {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 			&::before {
 				content: "";
@@ -694,7 +695,7 @@
 				width: 5px;
 				height: 5px;
 				border-radius: 50%;
-				background: #666;
+				background: #000;
 			}
 		}
 	}
@@ -703,8 +704,9 @@
 		list-style-position: inside;
 		margin-bottom: 20px;
 		& li {
+			margin-left: 15px;
 			&:not(:last-child) {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 		}
 	}
