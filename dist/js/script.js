@@ -350,6 +350,13 @@ document.addEventListener(
 								el.classList.add("active");
 
 								tabContentItem.classList.add("active");
+
+								if (el.classList.contains("product__tab-control")) {
+									window.scrollTo({
+										top: el.getBoundingClientRect().top + pageYOffset - 120,
+										behavior: "smooth",
+									});
+								}
 							}
 						}
 					});
@@ -390,6 +397,7 @@ document.addEventListener(
 			plugins: [lgFullscreen, lgThumbnail],
 			mobileSettings: {
 				controls: true,
+				thumbnail: false,
 			},
 		});
 

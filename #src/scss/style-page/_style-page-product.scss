@@ -129,8 +129,7 @@
 			content: "";
 			position: absolute;
 			top: 50%;
-			// right: -12px;
-			right: -34px;
+			right: -1.7vw;
 			transform: translate(0, -50%);
 			width: 2px;
 			height: 2px;
@@ -655,7 +654,7 @@ ul.dots-text {
 	.product {
 		&__tab-control {
 			&::before {
-				right: -21px;
+				right: -1.1vw;
 			}
 		}
 	}

@@ -64,18 +64,25 @@
 
 	&__check {
 		margin-right: 10px;
+		& .check-from__text {
+			color: #000;
+			&:hover {
+				text-shadow: 0px 0px 0px black, 0px 0px 0px black;
+			}
+		}
 	}
 
 	&__delete {
+		font-weight: bold;
 		font-size: 12px;
 		line-height: 140%;
 		text-transform: uppercase;
 		color: #c41616;
-		opacity: 0.5;
+		// opacity: 0.5;
 		background: none;
 		transition: all 0.3s ease;
 		&:hover {
-			opacity: 1;
+			text-shadow: 0px 0px 0px #c41616, 0px 0px 0px #c41616;
 		}
 	}
 
@@ -123,7 +130,7 @@
 		min-height: 15px;
 		max-width: 15px;
 		max-height: 15px;
-		background: #ecedef;
+		background: #d0d0d0;
 		transition: all 0.3s ease;
 		&::before {
 			opacity: 0;

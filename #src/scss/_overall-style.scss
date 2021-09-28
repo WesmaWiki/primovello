@@ -123,7 +123,7 @@ h3 {
 	transition: all 0.3s ease;
 	&.--white {
 		color: #000;
-		border-color: #999999;
+		border-color: #666666;
 		background: #fff;
 
 		&:not(.errors):hover {
@@ -139,7 +139,7 @@ h3 {
 	}
 	&:not(.--white):not(.--transparent):not(.errors):hover {
 		color: #000;
-		border-color: #999999;
+		border-color: #666666;
 		background: transparent;
 	}
 
@@ -329,7 +329,7 @@ h3 {
 		line-height: 140%;
 
 		& a {
-			color: #999999;
+			color: #444444;
 			transition: all 0.3s ease;
 			&:hover {
 				color: #000;
@@ -337,7 +337,7 @@ h3 {
 		}
 
 		& span {
-			color: #999999;
+			color: #444444;
 		}
 
 		&::before {
@@ -348,7 +348,7 @@ h3 {
 			top: 50%;
 			right: -8px;
 			transform: translate(0, -50%);
-			background: #999999;
+			background: #444444;
 		}
 
 		&:last-child {
@@ -396,7 +396,7 @@ h3 {
 			font-size: 12px;
 			line-height: 140%;
 			text-transform: uppercase;
-			color: #666666;
+			color: #444444;
 
 			transition: all 0.3s ease;
 		}
