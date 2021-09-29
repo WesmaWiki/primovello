@@ -14,6 +14,9 @@
 
 	z-index: 1000;
 
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(5px);
+
 	&__popup-wrap {
 		width: 100%;
 		padding: 30px 15px;
@@ -176,32 +179,6 @@
 
 		& .product-card__price {
 			margin-bottom: 10px;
-		}
-
-		& .product-card__image {
-			padding-top: 90%;
-		}
-
-		& .product-slider__prev {
-			top: 24%;
-		}
-
-		& .product-slider__next {
-			top: 24%;
-		}
-
-		&.--var-two {
-			& .product-card__image {
-				padding-top: 133%;
-			}
-
-			& .product-slider__prev {
-				top: 34%;
-			}
-
-			& .product-slider__next {
-				top: 34%;
-			}
 		}
 	}
 
@@ -497,23 +474,23 @@
 	}
 }
 
-.popup-overlay {
-	opacity: 0;
-	visibility: hidden;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: rgba(255, 255, 255, 0.85);
-	backdrop-filter: blur(5px);
-	z-index: 99;
-	transition: all 0.3s ease;
-	&.active {
-		opacity: 1;
-		visibility: visible;
-	}
-}
+// .popup-overlay {
+// 	opacity: 0;
+// 	visibility: hidden;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	background: rgba(255, 255, 255, 0.85);
+// 	backdrop-filter: blur(5px);
+// 	z-index: 99;
+// 	transition: all 0.3s ease;
+// 	&.active {
+// 		opacity: 1;
+// 		visibility: visible;
+// 	}
+// }
 
 .popup-card-poduct {
 	&__name {

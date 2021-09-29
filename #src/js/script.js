@@ -331,7 +331,7 @@ document.addEventListener(
 
 								if (el.classList.contains("product__tab-control")) {
 									window.scrollTo({
-										top: el.getBoundingClientRect().top + pageYOffset - 120,
+										top: pageYOffset,
 										behavior: "smooth",
 									});
 								}
@@ -848,7 +848,6 @@ document.addEventListener(
 		let popupAllElem = Array.prototype.slice.call(document.querySelectorAll(".modal"));
 		let openButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-show"));
 		let closeButton = Array.prototype.slice.call(document.querySelectorAll(".js-modal-close"));
-		let popupOverlay = document.querySelector(".popup-overlay");
 		let body = document.querySelector("body");
 
 		function openPopup(e) {
@@ -859,11 +858,8 @@ document.addEventListener(
 
 			body.classList.add("lock");
 
-			popupOverlay.classList.add("active");
-
 			setTimeout(() => {
 				modal.style.opacity = "1";
-				popupOverlay.style.opacity = "1";
 			}, 100);
 		}
 
@@ -872,13 +868,11 @@ document.addEventListener(
 				if (element.classList.contains("active")) {
 					let modal = element;
 
-					popupOverlay.classList.remove("active");
 					setTimeout(() => {
 						modal.classList.remove("active");
 					}, 300);
 
 					modal.style.opacity = "0";
-					popupOverlay.style.opacity = "0";
 
 					body.classList.remove("lock");
 				}
@@ -903,7 +897,7 @@ document.addEventListener(
 			});
 		}
 
-		if (popupOverlay != null) {
+		if (popupAllElem != null) {
 			popupAllElem.forEach((element) => {
 				element.addEventListener("click", (e) => {
 					if (e.target.classList.contains("modal")) {
