@@ -378,8 +378,9 @@ document.addEventListener(
 			exThumbImage: "data-external-thumb-image",
 			speed: 500,
 			plugins: [lgFullscreen, lgThumbnail],
+			thumbnail: false,
 			mobileSettings: {
-				controls: true,
+				controls: false,
 				thumbnail: false,
 			},
 		});

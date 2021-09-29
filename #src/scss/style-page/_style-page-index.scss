@@ -60,21 +60,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-		&.--white {
-			// color: #fff;
-			// border-color: #ffffff;
-			// background: transparent;
-		}
 
 		&:hover {
-			opacity: 0.9;
-
-			// &.--white {
-			// 	opacity: 1;
-			// 	color: #000000;
-			// 	background: #ffffff;
-			// 	border-color: #ffffff;
-			// }
+			background: #000;
+			color: #ffffff;
 		}
 	}
 }
@@ -202,7 +191,8 @@
 
 	&:hover {
 		& .card-category__button {
-			opacity: 0.7;
+			background: #000;
+			color: #ffffff;
 		}
 	}
 }
@@ -479,6 +469,11 @@
 		transition: all 0.3s ease;
 
 		z-index: 1;
+
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
 	}
 
 	&__name {
@@ -552,7 +547,7 @@
 		font-size: 12px;
 		line-height: 140%;
 		text-decoration-line: line-through;
-		color: #999999;
+		color: #444444;
 	}
 
 	&__current {
@@ -869,7 +864,8 @@
 		z-index: 2;
 		&:hover {
 			& .category-screen__button {
-				opacity: 0.7;
+				background: #000;
+				color: #ffffff;
 			}
 		}
 	}
@@ -1117,7 +1113,8 @@
 
 	&:hover {
 		& .banner-factory__button {
-			opacity: 0.7;
+			background: #000;
+			color: #ffffff;
 		}
 	}
 }
@@ -1456,7 +1453,8 @@
 	&__button {
 		max-width: 170px;
 		&:hover {
-			opacity: 0.7;
+			color: #ffffff;
+			background: #000;
 		}
 	}
 }

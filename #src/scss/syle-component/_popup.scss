@@ -345,7 +345,7 @@
 		margin-top: 15px;
 		font-size: 12px;
 		line-height: 140%;
-		color: #b9b9b9;
+		color: #444444;
 		& a {
 			color: #666666;
 			transition: all 0.3s ease;
@@ -357,9 +357,13 @@
 	&__policy {
 		font-size: 12px;
 		line-height: 140%;
-		color: #b9b9b9;
+		color: #444444;
 		& a {
-			color: #666666;
+			color: #000000;
+			transition: all 0.3s ease;
+			&:hover {
+				text-shadow: 0px 0px 0px black, 0px 0px 0px black;
+			}
 		}
 	}
 
@@ -417,7 +421,7 @@
 	&__article {
 		font-size: 12px;
 		line-height: 140%;
-		color: #999999;
+		color: #444444;
 	}
 
 	&__list-option {
@@ -463,7 +467,7 @@
 		font-size: 14px;
 		line-height: 140%;
 		text-decoration-line: line-through;
-		color: #999999;
+		color: #444444;
 	}
 
 	&__price-current {
@@ -473,24 +477,6 @@
 		color: #000000;
 	}
 }
-
-// .popup-overlay {
-// 	opacity: 0;
-// 	visibility: hidden;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	bottom: 0;
-// 	right: 0;
-// 	background: rgba(255, 255, 255, 0.85);
-// 	backdrop-filter: blur(5px);
-// 	z-index: 99;
-// 	transition: all 0.3s ease;
-// 	&.active {
-// 		opacity: 1;
-// 		visibility: visible;
-// 	}
-// }
 
 .popup-card-poduct {
 	&__name {
@@ -532,7 +518,7 @@
 		font-size: 14px;
 		line-height: 140%;
 		text-decoration-line: line-through;
-		color: #999999;
+		color: #444444;
 	}
 }
 

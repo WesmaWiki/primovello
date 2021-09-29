@@ -185,6 +185,10 @@ h6 {
 		color: #444444;
 		background: transparent;
 		text-transform: lowercase;
+		&:hover {
+			color: #000;
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
+		}
 	}
 	&:not(.--white):not(.--transparent):not(.errors):hover {
 		color: #000;
