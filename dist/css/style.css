@@ -1648,7 +1648,8 @@ input::-webkit-inner-spin-button {
     .main-screen__button:last-child {
       margin-bottom: 0; }
     .main-screen__button:hover {
-      background: #999999; }
+      background: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
 
 @media (max-width: 1170px) {
   .main-screen {
@@ -1766,7 +1767,8 @@ input::-webkit-inner-spin-button {
     max-width: 150px;
     z-index: 1; }
   .card-category:hover .card-category__button {
-    background: #999999; }
+    background: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
 
 @media (max-width: 1430px) {
   .card-category__title {
@@ -1960,7 +1962,8 @@ input::-webkit-inner-spin-button {
     transition: all 0.3s ease;
     z-index: 1; }
     .product-card__button:hover {
-      background: #999999; }
+      background: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
   .product-card__name {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -2207,8 +2210,8 @@ input::-webkit-inner-spin-button {
             justify-content: center;
     z-index: 2; }
     .category-screen__link:hover .category-screen__button {
-      background: #000;
-      color: #ffffff; }
+      background: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
   .category-screen__bg {
     position: absolute;
     top: 0;

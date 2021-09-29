@@ -62,7 +62,8 @@
 		}
 
 		&:hover {
-			background: #999999;
+			background: rgba(255, 255, 255, 0.8);
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 	}
 }
@@ -190,7 +191,8 @@
 
 	&:hover {
 		& .card-category__button {
-			background: #999999;
+			background: rgba(255, 255, 255, 0.8);
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 	}
 }
@@ -469,7 +471,8 @@
 		z-index: 1;
 
 		&:hover {
-			background: #999999;
+			background: rgba(255, 255, 255, 0.8);
+			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 		}
 	}
 
@@ -861,8 +864,8 @@
 		z-index: 2;
 		&:hover {
 			& .category-screen__button {
-				background: #000;
-				color: #ffffff;
+				background: rgba(255, 255, 255, 0.8);
+				text-shadow: 0px 0px 0px black, 0px 0px 0px black;
 			}
 		}
 	}
