@@ -1337,6 +1337,18 @@
 		max-height: 40px;
 		transform: rotate(180deg);
 		background: #ffffff;
+
+		& svg {
+			position: relative;
+			right: 0;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			& svg {
+				right: 7px;
+			}
+		}
 	}
 }
 
