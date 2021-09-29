@@ -1,0 +1,19 @@
+.hidden-func {
+	& .category-screen {
+		display: none !important;
+	}
+
+	& .form-basket__group-button {
+		display: none !important;
+	}
+
+	& .form-basket__check {
+		display: none !important;
+	}
+
+	& .result-basket__form {
+		&:last-child {
+			display: none;
+		}
+	}
+}

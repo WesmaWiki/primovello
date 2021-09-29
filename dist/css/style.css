@@ -6877,3 +6877,15 @@ ul.dots-text {
   .popup-table-size__info-group {
     grid-template-columns: 1fr;
     gap: 25px; } }
+
+.hidden-func .category-screen {
+  display: none !important; }
+
+.hidden-func .form-basket__group-button {
+  display: none !important; }
+
+.hidden-func .form-basket__check {
+  display: none !important; }
+
+.hidden-func .result-basket__form:last-child {
+  display: none; }
