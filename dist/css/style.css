@@ -2133,16 +2133,6 @@ input::-webkit-inner-spin-button {
   top: 39%;
   right: -15px; }
 
-.slider-catalog__scrollbar {
-  margin-top: 41px;
-  position: static !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: #f0eff2 !important; }
-  .slider-catalog__scrollbar .swiper-scrollbar-drag {
-    background: #000;
-    border-radius: 0; }
-
 .card-catalog__image {
   margin-bottom: 42px; }
   .card-catalog__image img {

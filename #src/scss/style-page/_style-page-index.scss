@@ -749,19 +749,6 @@
 
 	&__card {
 	}
-
-	&__scrollbar {
-		margin-top: 41px;
-		position: static !important;
-		width: 100% !important;
-		height: 2px !important;
-		background: #f0eff2 !important;
-
-		& .swiper-scrollbar-drag {
-			background: #000;
-			border-radius: 0;
-		}
-	}
 }
 
 .card-catalog {

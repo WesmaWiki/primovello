@@ -62,12 +62,6 @@ document.addEventListener(
 					spaceBetween: 20,
 				},
 			},
-
-			scrollbar: {
-				el: ".slider-catalog__scrollbar",
-				dragSize: 185,
-				snapOnRelease: true,
-			},
 		});
 
 		let sliderBrand = new Swiper(".slider-brand", {
