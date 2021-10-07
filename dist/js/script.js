@@ -323,9 +323,8 @@ document.addEventListener(
 
 								tabContentItem.classList.add("active");
 							}
+							Sticky.update();
 						}
-
-						Sticky.update();
 					});
 				});
 			});
