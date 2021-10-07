@@ -322,7 +322,20 @@ document.addEventListener(
 								el.classList.add("active");
 
 								tabContentItem.classList.add("active");
+
+								if (el.classList.contains("--anchor-tab")) {
+									setTimeout(() => {
+										if (element.getBoundingClientRect().top + window.pageYOffset > window.pageYOffset && element.getBoundingClientRect().bottom + window.pageYOffset < window.pageYOffset + document.documentElement.clientHeight) {
+										} else {
+											window.scrollTo({
+												top: element.closest(".product__column.--two").getBoundingClientRect().bottom + pageYOffset - element.clientHeight - 120,
+												behavior: "smooth",
+											});
+										}
+									}, 200);
+								}
 							}
+
 							Sticky.update();
 						}
 					});
