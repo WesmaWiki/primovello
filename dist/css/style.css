@@ -3571,18 +3571,20 @@ input::-webkit-inner-spin-button {
        -moz-column-gap: 30px;
             column-gap: 30px; }
 
-.product__text {
+.product__text.--height-text {
   overflow: auto;
   height: 150px;
   padding-right: 10px; }
-  .product__text p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 140%;
-    color: #444444; }
-  .product__text ul {
-    font-size: 14px;
-    margin-bottom: 20px; }
+
+.product__text p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 140%;
+  color: #444444; }
+
+.product__text ul {
+  font-size: 14px;
+  margin-bottom: 20px; }
 
 .gallery-product__banner {
   top: 15px;

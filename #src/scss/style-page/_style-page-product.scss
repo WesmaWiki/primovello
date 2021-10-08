@@ -162,9 +162,12 @@
 	}
 
 	&__text {
-		overflow: auto;
-		height: 150px;
-		padding-right: 10px;
+		&.--height-text {
+			overflow: auto;
+			height: 150px;
+			padding-right: 10px;
+		}
+
 		& p {
 			margin-bottom: 20px;
 			font-size: 14px;

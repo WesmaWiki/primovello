@@ -294,6 +294,22 @@ document.addEventListener(
 		// Табы
 
 		let tabContainers = Array.prototype.slice.call(document.querySelectorAll(".js-tab-container"));
+		let heightRow;
+		window.onload = () => {
+			if (document.querySelector(".product__row") != null) {
+				heightRow = document.querySelector(".product__row").offsetHeight;
+			}
+		};
+
+		window.addEventListener("resize", function () {
+			if (document.querySelector(".product__row") != null) {
+				heightRow = document.querySelector(".product__row").offsetHeight - document.querySelector(".product__tab-content.active").offsetHeight;
+				console.log(heightRow);
+				if (document.documentElement.clientWidth <= 900) {
+					document.querySelector(".product__row").style.minHeight = "initial";
+				}
+			}
+		});
 
 		if (tabContainers.length > 0) {
 			tabContainers.forEach((element) => {
@@ -324,15 +340,13 @@ document.addEventListener(
 								tabContentItem.classList.add("active");
 
 								if (el.classList.contains("--anchor-tab")) {
-									setTimeout(() => {
-										if (element.getBoundingClientRect().top + window.pageYOffset > window.pageYOffset && element.getBoundingClientRect().bottom + window.pageYOffset < window.pageYOffset + document.documentElement.clientHeight) {
+									if (document.querySelector(".product__row") != null) {
+										if (document.documentElement.clientWidth >= 900) {
+											document.querySelector(".product__row").style.minHeight = heightRow + tabContentItem.clientHeight + "px";
 										} else {
-											window.scrollTo({
-												top: element.closest(".product__column.--two").getBoundingClientRect().bottom + pageYOffset - element.clientHeight - 120,
-												behavior: "smooth",
-											});
+											document.querySelector(".product__row").style.minHeight = "initial";
 										}
-									}, 200);
+									}
 								}
 							}
 
@@ -564,7 +578,6 @@ document.addEventListener(
 		let arrMenuFooterToggle = document.querySelectorAll(".menu-footer.toggle-menu");
 
 		function footerToggleMenu() {
-			console.log(this);
 			let listMenu = this.parentNode;
 
 			listMenu.classList.toggle("active");
