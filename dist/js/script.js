@@ -294,19 +294,22 @@ document.addEventListener(
 		// Табы
 
 		let tabContainers = Array.prototype.slice.call(document.querySelectorAll(".js-tab-container"));
-		let heightRow;
+
+		let productRow = document.querySelector(".product__row");
 		window.onload = () => {
-			if (document.querySelector(".product__row") != null) {
-				heightRow = document.querySelector(".product__row").offsetHeight;
+			if (productRow != null) {
+				productRow.style.minHeight = productRow.offsetHeight + document.querySelector(".product__tab-content.active").offsetHeight + "px";
 			}
 		};
 
 		window.addEventListener("resize", function () {
-			if (document.querySelector(".product__row") != null) {
-				heightRow = document.querySelector(".product__row").offsetHeight - document.querySelector(".product__tab-content.active").offsetHeight;
-				console.log(heightRow);
+			if (productRow != null) {
+				productRow.style.minHeight = "initial";
+
+				productRow.style.minHeight = productRow.offsetHeight + document.querySelector(".product__tab-content.active").offsetHeight + "px";
+
 				if (document.documentElement.clientWidth <= 900) {
-					document.querySelector(".product__row").style.minHeight = "initial";
+					productRow.style.minHeight = "initial";
 				}
 			}
 		});
@@ -339,12 +342,13 @@ document.addEventListener(
 
 								tabContentItem.classList.add("active");
 
-								if (el.classList.contains("--anchor-tab")) {
-									if (document.querySelector(".product__row") != null) {
+								if (el.classList.contains("product__tab-control")) {
+									if (productRow != null) {
 										if (document.documentElement.clientWidth >= 900) {
-											document.querySelector(".product__row").style.minHeight = heightRow + tabContentItem.clientHeight + "px";
+											productRow.style.minHeight = "initial";
+											productRow.style.minHeight = productRow.offsetHeight + tabContentItem.clientHeight + "px";
 										} else {
-											document.querySelector(".product__row").style.minHeight = "initial";
+											productRow.style.minHeight = "initial";
 										}
 									}
 								}
