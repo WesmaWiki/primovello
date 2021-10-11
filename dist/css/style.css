@@ -3279,6 +3279,9 @@ input::-webkit-inner-spin-button {
 .recently-viewed__title {
   margin-bottom: 40px; }
 
+.recently-viewed.product-slider-viewed .recently-viewed__wrap {
+  padding-top: 10px; }
+
 @media (max-width: 1170px) {
   .recently-viewed__wrap {
     padding: 20px 0 25px 0; }
@@ -3431,7 +3434,7 @@ input::-webkit-inner-spin-button {
     margin: 0 0 15px 0; }
 
 .product__wrap {
-  padding: 10px 0 50px 0; }
+  padding: 10px 0 10px 0; }
 
 .product__row {
   display: grid;

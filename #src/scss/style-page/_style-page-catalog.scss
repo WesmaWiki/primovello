@@ -628,6 +628,12 @@
 	&__title {
 		margin-bottom: 40px;
 	}
+
+	&.product-slider-viewed {
+		& .recently-viewed__wrap {
+			padding-top: 10px;
+		}
+	}
 }
 
 @media (max-width: 1170px) {
