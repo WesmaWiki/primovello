@@ -422,31 +422,37 @@ document.addEventListener(
 
 		let arrFilter = Array.prototype.slice.call(document.querySelectorAll(".js-filter"));
 
-		function fadeInEl(arrElfade, fadeEl) {
-			if (!fadeEl.classList.contains("active")) {
-				arrElfade.forEach((el) => el.classList.remove("active"));
-				fadeEl.classList.add("active");
+		function fadeElAll(arrElfade, fadeEl) {
+			if (match[0].matches) {
+				if (!fadeEl.classList.contains("active")) {
+					arrElfade.forEach((el) => {
+						el.querySelector(".js-filter-wrap").style.height = "0";
+						el.classList.remove("active");
+					});
+
+					fadeEl.querySelector(".js-filter-wrap").style.height = fadeEl.querySelector(".js-filter-wrap").scrollHeight + "px";
+
+					fadeEl.classList.add("active");
+				} else {
+					fadeEl.querySelector(".js-filter-wrap").style.height = "0";
+
+					fadeEl.classList.remove("active");
+				}
 			} else {
-				fadeEl.classList.remove("active");
+				if (!fadeEl.classList.contains("active")) {
+					arrElfade.forEach((el) => el.classList.remove("active"));
+					fadeEl.classList.add("active");
+				} else {
+					fadeEl.classList.remove("active");
+				}
 			}
 		}
 
-		function slideToEl(arrElfade, fadeEl) {
-			if (!fadeEl.classList.contains("active")) {
-				arrElfade.forEach((el) => {
-					el.querySelector(".js-filter-wrap").style.height = "0";
-					el.classList.remove("active");
-				});
-
-				fadeEl.querySelector(".js-filter-wrap").style.height = fadeEl.querySelector(".js-filter-wrap").scrollHeight + "px";
-
-				fadeEl.classList.add("active");
-			} else {
-				fadeEl.querySelector(".js-filter-wrap").style.height = "0";
-
-				fadeEl.classList.remove("active");
-			}
-		}
+		arrFilter.forEach((element, index, array) => {
+			element.querySelector(".js-filter-click").addEventListener("click", () => {
+				fadeElAll(array, array[index]);
+			});
+		});
 
 		function closeFilterOutsideWindow(e) {
 			let filter = document.querySelector(".js-filter.active");
@@ -462,28 +468,12 @@ document.addEventListener(
 			function filterMobil() {
 				if (match[0].matches) {
 					arrFilter.forEach((element, index, array) => {
-						element.querySelector(".js-filter-click").removeEventListener("click", arrFuncFadeIn[0]);
-
-						arrFuncFadeIn.shift();
-
-						arrslideToEl.push(slideToEl.bind(null, array, array[index]));
-
-						element.querySelector(".js-filter-click").addEventListener("click", arrslideToEl[index]);
-
 						element.querySelector(".js-filter-wrap").style.height = 0;
 
 						document.removeEventListener("click", closeFilterOutsideWindow);
 					});
 				} else {
 					arrFilter.forEach((element, index, array) => {
-						element.querySelector(".js-filter-click").removeEventListener("click", arrslideToEl[0]);
-
-						arrslideToEl.shift();
-
-						arrFuncFadeIn.push(fadeInEl.bind(null, array, array[index]));
-
-						element.querySelector(".js-filter-click").addEventListener("click", arrFuncFadeIn[index]);
-
 						element.querySelector(".js-filter-wrap").style.height = element.querySelector(".js-filter-wrap").scrollHeight + "px";
 
 						document.addEventListener("click", closeFilterOutsideWindow);
@@ -693,17 +683,60 @@ document.addEventListener(
 		// Позиция хинтов нет в наличии при ресайзе
 		let arrElSize = Array.prototype.slice.call(document.querySelectorAll(".size-product__item.--out-of-stock"));
 
-		if (arrElSize.length > 0) {
-			arrElSize.forEach((element, index) => {
-				window.addEventListener("resize", function () {
-					if (element.getBoundingClientRect().right - element.closest(".container").getBoundingClientRect().right > -150) {
-						element.classList.add("--right");
-					} else {
-						element.classList.remove("--right");
-					}
-				});
+		// if (arrElSize.length > 0) {
+		// 	arrElSize.forEach((element, index) => {
+		// 		window.addEventListener("resize", function () {
+		// 			if (element.getBoundingClientRect().right - element.closest(".container").getBoundingClientRect().right > -150) {
+		// 				element.classList.add("--right");
+		// 			} else {
+		// 				element.classList.remove("--right");
+		// 			}
+		// 		});
+		// 	});
+		// }
+
+		function positionHint() {
+			arrElSize.forEach((element) => {
+				let indentRight = document.documentElement.clientWidth - element.querySelector(".size-product__hint").getBoundingClientRect().right;
+				let indentLeft = element.querySelector(".size-product__hint").getBoundingClientRect().left;
+
+				if (indentRight <= 0) {
+					element.querySelector(".size-product__hint").style.transitionDuration = "0s";
+					element.classList.add("--right");
+					setTimeout(() => {
+						element.querySelector(".size-product__hint").style.removeProperty("transition-duration");
+					}, 310);
+				}
+
+				if (element.classList.contains("--right") && indentRight >= element.querySelector(".size-product__hint").clientWidth / 2 - element.clientWidth / 2) {
+					element.querySelector(".size-product__hint").style.transitionDuration = "0s";
+					element.classList.remove("--right");
+					setTimeout(() => {
+						element.querySelector(".size-product__hint").style.removeProperty("transition-duration");
+					}, 310);
+				}
+
+				if (indentLeft <= 0) {
+					element.querySelector(".size-product__hint").style.transitionDuration = "0s";
+					element.classList.add("--left");
+					setTimeout(() => {
+						element.querySelector(".size-product__hint").style.removeProperty("transition-duration");
+					}, 310);
+				}
+
+				if (element.classList.contains("--left") && indentLeft >= element.querySelector(".size-product__hint").clientWidth / 2 - element.clientWidth / 2) {
+					element.querySelector(".size-product__hint").style.transitionDuration = "0s";
+					element.classList.remove("--left");
+					setTimeout(() => {
+						element.querySelector(".size-product__hint").style.removeProperty("transition-duration");
+					}, 310);
+				}
 			});
 		}
+
+		positionHint();
+
+		window.addEventListener("resize", positionHint);
 
 		// Раскрытие товаров в оформлении заказов
 
@@ -923,6 +956,87 @@ document.addEventListener(
 						closePopup();
 					}
 				});
+			});
+		}
+
+		// СЕО фильтр
+		let seoFilter = document.querySelectorAll(".seo-filter");
+
+		if (seoFilter.length > 0) {
+			seoFilter.forEach((element, index, array) => {
+				let elLink = element.querySelectorAll(".seo-filter__item");
+				let buttonAll = element.querySelector(".seo-filter__all");
+
+				let indexHiden;
+
+				if (element.classList.contains("--top")) {
+					indexHiden = 5;
+				}
+
+				if (element.classList.contains("--bottom")) {
+					indexHiden = 8;
+				}
+
+				if (elLink.length > indexHiden) {
+					elLink.forEach((el, i, arr) => {
+						if (i > indexHiden - 1) {
+							el.classList.add("--hidden");
+
+							el.style.height = "0";
+							el.style.marginBottom = "0";
+
+							el.style.display = "none";
+						}
+					});
+
+					if (buttonAll != null) {
+						buttonAll.addEventListener("click", function () {
+							this.classList.toggle("--show");
+
+							if (element.classList.contains("--bottom")) {
+								if (this.classList.contains("--show")) {
+									this.textContent = "скрыть все";
+								} else {
+									this.textContent = "раскрыть все";
+								}
+							}
+
+							elLink.forEach((el, i) => {
+								if (i > indexHiden - 1) {
+									if (el.classList.contains("--hidden")) {
+										el.classList.remove("--hidden");
+
+										el.style.display = "initial";
+
+										el.style.height = el.querySelector("a").clientHeight + "px";
+
+										setTimeout(() => {
+											el.style.removeProperty("height");
+										}, 310);
+
+										el.style.removeProperty("margin-bottom");
+									} else {
+										el.classList.add("--hidden");
+
+										el.style.height = el.querySelector("a").clientHeight + "px";
+
+										setTimeout(() => {
+											el.style.height = "0";
+										}, 0);
+
+										setTimeout(() => {
+											el.style.display = "none";
+										}, 310);
+
+										el.style.marginBottom = "0";
+									}
+								}
+							});
+						});
+					}
+				} else {
+					buttonAll ? (buttonAll.style.display = "none") : null;
+				}
 			});
 		}
 	},

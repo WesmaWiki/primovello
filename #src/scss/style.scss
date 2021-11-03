@@ -55,3 +55,145 @@
 @import "_animate";
 
 @import "_hidden-el";
+
+.page-catalog {
+	&__seo-filter {
+		border-top: 1px solid #f0eff2;
+		border-bottom: 1px solid #f0eff2;
+	}
+}
+.seo-filter {
+	padding: 15px 45px;
+
+	&__group {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px -15px -20px;
+	}
+
+	&__item {
+		margin: 0 20px 15px 20px;
+		& a {
+			display: block;
+			font-size: 12px;
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #000000d9;
+			transition: all 0.3s ease;
+			&:hover {
+				text-shadow: 0px 0px 0px black, 0px 0px 0px black;
+			}
+		}
+
+		overflow: hidden;
+
+		transition: all 0.3s ease;
+
+		&.--hidden {
+		}
+	}
+
+	&__all {
+		font-size: 12px;
+		margin-left: 40px;
+		cursor: pointer;
+
+		& svg {
+			transition: all 0.3s ease;
+		}
+
+		&.--show {
+			& svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&.--bottom {
+		padding: 20px 60px;
+
+		& .seo-filter {
+			&__group {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			&__list {
+				justify-content: center;
+			}
+
+			&__item {
+				position: relative;
+				padding-right: 15px;
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: 0;
+					width: 10px;
+					height: 5px;
+					background: url("../img/icon-arrow-filter.svg") no-repeat;
+					transform: translate(0, -50%) rotate(-90deg);
+				}
+			}
+
+			&__all {
+				text-transform: uppercase;
+				border-bottom: 1px solid #000;
+				margin-left: 0;
+				margin-top: 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1450px) {
+	.seo-filter {
+		padding: 15px 15px;
+
+		&__list {
+			margin: 0 -10px -15px -10px;
+		}
+
+		&__item {
+			margin: 0 10px 15px 10px;
+		}
+
+		&.--bottom {
+			padding: 15px 15px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.seo-filter {
+		&__list {
+			margin: 0 -10px -10px -10px;
+		}
+
+		&__item {
+			margin: 0 10px 10px 10px;
+			& a {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.seo-filter {
+		padding: 15px 0px;
+		&.--bottom {
+			padding: 15px 0px;
+		}
+	}
+}
