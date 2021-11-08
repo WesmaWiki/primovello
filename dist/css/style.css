@@ -6892,21 +6892,39 @@ ul.dots-text {
   border-bottom: 1px solid #f0eff2; }
 
 .seo-filter {
-  padding: 15px 45px; }
-  .seo-filter__group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+  padding: 15px 45px 10px 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .seo-filter.--bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .seo-filter__wrap {
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
   .seo-filter__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -20px -15px -20px; }
+    margin: 0 -20px -15px -20px;
+    overflow: hidden; }
+    .seo-filter__list.--hidden {
+      height: 20px; }
   .seo-filter__item {
     margin: 0 20px 15px 20px;
     overflow: hidden;
@@ -6938,14 +6956,6 @@ ul.dots-text {
               transform: rotate(180deg); }
   .seo-filter.--bottom {
     padding: 20px 60px; }
-    .seo-filter.--bottom .seo-filter__group {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
     .seo-filter.--bottom .seo-filter__list {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
@@ -6977,7 +6987,7 @@ ul.dots-text {
 
 @media (max-width: 1450px) {
   .seo-filter {
-    padding: 15px 15px; }
+    padding: 15px 15px 10px 15px; }
     .seo-filter__list {
       margin: 0 -10px -15px -10px; }
     .seo-filter__item {
@@ -6995,6 +7005,6 @@ ul.dots-text {
 
 @media (max-width: 768px) {
   .seo-filter {
-    padding: 15px 0px; }
+    padding: 15px 0px 10px 0; }
     .seo-filter.--bottom {
       padding: 15px 0px; } }

@@ -960,32 +960,146 @@ document.addEventListener(
 		}
 
 		// СЕО фильтр
+		// let seoFilter = document.querySelectorAll(".seo-filter");
+
+		// if (seoFilter.length > 0) {
+		// 	seoFilter.forEach((element, index, array) => {
+		// 		let elLink = element.querySelectorAll(".seo-filter__item");
+		// 		let buttonAll = element.querySelector(".seo-filter__all");
+
+		// 		let indexHiden;
+
+		// 		if (element.classList.contains("--top")) {
+		// 			indexHiden = 5;
+		// 		}
+
+		// 		if (element.classList.contains("--bottom")) {
+		// 			indexHiden = 8;
+		// 		}
+
+		// 		if (elLink.length > indexHiden) {
+		// 			elLink.forEach((el, i, arr) => {
+		// 				if (i > indexHiden - 1) {
+		// 					el.classList.add("--hidden");
+
+		// 					el.style.height = "0";
+		// 					el.style.marginBottom = "0";
+
+		// 					el.style.display = "none";
+		// 				}
+		// 			});
+
+		// 			if (buttonAll != null) {
+		// 				buttonAll.addEventListener("click", function () {
+		// 					this.classList.toggle("--show");
+
+		// 					if (element.classList.contains("--bottom")) {
+		// 						if (this.classList.contains("--show")) {
+		// 							this.textContent = "скрыть все";
+		// 						} else {
+		// 							this.textContent = "раскрыть все";
+		// 						}
+		// 					}
+
+		// 					elLink.forEach((el, i) => {
+		// 						if (i > indexHiden - 1) {
+		// 							if (el.classList.contains("--hidden")) {
+		// 								el.classList.remove("--hidden");
+
+		// 								el.style.display = "initial";
+
+		// 								el.style.height = el.querySelector("a").clientHeight + "px";
+
+		// 								setTimeout(() => {
+		// 									el.style.removeProperty("height");
+		// 								}, 310);
+
+		// 								el.style.removeProperty("margin-bottom");
+		// 							} else {
+		// 								el.classList.add("--hidden");
+
+		// 								el.style.height = el.querySelector("a").clientHeight + "px";
+
+		// 								setTimeout(() => {
+		// 									el.style.height = "0";
+		// 								}, 0);
+
+		// 								setTimeout(() => {
+		// 									el.style.display = "none";
+		// 								}, 310);
+
+		// 								el.style.marginBottom = "0";
+		// 							}
+		// 						}
+		// 					});
+		// 				});
+		// 			}
+		// 		} else {
+		// 			buttonAll ? (buttonAll.style.display = "none") : null;
+		// 		}
+		// 	});
+		// }
+
 		let seoFilter = document.querySelectorAll(".seo-filter");
 
 		if (seoFilter.length > 0) {
-			seoFilter.forEach((element, index, array) => {
-				let elLink = element.querySelectorAll(".seo-filter__item");
+			seoFilter.forEach((element) => {
+				let animWrap = element.querySelector(".seo-filter__wrap");
+				let elHeight = element.querySelector(".seo-filter__group");
+				let arrItem = element.querySelectorAll(".seo-filter__item");
 				let buttonAll = element.querySelector(".seo-filter__all");
 
-				let indexHiden;
-
 				if (element.classList.contains("--top")) {
-					indexHiden = 5;
+					if (elHeight.clientHeight - parseInt(window.getComputedStyle(arrItem[0]).marginBottom) <= arrItem[0].offsetHeight) {
+						buttonAll.style.display = "none";
+					} else {
+						buttonAll.style.display = "block";
+					}
 				}
 
 				if (element.classList.contains("--bottom")) {
-					indexHiden = 8;
+					if (elHeight.clientHeight - parseInt(window.getComputedStyle(arrItem[0]).marginBottom) <= arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom)) {
+						buttonAll.style.display = "none";
+					} else {
+						buttonAll.style.display = "block";
+					}
 				}
 
-				if (elLink.length > indexHiden) {
-					elLink.forEach((el, i, arr) => {
-						if (i > indexHiden - 1) {
-							el.classList.add("--hidden");
+				window.addEventListener("resize", function () {
+					if (element.classList.contains("--top")) {
+						if (elHeight.clientHeight - parseInt(window.getComputedStyle(arrItem[0]).marginBottom) <= arrItem[0].offsetHeight) {
+							buttonAll.style.display = "none";
+						} else {
+							buttonAll.style.display = "block";
+						}
+					}
 
-							el.style.height = "0";
-							el.style.marginBottom = "0";
+					if (element.classList.contains("--bottom")) {
+						if (elHeight.clientHeight - parseInt(window.getComputedStyle(arrItem[0]).marginBottom) <= arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom)) {
+							buttonAll.style.display = "none";
+						} else {
+							buttonAll.style.display = "block";
+						}
+					}
+				});
 
-							el.style.display = "none";
+				if (element.classList.contains("--bottom")) {
+				}
+
+				if (animWrap != null && arrItem.length > 0) {
+					animWrap.classList.add("--hidden");
+
+					if (!element.classList.contains("--bottom")) {
+						animWrap.style.height = arrItem[0].clientHeight + "px";
+					} else {
+						animWrap.style.height = arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom) + "px";
+					}
+
+					window.addEventListener("resize", function () {
+						if (!element.classList.contains("--bottom")) {
+							animWrap.style.height = arrItem[0].clientHeight + "px";
+						} else {
+							animWrap.style.height = arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom) + "px";
 						}
 					});
 
@@ -1001,41 +1115,20 @@ document.addEventListener(
 								}
 							}
 
-							elLink.forEach((el, i) => {
-								if (i > indexHiden - 1) {
-									if (el.classList.contains("--hidden")) {
-										el.classList.remove("--hidden");
-
-										el.style.display = "initial";
-
-										el.style.height = el.querySelector("a").clientHeight + "px";
-
-										setTimeout(() => {
-											el.style.removeProperty("height");
-										}, 310);
-
-										el.style.removeProperty("margin-bottom");
-									} else {
-										el.classList.add("--hidden");
-
-										el.style.height = el.querySelector("a").clientHeight + "px";
-
-										setTimeout(() => {
-											el.style.height = "0";
-										}, 0);
-
-										setTimeout(() => {
-											el.style.display = "none";
-										}, 310);
-
-										el.style.marginBottom = "0";
-									}
+							if (animWrap.classList.contains("--hidden")) {
+								animWrap.classList.remove("--hidden");
+								animWrap.style.height = elHeight.clientHeight + "px";
+							} else {
+								animWrap.classList.add("--hidden");
+								if (!element.classList.contains("--bottom")) {
+									animWrap.style.height = arrItem[0].clientHeight + "px";
+								} else {
+									console.log(parseInt(window.getComputedStyle(arrItem[0]).marginBottom));
+									animWrap.style.height = arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom) + "px";
 								}
-							});
+							}
 						});
 					}
-				} else {
-					buttonAll ? (buttonAll.style.display = "none") : null;
 				}
 			});
 		}
