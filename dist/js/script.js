@@ -1123,7 +1123,6 @@ document.addEventListener(
 								if (!element.classList.contains("--bottom")) {
 									animWrap.style.height = arrItem[0].clientHeight + "px";
 								} else {
-									console.log(parseInt(window.getComputedStyle(arrItem[0]).marginBottom));
 									animWrap.style.height = arrItem[0].offsetHeight * 2 + parseInt(window.getComputedStyle(arrItem[0]).marginBottom) + "px";
 								}
 							}
