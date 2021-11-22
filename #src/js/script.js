@@ -1,6 +1,37 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
+		let zoomSlider = new Swiper(".zoom-product__slider", {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			watchOverflow: true,
+			observer: true,
+			observeParents: true,
+			zoom: true,
+
+			
+			navigation: {
+				nextEl: ".zoom-product__next",
+				prevEl: ".zoom-product__prev",
+			},
+		})
+
+		let arrGallItem = document.querySelectorAll(".gallery-product__item");
+
+		arrGallItem.forEach(element => {
+			element.addEventListener("click", function(e) {
+				e.preventDefault();
+				document.querySelector("body").classList.toggle("lock")
+				document.querySelector(".zoom-product").classList.toggle("--show")
+			});
+		});
+
+		document.querySelector(".zoom-product__close").addEventListener("click", function() {
+			document.querySelector("body").classList.toggle("lock")
+			document.querySelector(".zoom-product").classList.toggle("--show")
+		})
+
+
 		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
 		if (arrSlidersProducts.length > 0) {
