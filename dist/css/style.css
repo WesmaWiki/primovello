@@ -7109,11 +7109,21 @@ ul.dots-text {
     visibility: visible; }
 
 .zoom-product__slider {
-  height: 100%; }
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.zoom-product__wrapper {
+  height: initial; }
 
 .zoom-product__slide {
   padding: 0 8%;
   text-align: center; }
+  .zoom-product__slide img {
+    max-height: initial; }
+  .zoom-product__slide:not(.swiper-slide-active) img {
+    height: 0; }
 
 .zoom-product__close {
   position: absolute;
