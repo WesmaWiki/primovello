@@ -661,7 +661,7 @@
             <div class="product__wrap">
                 <div class="product__row">
                     <div class="product__column --one">
-                        <div class="product__gallery gallery-product">
+                        <div class="product__gallery gallery-product zoom-gallery-container">
                             <div class="gallery-product__banner banner">
                                 <div class="banner__item --new">
                                     <img class="banner__icon" src="./img/icon-new.svg" alt="">
@@ -676,29 +676,28 @@
                             <div class="gallery-product__lsit">
                                 <div class="gallery-product__item">
                                     <a href="./img/gallery-product-image-1-top.png"
-                                        data-external-thumb-image="./img/gallery-product-image-1-top.png"
-                                        data-lg-size="1800-2400">
+                                        data-zoom="./img/gallery-product-image-1-top.png">
                                         <img src="./img/gallery-product-image-1-top.png" alt="">
                                     </a>
                                 </div>
 
                                 <div class="gallery-product__item">
-                                    <a href="./img/gallery-product-image-2.png" data-lg-size="434-577"
-                                        data-external-thumb-image="./img/gallery-product-image-2.png">
+                                    <a href="./img/gallery-product-image-2.png"
+                                        data-zoom="./img/gallery-product-image-2.png">
                                         <img src="./img/gallery-product-image-2.png" alt="">
                                     </a>
                                 </div>
 
                                 <div class="gallery-product__item">
-                                    <a href="./img/gallery-product-image-3.png" data-lg-size="434-577"
-                                        data-external-thumb-image="./img/gallery-product-image-3.png">
+                                    <a href="./img/gallery-product-image-3.png"
+                                        data-zoom="./img/gallery-product-image-3.png">
                                         <img src="./img/gallery-product-image-3.png" alt="">
                                     </a>
                                 </div>
 
                                 <div class="gallery-product__item">
-                                    <a href="./img/gallery-product-image-4.png" data-lg-size="434-577"
-                                        data-external-thumb-image="./img/gallery-product-image-4.png">
+                                    <a href="./img/gallery-product-image-4.png"
+                                        data-zoom="./img/gallery-product-image-4.png">
                                         <img src="./img/gallery-product-image-4.png" alt="">
                                     </a>
                                 </div>
@@ -1050,26 +1049,25 @@
             </div>
         </div>
 
-        <div class="product__zoom zoom-product">
-            <div class="zoom-product__close"></div>
-            <div class="zoom-product__slider swiper-container">
-                <div class="zoom-product__prev"></div>
-                <div class="zoom-product__wrapper swiper-wrapper">
-                    <div class="zoom-product__slide swiper-slide">
-                        <div class="swiper-zoom-container">
-                            <img src="./img/DSC00007_Dx0.jpg" alt="">
-                        </div>
-                    </div>
+        <div class="zoom-gallery">
+            <div class="zoom-gallery__close"></div>
+            <div class="zoom-gallery__slider swiper-container">
+                <div class="zoom-gallery__prev"></div>
+                <div class="zoom-gallery__wrapper swiper-wrapper">
 
-                    <div class="zoom-product__slide swiper-slide">
-                        <div class="swiper-zoom-container">
-                            <img src="./img/DSC00015_Dx0.jpg" alt="">
-                        </div>
+                </div>
+                <div class="zoom-gallery__next"></div>
+            </div>
+
+            <template>
+                <div class="zoom-gallery__slide swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="" alt="">
                     </div>
                 </div>
-                <div class="zoom-product__next"></div>
-            </div>
+            </template>
         </div>
+
     </section>
 
 
